@@ -294,8 +294,8 @@
         "heading_gradient": "",
         "button_background": "",
         "button_text_color": "",
-        "accordion_background": "",
-        "accordion_text_color": ""
+        "accordion_background": "#F9FAFB",
+        "accordion_text_color": "#111827"
       }
     }
   },
