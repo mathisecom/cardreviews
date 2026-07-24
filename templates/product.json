@@ -286,6 +286,112 @@
         "button_font_size": 16
       }
     },
+    "avisclients_mCfPmc": {
+      "type": "avisclients",
+      "blocks": {
+        "review_bxzayA": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review": "Un service client ultra réactif ! Merci à vous d’avoir solutionné mon souci aussi rapidement.",
+            "name": "Samantha Hiolin",
+            "date": "04/09/2025",
+            "verified": false,
+            "initial": "S",
+            "avatar_bg": "#0066FF",
+            "avatar_color": "#FFFFFF"
+          }
+        },
+        "review_g3Hzf3": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review": "Un grand merci à l’équipe pour leur accompagnement irréprochable. Tout a été clair et rapide.",
+            "name": "Boumine Pereira",
+            "date": "02/09/2025",
+            "verified": false,
+            "initial": "B",
+            "avatar_bg": "#0066FF",
+            "avatar_color": "#FFFFFF"
+          }
+        },
+        "review_mGzNT7": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review": "Parfait, rapide et qualitatif. Très contente de mon achat, merci !",
+            "name": "Cavavin Rognac",
+            "date": "02/09/2025",
+            "verified": false,
+            "initial": "C",
+            "avatar_bg": "#0066FF",
+            "avatar_color": "#FFFFFF"
+          }
+        }
+      },
+      "block_order": [
+        "review_bxzayA",
+        "review_g3Hzf3",
+        "review_mGzNT7"
+      ],
+      "name": "Avis clients Avisi",
+      "settings": {
+        "eyebrow": "",
+        "heading": "Un service qui fait la différence.",
+        "intro": "",
+        "show_summary": true,
+        "summary_title": "Excellent",
+        "summary_rating": 5,
+        "summary_prefix": "Basé sur",
+        "summary_count": "3,177 avis",
+        "summary_source": "clients",
+        "section_bg": "#FFFFFF",
+        "card_bg": "#F9FAFB",
+        "accent": "#0066FF",
+        "title_color": "#101218",
+        "text_color": "#363A44",
+        "muted_color": "#747A89",
+        "border_color": "#E5EAF2",
+        "star_inactive": "#D8DEE8",
+        "max_width": 1320,
+        "columns": 3,
+        "gap": 20,
+        "heading_width": 820,
+        "card_height": 280,
+        "card_padding": 28,
+        "radius": 22,
+        "summary_radius": 16,
+        "border_width": 1,
+        "shadow_opacity": 0,
+        "eyebrow_size": 12,
+        "heading_desktop": 38,
+        "heading_mobile": 28,
+        "heading_weight": "700",
+        "intro_size": 16,
+        "star_size": 16,
+        "review_size": 17,
+        "review_size_mobile": 16,
+        "review_weight": "400",
+        "author_size": 15,
+        "meta_size": 12,
+        "avatar_size": 46,
+        "avatar_font": 16,
+        "padding_top": 80,
+        "padding_bottom": 32,
+        "header_gap": 32,
+        "padding_top_mobile": 32,
+        "padding_bottom_mobile": 32,
+        "header_gap_mobile": 32,
+        "mobile_width": 88,
+        "mobile_gap": 14,
+        "card_height_mobile": 280,
+        "card_padding_mobile": 24,
+        "slider_label": "Avis de nos clients",
+        "prev_label": "Avis précédent",
+        "next_label": "Avis suivant",
+        "verified_text": "Avis vérifié"
+      }
+    },
     "faq_UKMdi7": {
       "type": "faq",
       "blocks": {
@@ -345,6 +451,7 @@
     "trustlogo_6PVqJq",
     "iconsfeature_icPqjF",
     "doublereviwsection_YWQRhB",
+    "avisclients_mCfPmc",
     "faq_UKMdi7"
   ]
 }
