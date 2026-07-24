@@ -331,6 +331,112 @@
         "item_text_font_size": 15
       }
     },
+    "avisclients_zkxwt3": {
+      "type": "avisclients",
+      "blocks": {
+        "review_wGB6n4": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review": "שירות לקוחות מהיר ומקצועי במיוחד! תודה שפתרתם את הבעיה שלי במהירות רבה.",
+            "name": "סמנתה היולין",
+            "date": "04/09/2025",
+            "verified": false,
+            "initial": "S",
+            "avatar_bg": "#0066FF",
+            "avatar_color": "#FFFFFF"
+          }
+        },
+        "review_fJPcwB": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review": "תודה גדולה לצוות על ליווי מקצועי וללא דופי. הכול היה ברור, פשוט ומהיר.",
+            "name": "בומין פריירה",
+            "date": "02/09/2025",
+            "verified": false,
+            "initial": "B",
+            "avatar_bg": "#0066FF",
+            "avatar_color": "#FFFFFF"
+          }
+        },
+        "review_3VYrxA": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review": "מושלם, מהיר ואיכותי. אני מרוצה מאוד מהרכישה שלי, תודה רבה!",
+            "name": "קבאבין רוניאק",
+            "date": "02/09/2025",
+            "verified": false,
+            "initial": "C",
+            "avatar_bg": "#0066FF",
+            "avatar_color": "#FFFFFF"
+          }
+        }
+      },
+      "block_order": [
+        "review_wGB6n4",
+        "review_fJPcwB",
+        "review_3VYrxA"
+      ],
+      "name": "Avis clients Avisi",
+      "settings": {
+        "eyebrow": "חוות דעת של לקוחות",
+        "heading": "שירות שעושה את ההבדל.",
+        "intro": "",
+        "show_summary": true,
+        "summary_title": "מצוין",
+        "summary_rating": 5,
+        "summary_prefix": "מבוסס על",
+        "summary_count": "77 ביקורות",
+        "summary_source": "לקוחות",
+        "section_bg": "#FFFFFF",
+        "card_bg": "#F9FAFB",
+        "accent": "#0066FF",
+        "title_color": "#101218",
+        "text_color": "#363A44",
+        "muted_color": "#747A89",
+        "border_color": "#E5EAF2",
+        "star_inactive": "#D8DEE8",
+        "max_width": 1320,
+        "columns": 3,
+        "gap": 20,
+        "heading_width": 820,
+        "card_height": 280,
+        "card_padding": 28,
+        "radius": 22,
+        "summary_radius": 16,
+        "border_width": 1,
+        "shadow_opacity": 0,
+        "eyebrow_size": 12,
+        "heading_desktop": 46,
+        "heading_mobile": 34,
+        "heading_weight": "700",
+        "intro_size": 16,
+        "star_size": 16,
+        "review_size": 17,
+        "review_size_mobile": 16,
+        "review_weight": "400",
+        "author_size": 15,
+        "meta_size": 12,
+        "avatar_size": 46,
+        "avatar_font": 16,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "header_gap": 48,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56,
+        "header_gap_mobile": 32,
+        "mobile_width": 88,
+        "mobile_gap": 14,
+        "card_height_mobile": 280,
+        "card_padding_mobile": 24,
+        "slider_label": "חוות הדעת של הלקוחות שלנו",
+        "prev_label": "הביקורת הקודמת",
+        "next_label": "הביקורת הבאה",
+        "verified_text": "ביקורת מאומתת"
+      }
+    },
     "faq": {
       "type": "faq",
       "blocks": {
@@ -392,6 +498,7 @@
     "doublereviwsection_9Ybpt6",
     "featured_collection_yezJaT",
     "whychoose_zV64bJ",
+    "avisclients_zkxwt3",
     "faq"
   ]
 }
