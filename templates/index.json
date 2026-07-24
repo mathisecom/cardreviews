@@ -65,11 +65,37 @@
         "section_bg": "#ffffff",
         "card_bg": "#f4f5f7",
         "icon_bg": "#ffffff",
-        "icon_color": "#0066FF",
-        "accent_color": "#0066FF",
+        "icon_color": "#0066ff",
+        "accent_color": "#0066ff",
         "heading_color": "#0a1f44",
         "title_color": "#0a1f44",
         "text_color": "#5c6577"
+      }
+    },
+    "featured_collection_yezJaT": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "collection": "",
+        "products": [],
+        "full_width": true,
+        "stack_products": false,
+        "show_progress_bar": true,
+        "products_count": 7,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "subheading": "",
+        "title": "Featured collection",
+        "content": "",
+        "link_url": "",
+        "link_text": "View all",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
       }
     },
     "faq": {
@@ -128,6 +154,7 @@
   },
   "order": [
     "benefitsection_VtJMGb",
+    "featured_collection_yezJaT",
     "faq"
   ]
 }
