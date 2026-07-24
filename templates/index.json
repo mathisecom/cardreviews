@@ -196,6 +196,79 @@
         "text_color": "#5c6577"
       }
     },
+    "whychoose_zV64bJ": {
+      "type": "whychoose",
+      "blocks": {
+        "feature_zzeTEe": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "check",
+            "icon_text": "IL",
+            "icon_bg": "#dcfce7",
+            "icon_color": "#16a34a",
+            "title": "יותר ביקורות בגוגל",
+            "text": "הכפילו פי 5 את מספר הביקורות בעמוד העסק שלכם בגוגל בעזרת שלטי ה-NFC שלנו."
+          }
+        },
+        "feature_D8nKdF": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "bolt",
+            "icon_text": "IL",
+            "icon_bg": "#dbeafe",
+            "icon_color": "#0066ff",
+            "title": "התקנה מיידית",
+            "text": "הדביקו את השלט וזהו! לא נדרשת שום הגדרה טכנית."
+          }
+        },
+        "feature_tHBTA3": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "clock",
+            "icon_text": "IL",
+            "icon_bg": "#ede9fe",
+            "icon_color": "#7c3aed",
+            "title": "שימוש לכל החיים",
+            "text": "ללא מנוי, ללא עלויות נסתרות. לאחר הרכישה, השלט שלכם לתמיד."
+          }
+        },
+        "feature_QyjKAg": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "text",
+            "icon_text": "IL",
+            "icon_bg": "#fef9c3",
+            "icon_color": "#854d0e",
+            "title": "מיוצר בישראל",
+            "text": "איכות פרימיום, ייצור מקומי ומשלוח מהיר מובטח."
+          }
+        }
+      },
+      "block_order": [
+        "feature_zzeTEe",
+        "feature_D8nKdF",
+        "feature_tHBTA3",
+        "feature_QyjKAg"
+      ],
+      "name": "Why Choose Us",
+      "settings": {
+        "text_direction": "rtl",
+        "heading": "?למה לבחור ב-Avisi",
+        "image_position": "right",
+        "padding_top_desktop": 80,
+        "padding_bottom_desktop": 80,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "bg_color": "#ffffff",
+        "heading_color": "#0A1F44",
+        "item_title_color": "#0A1F44",
+        "item_text_color": "#5C6577",
+        "heading_font_size_desktop": 34,
+        "heading_font_size_mobile": 26,
+        "item_title_font_size": 17,
+        "item_text_font_size": 15
+      }
+    },
     "featured_collection_yezJaT": {
       "type": "featured-collection",
       "name": "Featured collection",
@@ -281,6 +354,7 @@
     "trustlogo_ymtPjm",
     "benefitsection_VtJMGb",
     "featured_collection_yezJaT",
+    "whychoose_zV64bJ",
     "faq"
   ]
 }
