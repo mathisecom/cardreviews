@@ -9,6 +9,69 @@
  */
 {
   "sections": {
+    "benefitsection_VtJMGb": {
+      "type": "benefitsection",
+      "blocks": {
+        "benefit_iLeQGa": {
+          "type": "benefit",
+          "settings": {
+            "icon": "rocket",
+            "title": "ביקורות תוך 5 שניות",
+            "text": "<p><strong>הקלו על איסוף הביקורות</strong> באמצעות תגי NFC וקודי QR. הלקוחות שלכם משתפים את החוויה שלהם תוך שניות.</p>"
+          }
+        },
+        "benefit_BbWTXB": {
+          "type": "benefit",
+          "settings": {
+            "icon": "scan",
+            "title": "שפרו את התדמית שלכם",
+            "text": "<p><strong>ענו במהירות</strong> וביעילות לביקורות עם האפליקציה שלנו ובעזרת ה-AI שלה, ושפרו את התדמית המקוונת שלכם ללא מאמץ.</p>"
+          }
+        },
+        "benefit_qJGmEy": {
+          "type": "benefit",
+          "settings": {
+            "icon": "trending-up",
+            "title": "הגבירו את הנראות המקומית שלכם",
+            "text": "<p><strong>יותר ביקורות</strong> משמעותן נראות טובה יותר. הגדילו את הסיכויים שלכם <strong>להופיע בראש תוצאות גוגל</strong> ומשכו יותר לקוחות.</p>"
+          }
+        },
+        "benefit_hQe4zQ": {
+          "type": "benefit",
+          "settings": {
+            "icon": "bar-chart",
+            "title": "תוצאות גלויות",
+            "text": "<p><strong>עקבו</strong> אחרי איסוף הביקורות, הנראות שלכם בגוגל <strong>והביצועים</strong> שלכם ישירות מהאפליקציה, במחשב או בנייד.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_iLeQGa",
+        "benefit_BbWTXB",
+        "benefit_qJGmEy",
+        "benefit_hQe4zQ"
+      ],
+      "name": "Benefits / USP Cards",
+      "settings": {
+        "text_direction": "rtl",
+        "subheading": "",
+        "heading": "",
+        "columns_desktop": 4,
+        "card_gap": 20,
+        "card_radius": 16,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "enable_mobile_slider": true,
+        "section_bg": "#ffffff",
+        "card_bg": "#f4f5f7",
+        "icon_bg": "#ffffff",
+        "icon_color": "#0066FF",
+        "accent_color": "#0066FF",
+        "heading_color": "#0a1f44",
+        "title_color": "#0a1f44",
+        "text_color": "#5c6577"
+      }
+    },
     "faq": {
       "type": "faq",
       "blocks": {
@@ -64,6 +127,7 @@
     }
   },
   "order": [
+    "benefitsection_VtJMGb",
     "faq"
   ]
 }
