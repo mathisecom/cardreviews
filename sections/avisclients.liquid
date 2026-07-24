@@ -1,0 +1,703 @@
+{% comment %}
+  Avis clients Avisi
+  Grille desktop + slider tactile mobile, sans bibliothèque externe.
+{% endcomment %}
+
+<section
+  id="avisi-reviews-{{ section.id }}"
+  class="avisi-reviews"
+  style="
+    --section-bg: {{ section.settings.section_bg }};
+    --card-bg: {{ section.settings.card_bg }};
+    --accent: {{ section.settings.accent }};
+    --title: {{ section.settings.title_color }};
+    --text: {{ section.settings.text_color }};
+    --muted: {{ section.settings.muted_color }};
+    --border: {{ section.settings.border_color }};
+    --radius: {{ section.settings.radius }}px;
+    --gap: {{ section.settings.gap }}px;
+    --max-width: {{ section.settings.max_width }}px;
+  "
+>
+  <div class="avisi-reviews__inner">
+    <header class="avisi-reviews__header">
+      <div class="avisi-reviews__heading">
+        {% if section.settings.eyebrow != blank %}
+          <p class="avisi-reviews__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+        {% endif %}
+
+        {% if section.settings.heading != blank %}
+          <h2>{{ section.settings.heading | escape }}</h2>
+        {% endif %}
+
+        {% if section.settings.intro != blank %}
+          <div class="avisi-reviews__intro rte">{{ section.settings.intro }}</div>
+        {% endif %}
+      </div>
+
+      {% if section.settings.show_summary %}
+        <div class="avisi-reviews__summary">
+          <div>
+            <strong>{{ section.settings.summary_title | escape }}</strong>
+            <div class="avisi-reviews__stars" aria-label="{{ section.settings.summary_rating }} sur 5 étoiles">
+              {% for i in (1..5) %}
+                <span class="{% if i <= section.settings.summary_rating %}is-active{% endif %}" aria-hidden="true">★</span>
+              {% endfor %}
+            </div>
+          </div>
+
+          <i aria-hidden="true"></i>
+
+          <div class="avisi-reviews__summary-copy">
+            <span>{{ section.settings.summary_prefix | escape }}</span>
+            <strong>{{ section.settings.summary_count | escape }}</strong>
+            <span>{{ section.settings.summary_source | escape }}</span>
+          </div>
+        </div>
+      {% endif %}
+    </header>
+
+    {% if section.blocks.size > 0 %}
+      <div class="avisi-reviews__slider">
+        <div
+          class="avisi-reviews__track"
+          data-track
+          role="region"
+          aria-label="{{ section.settings.slider_label | escape }}"
+          tabindex="0"
+        >
+          {% for block in section.blocks %}
+            <article class="avisi-reviews__card" data-card {{ block.shopify_attributes }}>
+              <div>
+                <div class="avisi-reviews__stars" aria-label="{{ block.settings.rating }} sur 5 étoiles">
+                  {% for i in (1..5) %}
+                    <span class="{% if i <= block.settings.rating %}is-active{% endif %}" aria-hidden="true">★</span>
+                  {% endfor %}
+                </div>
+
+                {% if block.settings.review != blank %}
+                  <blockquote>{{ block.settings.review | escape | newline_to_br }}</blockquote>
+                {% endif %}
+              </div>
+
+              <div class="avisi-reviews__author">
+                {% if block.settings.photo != blank %}
+                  <div class="avisi-reviews__avatar">
+                    {{
+                      block.settings.photo
+                      | image_url: width: 120
+                      | image_tag: loading: 'lazy', widths: '60, 90, 120', sizes: '48px', alt: block.settings.name
+                    }}
+                  </div>
+                {% else %}
+                  <div
+                    class="avisi-reviews__avatar"
+                    style="--avatar-bg: {{ block.settings.avatar_bg }}; --avatar-color: {{ block.settings.avatar_color }};"
+                    aria-hidden="true"
+                  >
+                    {{ block.settings.initial | default: block.settings.name | slice: 0 | upcase | escape }}
+                  </div>
+                {% endif %}
+
+                <div class="avisi-reviews__author-copy">
+                  <strong>{{ block.settings.name | escape }}</strong>
+                  {% if block.settings.date != blank %}
+                    <span>{{ block.settings.date | escape }}</span>
+                  {% endif %}
+                  {% if block.settings.verified %}
+                    <span class="avisi-reviews__verified">✓ {{ section.settings.verified_text | escape }}</span>
+                  {% endif %}
+                </div>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+
+        {% if section.blocks.size > 1 %}
+          <div class="avisi-reviews__controls">
+            <button type="button" data-prev aria-label="{{ section.settings.prev_label | escape }}">←</button>
+
+            <div class="avisi-reviews__dots">
+              {% for block in section.blocks %}
+                <button
+                  type="button"
+                  data-dot="{{ forloop.index0 }}"
+                  aria-label="Afficher l’avis {{ forloop.index }}"
+                  class="{% if forloop.first %}is-active{% endif %}"
+                  {% if forloop.first %}aria-current="true"{% endif %}
+                ></button>
+              {% endfor %}
+            </div>
+
+            <button type="button" data-next aria-label="{{ section.settings.next_label | escape }}">→</button>
+          </div>
+        {% endif %}
+      </div>
+    {% elsif request.design_mode %}
+      <p class="avisi-reviews__empty">Ajoutez des blocs « Avis client » dans l’éditeur de thème.</p>
+    {% endif %}
+  </div>
+</section>
+
+{% style %}
+  #avisi-reviews-{{ section.id }} {
+    background: var(--section-bg);
+    color: var(--text);
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+  }
+
+  #avisi-reviews-{{ section.id }} * {
+    box-sizing: border-box;
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__inner {
+    width: min(calc(100% - 40px), var(--max-width));
+    margin: 0 auto;
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: 32px;
+    margin-bottom: {{ section.settings.header_gap }}px;
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__heading {
+    max-width: {{ section.settings.heading_width }}px;
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__eyebrow {
+    margin: 0 0 14px;
+    color: var(--accent);
+    font-size: {{ section.settings.eyebrow_size }}px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+  }
+
+  #avisi-reviews-{{ section.id }} h2 {
+    margin: 0;
+    color: var(--title);
+    font-size: clamp({{ section.settings.heading_mobile }}px, 3.1vw, {{ section.settings.heading_desktop }}px);
+    font-weight: {{ section.settings.heading_weight }};
+    line-height: 1.08;
+    letter-spacing: -.03em;
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__intro {
+    margin-top: 15px;
+    color: var(--muted);
+    font-size: {{ section.settings.intro_size }}px;
+    line-height: 1.6;
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__intro > * {
+    margin: 0;
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__summary {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-width: 285px;
+    padding: 18px 22px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: {{ section.settings.summary_radius }}px;
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__summary > div:first-child {
+    display: grid;
+    gap: 4px;
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__summary > div:first-child > strong {
+    color: var(--title);
+    font-size: 20px;
+    line-height: 1.1;
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__summary i {
+    width: 1px;
+    height: 40px;
+    background: var(--border);
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__summary-copy {
+    display: grid;
+    gap: 2px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__summary-copy strong {
+    color: var(--title);
+    font-size: 13px;
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__track {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.columns }}, minmax(0, 1fr));
+    gap: var(--gap);
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+    min-height: {{ section.settings.card_height }}px;
+    padding: {{ section.settings.card_padding }}px;
+    background: var(--card-bg);
+    border: {{ section.settings.border_width }}px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 10px 30px rgba(17, 24, 39, {{ section.settings.shadow_opacity | divided_by: 100.0 }});
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__stars {
+    display: flex;
+    gap: 1px;
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__stars span {
+    color: {{ section.settings.star_inactive }};
+    font-size: {{ section.settings.star_size }}px;
+    line-height: 1;
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__stars span.is-active {
+    color: var(--accent);
+  }
+
+  #avisi-reviews-{{ section.id }} blockquote {
+    margin: 18px 0 30px;
+    color: var(--text);
+    font-size: {{ section.settings.review_size }}px;
+    font-style: normal;
+    font-weight: {{ section.settings.review_weight }};
+    line-height: 1.55;
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__avatar {
+    display: grid;
+    flex: 0 0 {{ section.settings.avatar_size }}px;
+    width: {{ section.settings.avatar_size }}px;
+    height: {{ section.settings.avatar_size }}px;
+    place-items: center;
+    overflow: hidden;
+    background: var(--avatar-bg, var(--accent));
+    border-radius: 50%;
+    color: var(--avatar-color, #fff);
+    font-size: {{ section.settings.avatar_font }}px;
+    font-weight: 800;
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__author-copy {
+    display: grid;
+    min-width: 0;
+    gap: 2px;
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__author-copy strong {
+    overflow: hidden;
+    color: var(--title);
+    font-size: {{ section.settings.author_size }}px;
+    line-height: 1.25;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__author-copy span {
+    color: var(--muted);
+    font-size: {{ section.settings.meta_size }}px;
+    line-height: 1.25;
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__author-copy .avisi-reviews__verified {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__controls {
+    display: none;
+  }
+
+  #avisi-reviews-{{ section.id }} .avisi-reviews__empty {
+    padding: 30px;
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    color: var(--muted);
+    text-align: center;
+  }
+
+  @media (max-width: 989px) {
+    #avisi-reviews-{{ section.id }} .avisi-reviews__header {
+      grid-template-columns: 1fr;
+      align-items: start;
+      gap: 24px;
+    }
+
+    #avisi-reviews-{{ section.id }} .avisi-reviews__summary {
+      width: fit-content;
+    }
+
+    #avisi-reviews-{{ section.id }} .avisi-reviews__track {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 749px) {
+    #avisi-reviews-{{ section.id }} {
+      padding: {{ section.settings.padding_top_mobile }}px 0 {{ section.settings.padding_bottom_mobile }}px;
+    }
+
+    #avisi-reviews-{{ section.id }} .avisi-reviews__inner {
+      width: min(calc(100% - 28px), var(--max-width));
+    }
+
+    #avisi-reviews-{{ section.id }} .avisi-reviews__header {
+      margin-bottom: {{ section.settings.header_gap_mobile }}px;
+    }
+
+    #avisi-reviews-{{ section.id }} .avisi-reviews__summary {
+      width: 100%;
+      min-width: 0;
+      justify-content: space-between;
+      padding: 16px 18px;
+    }
+
+    #avisi-reviews-{{ section.id }} .avisi-reviews__slider {
+      margin-right: -14px;
+    }
+
+    #avisi-reviews-{{ section.id }} .avisi-reviews__track {
+      display: flex;
+      gap: {{ section.settings.mobile_gap }}px;
+      overflow-x: auto;
+      padding: 0 14px 8px 0;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    #avisi-reviews-{{ section.id }} .avisi-reviews__track::-webkit-scrollbar {
+      display: none;
+    }
+
+    #avisi-reviews-{{ section.id }} .avisi-reviews__card {
+      flex: 0 0 {{ section.settings.mobile_width }}%;
+      min-height: {{ section.settings.card_height_mobile }}px;
+      padding: {{ section.settings.card_padding_mobile }}px;
+      scroll-snap-align: start;
+    }
+
+    #avisi-reviews-{{ section.id }} blockquote {
+      font-size: {{ section.settings.review_size_mobile }}px;
+    }
+
+    #avisi-reviews-{{ section.id }} .avisi-reviews__controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 14px 14px 0 0;
+    }
+
+    #avisi-reviews-{{ section.id }} .avisi-reviews__controls > button {
+      display: grid;
+      flex: 0 0 44px;
+      width: 44px;
+      height: 44px;
+      place-items: center;
+      padding: 0;
+      background: var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: 50%;
+      color: #fff;
+      cursor: pointer;
+      font: inherit;
+      font-size: 21px;
+    }
+
+    #avisi-reviews-{{ section.id }} .avisi-reviews__controls > button:disabled {
+      cursor: not-allowed;
+      opacity: .35;
+    }
+
+    #avisi-reviews-{{ section.id }} .avisi-reviews__dots {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    #avisi-reviews-{{ section.id }} .avisi-reviews__dots button {
+      width: 8px;
+      height: 8px;
+      padding: 0;
+      background: var(--border);
+      border: 0;
+      border-radius: 99px;
+      cursor: pointer;
+      transition: width .2s ease, background .2s ease;
+    }
+
+    #avisi-reviews-{{ section.id }} .avisi-reviews__dots button.is-active {
+      width: 24px;
+      background: var(--accent);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #avisi-reviews-{{ section.id }} .avisi-reviews__track {
+      scroll-behavior: auto;
+    }
+  }
+{% endstyle %}
+
+<script>
+  (() => {
+    const section = document.getElementById('avisi-reviews-{{ section.id }}');
+    if (!section || section.dataset.ready === 'true') return;
+    section.dataset.ready = 'true';
+
+    const track = section.querySelector('[data-track]');
+    const cards = [...section.querySelectorAll('[data-card]')];
+    const prev = section.querySelector('[data-prev]');
+    const next = section.querySelector('[data-next]');
+    const dots = [...section.querySelectorAll('[data-dot]')];
+
+    if (!track || cards.length < 2) return;
+
+    let active = 0;
+    let frame;
+    const mobile = () => matchMedia('(max-width: 749px)').matches;
+
+    const offset = index => cards[index] ? cards[index].offsetLeft - track.offsetLeft : 0;
+
+    const update = index => {
+      active = Math.max(0, Math.min(index, cards.length - 1));
+
+      dots.forEach((dot, i) => {
+        const selected = i === active;
+        dot.classList.toggle('is-active', selected);
+        selected ? dot.setAttribute('aria-current', 'true') : dot.removeAttribute('aria-current');
+      });
+
+      if (prev) prev.disabled = active === 0;
+      if (next) next.disabled = active === cards.length - 1;
+    };
+
+    const go = index => {
+      if (!mobile()) return;
+      const target = Math.max(0, Math.min(index, cards.length - 1));
+      track.scrollTo({
+        left: offset(target),
+        behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+      });
+      update(target);
+    };
+
+    const sync = () => {
+      if (!mobile()) return;
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        let nearest = 0;
+        let distance = Infinity;
+
+        cards.forEach((card, index) => {
+          const currentDistance = Math.abs(offset(index) - track.scrollLeft);
+          if (currentDistance < distance) {
+            distance = currentDistance;
+            nearest = index;
+          }
+        });
+
+        update(nearest);
+      });
+    };
+
+    prev?.addEventListener('click', () => go(active - 1));
+    next?.addEventListener('click', () => go(active + 1));
+    dots.forEach(dot => dot.addEventListener('click', () => go(Number(dot.dataset.dot))));
+    track.addEventListener('scroll', sync, { passive: true });
+
+    addEventListener('resize', () => {
+      if (mobile()) sync();
+      else {
+        track.scrollLeft = 0;
+        update(0);
+      }
+    });
+
+    update(0);
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Avis clients Avisi",
+  "tag": "section",
+  "class": "section-avisi-reviews",
+  "max_blocks": 12,
+  "settings": [
+    { "type": "header", "content": "Contenu" },
+    { "type": "text", "id": "eyebrow", "label": "Sur-titre", "default": "AVIS CLIENTS" },
+    { "type": "text", "id": "heading", "label": "Titre", "default": "Un service qui fait la différence." },
+    { "type": "richtext", "id": "intro", "label": "Introduction" },
+    { "type": "checkbox", "id": "show_summary", "label": "Afficher le résumé", "default": true },
+    { "type": "text", "id": "summary_title", "label": "Mention principale", "default": "Excellent" },
+    { "type": "range", "id": "summary_rating", "label": "Note globale", "min": 1, "max": 5, "step": 1, "default": 5 },
+    { "type": "text", "id": "summary_prefix", "label": "Texte avant le nombre", "default": "Basé sur" },
+    { "type": "text", "id": "summary_count", "label": "Nombre d’avis", "default": "77 avis" },
+    { "type": "text", "id": "summary_source", "label": "Source", "default": "clients" },
+
+    { "type": "header", "content": "Couleurs" },
+    { "type": "color", "id": "section_bg", "label": "Fond de la section", "default": "#FFFFFF" },
+    { "type": "color", "id": "card_bg", "label": "Fond des cartes", "default": "#F9FAFB" },
+    { "type": "color", "id": "accent", "label": "Couleur principale", "default": "#0066FF" },
+    { "type": "color", "id": "title_color", "label": "Titres", "default": "#101218" },
+    { "type": "color", "id": "text_color", "label": "Texte", "default": "#363A44" },
+    { "type": "color", "id": "muted_color", "label": "Texte secondaire", "default": "#747A89" },
+    { "type": "color", "id": "border_color", "label": "Bordures", "default": "#E5EAF2" },
+    { "type": "color", "id": "star_inactive", "label": "Étoiles inactives", "default": "#D8DEE8" },
+
+    { "type": "header", "content": "Mise en page" },
+    { "type": "range", "id": "max_width", "label": "Largeur maximale", "min": 900, "max": 1600, "step": 20, "unit": "px", "default": 1320 },
+    { "type": "range", "id": "columns", "label": "Colonnes sur ordinateur", "min": 2, "max": 4, "step": 1, "default": 3 },
+    { "type": "range", "id": "gap", "label": "Espace entre les cartes", "min": 8, "max": 48, "step": 2, "unit": "px", "default": 20 },
+    { "type": "range", "id": "heading_width", "label": "Largeur maximale du titre", "min": 400, "max": 1100, "step": 20, "unit": "px", "default": 820 },
+    { "type": "range", "id": "card_height", "label": "Hauteur minimale des cartes", "min": 220, "max": 500, "step": 10, "unit": "px", "default": 280 },
+    { "type": "range", "id": "card_padding", "label": "Marge intérieure des cartes", "min": 16, "max": 56, "step": 2, "unit": "px", "default": 28 },
+    { "type": "range", "id": "radius", "label": "Arrondi des cartes", "min": 0, "max": 40, "step": 2, "unit": "px", "default": 22 },
+    { "type": "range", "id": "summary_radius", "label": "Arrondi du résumé", "min": 0, "max": 32, "step": 2, "unit": "px", "default": 16 },
+    { "type": "range", "id": "border_width", "label": "Épaisseur des bordures", "min": 0, "max": 3, "step": 1, "unit": "px", "default": 1 },
+    { "type": "range", "id": "shadow_opacity", "label": "Opacité de l’ombre", "min": 0, "max": 25, "step": 1, "unit": "%", "default": 6 },
+
+    { "type": "header", "content": "Typographie" },
+    { "type": "range", "id": "eyebrow_size", "label": "Taille du sur-titre", "min": 10, "max": 20, "step": 1, "unit": "px", "default": 12 },
+    { "type": "range", "id": "heading_desktop", "label": "Titre sur ordinateur", "min": 28, "max": 76, "step": 2, "unit": "px", "default": 46 },
+    { "type": "range", "id": "heading_mobile", "label": "Titre sur mobile", "min": 24, "max": 48, "step": 1, "unit": "px", "default": 34 },
+    {
+      "type": "select",
+      "id": "heading_weight",
+      "label": "Graisse du titre",
+      "default": "700",
+      "options": [
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi-gras" },
+        { "value": "700", "label": "Gras" },
+        { "value": "800", "label": "Très gras" }
+      ]
+    },
+    { "type": "range", "id": "intro_size", "label": "Taille de l’introduction", "min": 13, "max": 22, "step": 1, "unit": "px", "default": 16 },
+    { "type": "range", "id": "star_size", "label": "Taille des étoiles", "min": 12, "max": 28, "step": 1, "unit": "px", "default": 16 },
+    { "type": "range", "id": "review_size", "label": "Avis sur ordinateur", "min": 14, "max": 24, "step": 1, "unit": "px", "default": 17 },
+    { "type": "range", "id": "review_size_mobile", "label": "Avis sur mobile", "min": 14, "max": 22, "step": 1, "unit": "px", "default": 16 },
+    {
+      "type": "select",
+      "id": "review_weight",
+      "label": "Graisse des avis",
+      "default": "400",
+      "options": [
+        { "value": "400", "label": "Normal" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi-gras" }
+      ]
+    },
+    { "type": "range", "id": "author_size", "label": "Taille du nom", "min": 12, "max": 20, "step": 1, "unit": "px", "default": 15 },
+    { "type": "range", "id": "meta_size", "label": "Taille de la date", "min": 10, "max": 17, "step": 1, "unit": "px", "default": 12 },
+    { "type": "range", "id": "avatar_size", "label": "Taille de l’avatar", "min": 36, "max": 72, "step": 2, "unit": "px", "default": 46 },
+    { "type": "range", "id": "avatar_font", "label": "Taille de l’initiale", "min": 12, "max": 26, "step": 1, "unit": "px", "default": 16 },
+
+    { "type": "header", "content": "Espacements" },
+    { "type": "range", "id": "padding_top", "label": "Marge haute ordinateur", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 80 },
+    { "type": "range", "id": "padding_bottom", "label": "Marge basse ordinateur", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 80 },
+    { "type": "range", "id": "header_gap", "label": "Espace sous l’en-tête", "min": 20, "max": 100, "step": 4, "unit": "px", "default": 48 },
+    { "type": "range", "id": "padding_top_mobile", "label": "Marge haute mobile", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 56 },
+    { "type": "range", "id": "padding_bottom_mobile", "label": "Marge basse mobile", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 56 },
+    { "type": "range", "id": "header_gap_mobile", "label": "Espace sous l’en-tête mobile", "min": 16, "max": 72, "step": 4, "unit": "px", "default": 32 },
+
+    { "type": "header", "content": "Slider mobile" },
+    { "type": "range", "id": "mobile_width", "label": "Largeur d’une carte", "min": 78, "max": 100, "step": 1, "unit": "%", "default": 88 },
+    { "type": "range", "id": "mobile_gap", "label": "Espace entre les cartes", "min": 8, "max": 28, "step": 2, "unit": "px", "default": 14 },
+    { "type": "range", "id": "card_height_mobile", "label": "Hauteur minimale des cartes", "min": 220, "max": 500, "step": 10, "unit": "px", "default": 280 },
+    { "type": "range", "id": "card_padding_mobile", "label": "Marge intérieure des cartes", "min": 16, "max": 40, "step": 2, "unit": "px", "default": 24 },
+    { "type": "text", "id": "slider_label", "label": "Libellé accessible du slider", "default": "Avis de nos clients" },
+    { "type": "text", "id": "prev_label", "label": "Bouton précédent", "default": "Avis précédent" },
+    { "type": "text", "id": "next_label", "label": "Bouton suivant", "default": "Avis suivant" },
+    { "type": "text", "id": "verified_text", "label": "Texte avis vérifié", "default": "Avis vérifié" }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Avis client",
+      "settings": [
+        { "type": "range", "id": "rating", "label": "Note", "min": 1, "max": 5, "step": 1, "default": 5 },
+        { "type": "textarea", "id": "review", "label": "Avis", "default": "Un service client ultra réactif ! Merci à vous d’avoir solutionné mon souci aussi rapidement." },
+        { "type": "text", "id": "name", "label": "Nom du client", "default": "Samantha Hiolin" },
+        { "type": "text", "id": "date", "label": "Date", "default": "04/09/2025" },
+        { "type": "checkbox", "id": "verified", "label": "Afficher Avis vérifié", "default": false },
+        { "type": "image_picker", "id": "photo", "label": "Photo du client" },
+        { "type": "text", "id": "initial", "label": "Initiale", "default": "S" },
+        { "type": "color", "id": "avatar_bg", "label": "Fond de l’avatar", "default": "#0066FF" },
+        { "type": "color", "id": "avatar_color", "label": "Couleur de l’initiale", "default": "#FFFFFF" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Avis clients Avisi",
+      "blocks": [
+        {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review": "Un service client ultra réactif ! Merci à vous d’avoir solutionné mon souci aussi rapidement.",
+            "name": "Samantha Hiolin",
+            "date": "04/09/2025",
+            "initial": "S"
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review": "Un grand merci à l’équipe pour leur accompagnement irréprochable. Tout a été clair et rapide.",
+            "name": "Boumine Pereira",
+            "date": "02/09/2025",
+            "initial": "B"
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review": "Parfait, rapide et qualitatif. Très contente de mon achat, merci !",
+            "name": "Cavavin Rognac",
+            "date": "02/09/2025",
+            "initial": "C"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
