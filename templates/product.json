@@ -286,15 +286,15 @@
         "button_font_size": 16
       }
     },
-    "avisclients_NzAqTJ": {
+    "avisclients_KnPTMp": {
       "type": "avisclients",
       "blocks": {
-        "review_JyCygy": {
+        "review_DX6Bzi": {
           "type": "review",
           "settings": {
             "rating": 5,
-            "review": "Un service client ultra réactif ! Merci à vous d’avoir solutionné mon souci aussi rapidement.",
-            "name": "Samantha Hiolin",
+            "review": "שירות לקוחות מהיר ומקצועי במיוחד! תודה שפתרתם את הבעיה שלי במהירות רבה.",
+            "name": "סמנתה היולין",
             "date": "04/09/2025",
             "verified": false,
             "initial": "S",
@@ -302,12 +302,12 @@
             "avatar_color": "#FFFFFF"
           }
         },
-        "review_6khBaM": {
+        "review_XjD4k8": {
           "type": "review",
           "settings": {
             "rating": 5,
-            "review": "Un grand merci à l’équipe pour leur accompagnement irréprochable. Tout a été clair et rapide.",
-            "name": "Boumine Pereira",
+            "review": "תודה גדולה לצוות על ליווי מקצועי וללא דופי. הכול היה ברור, פשוט ומהיר.",
+            "name": "בומין פריירה",
             "date": "02/09/2025",
             "verified": false,
             "initial": "B",
@@ -315,12 +315,12 @@
             "avatar_color": "#FFFFFF"
           }
         },
-        "review_9DcDcQ": {
+        "review_q37VGW": {
           "type": "review",
           "settings": {
             "rating": 5,
-            "review": "Parfait, rapide et qualitatif. Très contente de mon achat, merci !",
-            "name": "Cavavin Rognac",
+            "review": "מושלם, מהיר ואיכותי. אני מרוצה מאוד מהרכישה שלי, תודה רבה!",
+            "name": "קבאבין רוניאק",
             "date": "02/09/2025",
             "verified": false,
             "initial": "C",
@@ -330,21 +330,21 @@
         }
       },
       "block_order": [
-        "review_JyCygy",
-        "review_6khBaM",
-        "review_9DcDcQ"
+        "review_DX6Bzi",
+        "review_XjD4k8",
+        "review_q37VGW"
       ],
       "name": "Avis clients Avisi",
       "settings": {
-        "eyebrow": "",
-        "heading": "Un service qui fait la différence.",
+        "eyebrow": "חוות דעת של לקוחות",
+        "heading": "שירות שעושה את ההבדל.",
         "intro": "",
         "show_summary": true,
-        "summary_title": "Excellent",
+        "summary_title": "מצוין",
         "summary_rating": 5,
-        "summary_prefix": "Basé sur",
-        "summary_count": "77 avis",
-        "summary_source": "clients",
+        "summary_prefix": "מבוסס על",
+        "summary_count": "77 ביקורות",
+        "summary_source": "לקוחות",
         "section_bg": "#FFFFFF",
         "card_bg": "#F9FAFB",
         "accent": "#0066FF",
@@ -359,13 +359,13 @@
         "heading_width": 820,
         "card_height": 280,
         "card_padding": 28,
-        "radius": 18,
-        "summary_radius": 18,
+        "radius": 22,
+        "summary_radius": 16,
         "border_width": 1,
         "shadow_opacity": 0,
         "eyebrow_size": 12,
         "heading_desktop": 46,
-        "heading_mobile": 28,
+        "heading_mobile": 34,
         "heading_weight": "700",
         "intro_size": 16,
         "star_size": 16,
@@ -377,19 +377,19 @@
         "avatar_size": 46,
         "avatar_font": 16,
         "padding_top": 80,
-        "padding_bottom": 80,
-        "header_gap": 48,
-        "padding_top_mobile": 56,
-        "padding_bottom_mobile": 56,
+        "padding_bottom": 32,
+        "header_gap": 32,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28,
         "header_gap_mobile": 32,
         "mobile_width": 88,
         "mobile_gap": 14,
         "card_height_mobile": 280,
         "card_padding_mobile": 24,
-        "slider_label": "Avis de nos clients",
-        "prev_label": "Avis précédent",
-        "next_label": "Avis suivant",
-        "verified_text": "Avis vérifié"
+        "slider_label": "חוות הדעת של הלקוחות שלנו",
+        "prev_label": "הביקורת הקודמת",
+        "next_label": "הביקורת הבאה",
+        "verified_text": "ביקורת מאומתת"
       }
     },
     "faq_UKMdi7": {
@@ -451,7 +451,7 @@
     "trustlogo_6PVqJq",
     "iconsfeature_icPqjF",
     "doublereviwsection_YWQRhB",
-    "avisclients_NzAqTJ",
+    "avisclients_KnPTMp",
     "faq_UKMdi7"
   ]
 }
