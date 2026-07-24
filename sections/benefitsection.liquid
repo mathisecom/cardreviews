@@ -1,0 +1,360 @@
+{{ 'section-benefits.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --benefits-bg: {{ section.settings.section_bg }};
+    --benefits-card-bg: {{ section.settings.card_bg }};
+    --benefits-icon-bg: {{ section.settings.icon_bg }};
+    --benefits-icon-color: {{ section.settings.icon_color }};
+    --benefits-title-color: {{ section.settings.title_color }};
+    --benefits-text-color: {{ section.settings.text_color }};
+    --benefits-heading-color: {{ section.settings.heading_color }};
+    --benefits-accent-color: {{ section.settings.accent_color }};
+    --benefits-columns: {{ section.settings.columns_desktop }};
+    --benefits-radius: {{ section.settings.card_radius }}px;
+    --benefits-gap: {{ section.settings.card_gap }}px;
+  }
+{%- endstyle -%}
+
+<div class="benefits-section" dir="{{ section.settings.text_direction }}" style="background-color: var(--benefits-bg); padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+  <div class="benefits-section__container page-width">
+
+    {%- if section.settings.heading != blank or section.settings.subheading != blank -%}
+      <div class="benefits-section__header">
+        {%- if section.settings.subheading != blank -%}
+          <p class="benefits-section__eyebrow">{{ section.settings.subheading }}</p>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2 class="benefits-section__heading">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <div
+      class="benefits-section__track{% if section.settings.enable_mobile_slider %} benefits-section__track--slider{% endif %}"
+      id="benefits-track-{{ section.id }}"
+    >
+      {%- for block in section.blocks -%}
+        {%- assign icon_key = block.settings.icon -%}
+        <div class="benefits-card" {{ block.shopify_attributes }}>
+          <div class="benefits-card__icon-wrap">
+            {%- if block.settings.custom_icon != blank -%}
+              <img
+                src="{{ block.settings.custom_icon | image_url: width: 96 }}"
+                alt="{{ block.settings.title | escape }}"
+                loading="lazy"
+                width="28"
+                height="28"
+                class="benefits-card__icon-img"
+              >
+            {%- else -%}
+              <span class="benefits-card__icon">
+                {%- case icon_key -%}
+                  {%- when 'rocket' -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+                  {%- when 'scan' -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="11" r="3"/><path d="M8 17c1-1.5 2.5-2 4-2s3 .5 4 2"/></svg>
+                  {%- when 'trending-up' -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                  {%- when 'bar-chart' -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+                  {%- when 'star' -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  {%- when 'shield' -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  {%- when 'heart' -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+                  {%- when 'check' -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                {%- endcase -%}
+              </span>
+            {%- endif -%}
+          </div>
+
+          {%- if block.settings.title != blank -%}
+            <h3 class="benefits-card__title">{{ block.settings.title }}</h3>
+          {%- endif -%}
+
+          {%- if block.settings.text != blank -%}
+            <div class="benefits-card__text">{{ block.settings.text }}</div>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.enable_mobile_slider -%}
+      <div class="benefits-section__dots" id="benefits-dots-{{ section.id }}" aria-hidden="true"></div>
+    {%- endif -%}
+
+  </div>
+</div>
+
+{%- if section.settings.enable_mobile_slider -%}
+<script>
+  (function () {
+    var track = document.getElementById('benefits-track-{{ section.id }}');
+    var dotsWrap = document.getElementById('benefits-dots-{{ section.id }}');
+    if (!track || !dotsWrap) return;
+
+    function build() {
+      dotsWrap.innerHTML = '';
+      var cards = track.querySelectorAll('.benefits-card');
+      cards.forEach(function (_, i) {
+        var dot = document.createElement('button');
+        dot.className = 'benefits-section__dot';
+        dot.type = 'button';
+        dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+        dot.addEventListener('click', function () {
+          var card = cards[i];
+          track.scrollTo({ left: card.offsetLeft - track.offsetLeft, behavior: 'smooth' });
+        });
+        dotsWrap.appendChild(dot);
+      });
+      updateActive();
+    }
+
+    function updateActive() {
+      var dots = dotsWrap.querySelectorAll('.benefits-section__dot');
+      var cards = track.querySelectorAll('.benefits-card');
+      var scrollLeft = track.scrollLeft;
+      var closest = 0;
+      var min = Infinity;
+      cards.forEach(function (card, i) {
+        var dist = Math.abs((card.offsetLeft - track.offsetLeft) - scrollLeft);
+        if (dist < min) { min = dist; closest = i; }
+      });
+      dots.forEach(function (d, i) {
+        d.classList.toggle('is-active', i === closest);
+      });
+    }
+
+    var raf;
+    track.addEventListener('scroll', function () {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(updateActive);
+    });
+
+    build();
+    window.addEventListener('resize', updateActive);
+  })();
+</script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Benefits / USP Cards",
+  "tag": "section",
+  "class": "section-benefits-wrapper",
+  "settings": [
+    {
+      "type": "select",
+      "id": "text_direction",
+      "label": "Text direction",
+      "options": [
+        { "value": "rtl", "label": "RTL (Hebrew / Arabic)" },
+        { "value": "ltr", "label": "LTR" }
+      ],
+      "default": "rtl"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Eyebrow / subheading",
+      "default": "למה לבחור בנו"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "היתרונות שלנו"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "Columns (desktop)",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "card_gap",
+      "label": "Gap between cards (px)",
+      "min": 8,
+      "max": 48,
+      "step": 2,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "label": "Card corner radius (px)",
+      "min": 0,
+      "max": 32,
+      "step": 1,
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top (px)",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom (px)",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 60
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_mobile_slider",
+      "label": "Enable slider on mobile",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "section_bg",
+      "label": "Section background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_bg",
+      "label": "Card background",
+      "default": "#f4f5f7"
+    },
+    {
+      "type": "color",
+      "id": "icon_bg",
+      "label": "Icon box background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon color",
+      "default": "#c6127a"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#c6127a"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#0a1f44"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Card title color",
+      "default": "#0a1f44"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Card text color",
+      "default": "#5c6577"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "rocket", "label": "Rocket" },
+            { "value": "scan", "label": "Scan / Profile" },
+            { "value": "trending-up", "label": "Trending up" },
+            { "value": "bar-chart", "label": "Bar chart" },
+            { "value": "star", "label": "Star" },
+            { "value": "shield", "label": "Shield" },
+            { "value": "heart", "label": "Heart" },
+            { "value": "check", "label": "Check" }
+          ],
+          "default": "rocket"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_icon",
+          "label": "Custom icon (overrides icon above)"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "כותרת היתרון"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>תיאור קצר של היתרון, אפשר להדגיש <strong>מילים חשובות</strong> בטקסט.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Benefits / USP Cards",
+      "blocks": [
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "rocket",
+            "title": "ביקורות תוך 5 שניות",
+            "text": "<p><strong>הקלו על איסוף הביקורות</strong> באמצעות תגי NFC וקודי QR. הלקוחות שלכם משתפים את החוויה שלהם תוך שניות.</p>"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "scan",
+            "title": "שפרו את התדמית שלכם",
+            "text": "<p><strong>ענו במהירות</strong> וביעילות לביקורות עם האפליקציה שלנו ובעזרת ה-AI שלה, ושפרו את התדמית המקוונת שלכם ללא מאמץ.</p>"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "trending-up",
+            "title": "הגבירו את הנראות המקומית שלכם",
+            "text": "<p><strong>יותר ביקורות</strong> משמעותן נראות טובה יותר. הגדילו את הסיכויים שלכם <strong>להופיע בראש תוצאות גוגל</strong> ומשכו יותר לקוחות.</p>"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "bar-chart",
+            "title": "תוצאות גלויות",
+            "text": "<p><strong>עקבו</strong> אחרי איסוף הביקורות, הנראות שלכם בגוגל <strong>והביצועים</strong> שלכם ישירות מהאפליקציה, במחשב או בנייד.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
