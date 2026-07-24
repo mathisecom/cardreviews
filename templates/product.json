@@ -177,7 +177,7 @@
         "padding_top_mobile": 8,
         "padding_bottom_mobile": 32,
         "bg_color": "#ffffff",
-        "heading_color": "#8A94A6",
+        "heading_color": "#8a94a6",
         "heading_font_size": 13
       }
     },
@@ -238,11 +238,40 @@
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40,
         "bg_color": "#ffffff",
-        "icon_color": "#0A1F44",
-        "star_color": "#FBBC05",
-        "google_g_color": "#0A1F44",
+        "icon_color": "#0a1f44",
+        "star_color": "#fbbc05",
+        "google_g_color": "#0a1f44",
+        "text_color": "#5c6577",
+        "text_strong_color": "#0a1f44"
+      }
+    },
+    "doublereviwsection_YWQRhB": {
+      "type": "doublereviwsection",
+      "name": "Double Reviews Split",
+      "settings": {
+        "text_direction": "rtl",
+        "top_heading_text": "קבלו ביקורות תוך",
+        "top_heading_accent": "3 שניות בלבד!",
+        "content_heading_text": "הכפילו את כמות הביקורות שלכם בגוגל תוך",
+        "content_heading_accent": "90 יום",
+        "paragraph_1": "<p>אלו הנתונים הממוצעים של הלקוחות שלנו.</p>",
+        "paragraph_2": "<p>אתם נמצאים במגע עם הלקוחות שלכם <strong>כל יום</strong>, אל תפספסו את ההזדמנות לאסוף <strong>את הביקורת שלהם בגוגל!</strong></p>",
+        "image_position": "left",
+        "image_radius": 12,
+        "padding_top_desktop": 64,
+        "padding_bottom_desktop": 64,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 24,
+        "bg_color": "#ffffff",
+        "heading_color": "#0A1F44",
+        "accent_color": "#0066FF",
         "text_color": "#5C6577",
-        "text_strong_color": "#0A1F44"
+        "text_strong_color": "#0A1F44",
+        "top_heading_font_size_desktop": 32,
+        "top_heading_font_size_mobile": 22,
+        "content_heading_font_size_desktop": 32,
+        "content_heading_font_size_mobile": 24,
+        "text_font_size": 17
       }
     },
     "faq_UKMdi7": {
@@ -294,7 +323,7 @@
         "heading_gradient": "",
         "button_background": "",
         "button_text_color": "",
-        "accordion_background": "#F9FAFB",
+        "accordion_background": "#f9fafb",
         "accordion_text_color": "#111827"
       }
     }
@@ -303,6 +332,7 @@
     "main",
     "trustlogo_6PVqJq",
     "iconsfeature_icPqjF",
+    "doublereviwsection_YWQRhB",
     "faq_UKMdi7"
   ]
 }
