@@ -10,6 +10,9 @@
     --dbl-content-heading-size: {{ section.settings.content_heading_font_size_desktop }}px;
     --dbl-content-heading-size-mobile: {{ section.settings.content_heading_font_size_mobile }}px;
     --dbl-text-size: {{ section.settings.text_font_size }}px;
+    --dbl-button-bg: {{ section.settings.button_bg }};
+    --dbl-button-text: {{ section.settings.button_text_color }};
+    --dbl-button-size: {{ section.settings.button_font_size }}px;
   }
 
   #shopify-section-{{ section.id }} .dbl {
@@ -111,6 +114,36 @@
     margin: 0;
   }
 
+  #shopify-section-{{ section.id }} .dbl__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--dbl-button-bg);
+    color: var(--dbl-button-text);
+    font-weight: 700;
+    font-size: var(--dbl-button-size);
+    padding: 16px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 28px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  #shopify-section-{{ section.id }} .dbl__button:hover {
+    transform: translateY(-2px);
+    opacity: 0.92;
+  }
+
+  #shopify-section-{{ section.id }} .dbl__button svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+
+  #shopify-section-{{ section.id }} .dbl__button:dir(rtl) svg {
+    transform: scaleX(-1);
+  }
+
   @media screen and (max-width: 989px) {
     #shopify-section-{{ section.id }} .dbl__grid {
       grid-template-columns: 1fr;
@@ -124,6 +157,10 @@
 
     #shopify-section-{{ section.id }} .dbl__content {
       text-align: center;
+    }
+
+    #shopify-section-{{ section.id }} .dbl__button {
+      justify-content: center;
     }
   }
 
@@ -187,6 +224,13 @@
         {%- if section.settings.paragraph_2 != blank -%}
           <div class="dbl__text">{{ section.settings.paragraph_2 }}</div>
         {%- endif -%}
+
+        {%- if section.settings.button_label != blank -%}
+          <a href="{{ section.settings.button_link | default: '#' }}" class="dbl__button">
+            {{ section.settings.button_label }}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        {%- endif -%}
       </div>
     </div>
 
@@ -248,6 +292,17 @@
       "id": "paragraph_2",
       "label": "Paragraph 2",
       "default": "<p>אתם נמצאים במגע עם הלקוחות שלכם <strong>כל יום</strong>, אל תפספסו את ההזדמנות לאסוף <strong>את הביקורת שלהם בגוגל!</strong></p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "גלו את המוצרים שלנו"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
     },
     {
       "type": "header",
@@ -352,6 +407,18 @@
       "default": "#0A1F44"
     },
     {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Button background",
+      "default": "#0066FF"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text",
+      "default": "#ffffff"
+    },
+    {
       "type": "header",
       "content": "Typography"
     },
@@ -399,6 +466,15 @@
       "max": 24,
       "step": 1,
       "default": 17
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "label": "Button font size (px)",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "default": 16
     }
   ],
   "presets": [

@@ -196,6 +196,35 @@
         "text_color": "#5c6577"
       }
     },
+    "doublereviwsection_9Ybpt6": {
+      "type": "doublereviwsection",
+      "name": "Double Reviews Split",
+      "settings": {
+        "text_direction": "rtl",
+        "top_heading_text": "קבלו ביקורות תוך",
+        "top_heading_accent": "3 שניות בלבד!",
+        "content_heading_text": "הכפילו את כמות הביקורות שלכם בגוגל תוך",
+        "content_heading_accent": "90 יום",
+        "paragraph_1": "<p>אלו הנתונים הממוצעים של הלקוחות שלנו.</p>",
+        "paragraph_2": "<p>אתם נמצאים במגע עם הלקוחות שלכם <strong>כל יום</strong>, אל תפספסו את ההזדמנות לאסוף <strong>את הביקורת שלהם בגוגל!</strong></p>",
+        "image_position": "left",
+        "image_radius": 12,
+        "padding_top_desktop": 64,
+        "padding_bottom_desktop": 64,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "bg_color": "#ffffff",
+        "heading_color": "#0A1F44",
+        "accent_color": "#0066FF",
+        "text_color": "#5C6577",
+        "text_strong_color": "#0A1F44",
+        "top_heading_font_size_desktop": 32,
+        "top_heading_font_size_mobile": 22,
+        "content_heading_font_size_desktop": 32,
+        "content_heading_font_size_mobile": 24,
+        "text_font_size": 17
+      }
+    },
     "featured_collection_yezJaT": {
       "type": "featured-collection",
       "name": "Featured collection",
@@ -355,6 +384,7 @@
     "herobannernfc_PGHQNq",
     "trustlogo_ymtPjm",
     "benefitsection_VtJMGb",
+    "doublereviwsection_9Ybpt6",
     "featured_collection_yezJaT",
     "whychoose_zV64bJ",
     "faq"
