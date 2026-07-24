@@ -196,6 +196,100 @@
         "text_color": "#5c6577"
       }
     },
+    "commentcafonctionne_x3KEFx": {
+      "type": "commentcafonctionne",
+      "blocks": {
+        "step_Kg6LGY": {
+          "type": "step",
+          "settings": {
+            "number": "1",
+            "title": "הזמינו את השלט שלכם",
+            "text": "בחרו את השלט המתאים לצרכים שלכם והזינו את הפרטים הנדרשים."
+          }
+        },
+        "step_j6H4jg": {
+          "type": "step",
+          "settings": {
+            "number": "2",
+            "title": "קבלו אותו תוך 48–72 שעות",
+            "text": "משלוח מהיר ומעקב אחר ההזמנה עד להגעתה אליכם."
+          }
+        },
+        "step_UzHY98": {
+          "type": "step",
+          "settings": {
+            "number": "3",
+            "title": "אספו ביקורות",
+            "text": "הלקוחות שלכם סורקים את השלט ומשאירים ביקורת בתוך כמה שניות."
+          }
+        }
+      },
+      "block_order": [
+        "step_Kg6LGY",
+        "step_j6H4jg",
+        "step_UzHY98"
+      ],
+      "name": "Comment ça marche Avisi",
+      "settings": {
+        "heading": "איך זה עובד?",
+        "subtitle": "3 שלבים פשוטים לאיסוף יותר ביקורות",
+        "background_color": "#FFFFFF",
+        "card_background": "#FFFFFF",
+        "accent_color": "#0066FF",
+        "heading_color": "#10131A",
+        "text_color": "#303641",
+        "muted_color": "#697181",
+        "border_color": "#E5EAF2",
+        "max_width": 1320,
+        "header_max_width": 700,
+        "desktop_slides_visible": 3,
+        "tablet_slides_visible": 2,
+        "mobile_slide_width": 90,
+        "card_gap": 24,
+        "mobile_gap": 14,
+        "card_min_height": 230,
+        "card_min_height_mobile": 250,
+        "card_padding": 28,
+        "card_padding_mobile": 24,
+        "card_radius": 20,
+        "border_width": 0,
+        "number_size": 54,
+        "number_radius": 14,
+        "number_font_size": 22,
+        "number_bottom_spacing": 24,
+        "number_shadow_opacity": 0,
+        "heading_size_desktop": 34,
+        "heading_size_mobile": 30,
+        "heading_weight": "700",
+        "subtitle_size": 16,
+        "subtitle_size_mobile": 15,
+        "step_title_size": 18,
+        "step_title_size_mobile": 18,
+        "step_title_weight": "700",
+        "step_text_size": 15,
+        "step_text_size_mobile": 15,
+        "step_text_line_height": 155,
+        "text_max_width": 340,
+        "shadow_y": 0,
+        "shadow_blur": 0,
+        "shadow_opacity": 0,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "header_bottom_spacing": 44,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 12,
+        "header_bottom_spacing_mobile": 32,
+        "controls_top_spacing": 20,
+        "controls_top_spacing_mobile": 16,
+        "show_controls": false,
+        "autoplay": true,
+        "autoplay_delay": 4,
+        "slider_accessibility_label": "שלבי התהליך",
+        "previous_label": "השלב הקודם",
+        "next_label": "השלב הבא",
+        "pagination_label": "ניווט בין שלבי התהליך"
+      }
+    },
     "doublereviwsection_9Ybpt6": {
       "type": "doublereviwsection",
       "name": "Double Reviews Split",
@@ -215,7 +309,7 @@
         "padding_bottom_desktop": 64,
         "padding_top_mobile": 24,
         "padding_bottom_mobile": 24,
-        "bg_color": "#F9FAFB",
+        "bg_color": "#f9fafb",
         "heading_color": "#0a1f44",
         "accent_color": "#0066ff",
         "text_color": "#5c6577",
@@ -287,11 +381,11 @@
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40,
         "bg_color": "#ffffff",
-        "icon_color": "#0A1F44",
-        "star_color": "#FBBC05",
-        "google_g_color": "#0A1F44",
-        "text_color": "#5C6577",
-        "text_strong_color": "#0A1F44"
+        "icon_color": "#0a1f44",
+        "star_color": "#fbbc05",
+        "google_g_color": "#0a1f44",
+        "text_color": "#5c6577",
+        "text_strong_color": "#0a1f44"
       }
     },
     "featured_collection_yezJaT": {
@@ -407,8 +501,8 @@
             "date": "04/09/2025",
             "verified": false,
             "initial": "S",
-            "avatar_bg": "#0066FF",
-            "avatar_color": "#FFFFFF"
+            "avatar_bg": "#0066ff",
+            "avatar_color": "#ffffff"
           }
         },
         "review_fJPcwB": {
@@ -420,8 +514,8 @@
             "date": "02/09/2025",
             "verified": false,
             "initial": "B",
-            "avatar_bg": "#0066FF",
-            "avatar_color": "#FFFFFF"
+            "avatar_bg": "#0066ff",
+            "avatar_color": "#ffffff"
           }
         },
         "review_3VYrxA": {
@@ -433,8 +527,8 @@
             "date": "02/09/2025",
             "verified": false,
             "initial": "C",
-            "avatar_bg": "#0066FF",
-            "avatar_color": "#FFFFFF"
+            "avatar_bg": "#0066ff",
+            "avatar_color": "#ffffff"
           }
         }
       },
@@ -454,14 +548,14 @@
         "summary_prefix": "מבוסס על",
         "summary_count": "77 ביקורות",
         "summary_source": "לקוחות",
-        "section_bg": "#FFFFFF",
-        "card_bg": "#F9FAFB",
-        "accent": "#0066FF",
+        "section_bg": "#ffffff",
+        "card_bg": "#f9fafb",
+        "accent": "#0066ff",
         "title_color": "#101218",
-        "text_color": "#363A44",
-        "muted_color": "#747A89",
-        "border_color": "#E5EAF2",
-        "star_inactive": "#D8DEE8",
+        "text_color": "#363a44",
+        "muted_color": "#747a89",
+        "border_color": "#e5eaf2",
+        "star_inactive": "#d8dee8",
         "max_width": 1320,
         "columns": 3,
         "gap": 20,
@@ -559,6 +653,7 @@
     "herobannernfc_PGHQNq",
     "trustlogo_ymtPjm",
     "benefitsection_VtJMGb",
+    "commentcafonctionne_x3KEFx",
     "doublereviwsection_9Ybpt6",
     "iconsfeature_myNHRE",
     "featured_collection_yezJaT",
