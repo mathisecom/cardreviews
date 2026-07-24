@@ -230,6 +230,70 @@
         "button_font_size": 16
       }
     },
+    "iconsfeature_myNHRE": {
+      "type": "iconsfeature",
+      "blocks": {
+        "item_FNEK73": {
+          "type": "item",
+          "settings": {
+            "icon_type": "google_badge",
+            "icon_alt": "",
+            "text": "<p><strong>היו במקום הראשון בגוגל!</strong> ושמרו על היתרון</p>"
+          }
+        },
+        "item_KLQGBg": {
+          "type": "item",
+          "settings": {
+            "icon_type": "bolt",
+            "icon_alt": "",
+            "text": "<p><strong>הפניה מיידית</strong> לביקורות שלכם בגוגל</p>"
+          }
+        },
+        "item_bPwAQD": {
+          "type": "item",
+          "settings": {
+            "icon_type": "sparkles",
+            "icon_alt": "",
+            "text": "<p><strong>הלקוחות אוהבים את זה!</strong> פשוט וכיפי</p>"
+          }
+        },
+        "item_dqVkeP": {
+          "type": "item",
+          "settings": {
+            "icon_type": "handshake",
+            "icon_alt": "",
+            "text": "<p>תנו ל<strong>לקוחות האמיתיים</strong> שלכם לדבר בשמכם!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_FNEK73",
+        "item_KLQGBg",
+        "item_bPwAQD",
+        "item_dqVkeP"
+      ],
+      "name": "Icon Feature Row",
+      "settings": {
+        "text_direction": "rtl",
+        "heading": "",
+        "heading_font_size": 28,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "item_gap": 32,
+        "icon_size": 48,
+        "text_font_size": 15,
+        "padding_top_desktop": 64,
+        "padding_bottom_desktop": 64,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "bg_color": "#ffffff",
+        "icon_color": "#0A1F44",
+        "star_color": "#FBBC05",
+        "google_g_color": "#0A1F44",
+        "text_color": "#5C6577",
+        "text_strong_color": "#0A1F44"
+      }
+    },
     "featured_collection_yezJaT": {
       "type": "featured-collection",
       "name": "Featured collection",
@@ -496,6 +560,7 @@
     "trustlogo_ymtPjm",
     "benefitsection_VtJMGb",
     "doublereviwsection_9Ybpt6",
+    "iconsfeature_myNHRE",
     "featured_collection_yezJaT",
     "whychoose_zV64bJ",
     "avisclients_zkxwt3",
