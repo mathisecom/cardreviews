@@ -271,7 +271,7 @@
         "padding_bottom_desktop": 64,
         "padding_top_mobile": 24,
         "padding_bottom_mobile": 24,
-        "bg_color": "#F9FAFB",
+        "bg_color": "#f9fafb",
         "heading_color": "#0a1f44",
         "accent_color": "#0066ff",
         "text_color": "#5c6577",
@@ -350,9 +350,9 @@
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40,
         "bg_color": "#ffffff",
-        "heading_color": "#0A1F44",
-        "item_title_color": "#0A1F44",
-        "item_text_color": "#5C6577",
+        "heading_color": "#0a1f44",
+        "item_title_color": "#0a1f44",
+        "item_text_color": "#5c6577",
         "heading_font_size_desktop": 34,
         "heading_font_size_mobile": 26,
         "item_title_font_size": 17,
@@ -371,8 +371,8 @@
             "date": "04/09/2025",
             "verified": false,
             "initial": "S",
-            "avatar_bg": "#0066FF",
-            "avatar_color": "#FFFFFF"
+            "avatar_bg": "#0066ff",
+            "avatar_color": "#ffffff"
           }
         },
         "review_XjD4k8": {
@@ -384,8 +384,8 @@
             "date": "02/09/2025",
             "verified": false,
             "initial": "B",
-            "avatar_bg": "#0066FF",
-            "avatar_color": "#FFFFFF"
+            "avatar_bg": "#0066ff",
+            "avatar_color": "#ffffff"
           }
         },
         "review_q37VGW": {
@@ -397,8 +397,8 @@
             "date": "02/09/2025",
             "verified": false,
             "initial": "C",
-            "avatar_bg": "#0066FF",
-            "avatar_color": "#FFFFFF"
+            "avatar_bg": "#0066ff",
+            "avatar_color": "#ffffff"
           }
         }
       },
@@ -418,14 +418,14 @@
         "summary_prefix": "מבוסס על",
         "summary_count": "77 ביקורות",
         "summary_source": "לקוחות",
-        "section_bg": "#FFFFFF",
-        "card_bg": "#F9FAFB",
-        "accent": "#0066FF",
+        "section_bg": "#ffffff",
+        "card_bg": "#f9fafb",
+        "accent": "#0066ff",
         "title_color": "#101218",
-        "text_color": "#363A44",
-        "muted_color": "#747A89",
-        "border_color": "#E5EAF2",
-        "star_inactive": "#D8DEE8",
+        "text_color": "#363a44",
+        "muted_color": "#747a89",
+        "border_color": "#e5eaf2",
+        "star_inactive": "#d8dee8",
         "max_width": 1320,
         "columns": 3,
         "gap": 20,
@@ -499,7 +499,7 @@
       "settings": {
         "full_width": true,
         "subheading": "",
-        "title": "FAQ",
+        "title": "שאלות נפוצות",
         "content": "",
         "team_avatar_width": 160,
         "support_hours": "",
