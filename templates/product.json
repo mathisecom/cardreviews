@@ -115,31 +115,131 @@
         "input_text_color": ""
       }
     },
-    "related-products": {
-      "type": "related-products",
+    "trustlogo_6PVqJq": {
+      "type": "trustlogo",
+      "blocks": {
+        "logo_CjqUg8": {
+          "type": "logo",
+          "settings": {
+            "alt": "Krys",
+            "link": ""
+          }
+        },
+        "logo_ALYwiX": {
+          "type": "logo",
+          "settings": {
+            "alt": "Decathlon",
+            "link": ""
+          }
+        },
+        "logo_XeMQ8L": {
+          "type": "logo",
+          "settings": {
+            "alt": "Au Bureau",
+            "link": ""
+          }
+        },
+        "logo_VdNfUj": {
+          "type": "logo",
+          "settings": {
+            "alt": "Besson",
+            "link": ""
+          }
+        },
+        "logo_DXhe8T": {
+          "type": "logo",
+          "settings": {
+            "alt": "Atol",
+            "link": ""
+          }
+        },
+        "logo_rnricM": {
+          "type": "logo",
+          "settings": {
+            "alt": "McDonald's",
+            "link": ""
+          }
+        },
+        "logo_jHa3BR": {
+          "type": "logo",
+          "settings": {
+            "alt": "Orpi",
+            "link": ""
+          }
+        },
+        "logo_CFQ7L7": {
+          "type": "logo",
+          "settings": {
+            "alt": "Burger King",
+            "link": ""
+          }
+        },
+        "logo_fWXDpQ": {
+          "type": "logo",
+          "settings": {
+            "alt": "Franck Provost",
+            "link": ""
+          }
+        },
+        "logo_ybrG7M": {
+          "type": "logo",
+          "settings": {
+            "alt": "New School",
+            "link": ""
+          }
+        },
+        "logo_ytyVBd": {
+          "type": "logo",
+          "settings": {
+            "alt": "E.Leclerc",
+            "link": ""
+          }
+        },
+        "logo_CqXVNE": {
+          "type": "logo",
+          "settings": {
+            "alt": "Elec Depot",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_CjqUg8",
+        "logo_ALYwiX",
+        "logo_XeMQ8L",
+        "logo_VdNfUj",
+        "logo_DXhe8T",
+        "logo_rnricM",
+        "logo_jHa3BR",
+        "logo_CFQ7L7",
+        "logo_fWXDpQ",
+        "logo_ybrG7M",
+        "logo_ytyVBd",
+        "logo_CqXVNE"
+      ],
+      "name": "Trust Logo Marquee",
       "settings": {
-        "recommendations_count": 6,
-        "products": [],
-        "full_width": true,
-        "stack_products": true,
-        "show_progress_bar": false,
-        "products_per_row_mobile": "1",
-        "products_per_row_desktop": 3,
-        "subheading": "",
-        "title": "You may also like",
-        "content": "",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "product_card_background": "",
-        "product_card_text_color": ""
+        "heading": "הם כבר סומכים עלינו",
+        "scroll_speed": 25,
+        "reverse_direction": false,
+        "pause_on_hover": true,
+        "grayscale": true,
+        "fade_width": 80,
+        "logo_height": 40,
+        "logo_height_mobile": 28,
+        "logo_gap": 64,
+        "padding_top_desktop": 16,
+        "padding_bottom_desktop": 48,
+        "padding_top_mobile": 8,
+        "padding_bottom_mobile": 32,
+        "bg_color": "#ffffff",
+        "heading_color": "#8A94A6",
+        "heading_font_size": 13
       }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "trustlogo_6PVqJq"
   ]
 }
