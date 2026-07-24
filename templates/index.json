@@ -53,18 +53,140 @@
         "padding_bottom_desktop": 56,
         "padding_top_mobile": 32,
         "padding_bottom_mobile": 32,
-        "bg_color": "#F4F5F7",
-        "bg_pattern_color": "#E7E9ED",
-        "badge_bg": "#0066FF",
+        "bg_color": "#f4f5f7",
+        "bg_pattern_color": "#e7e9ed",
+        "badge_bg": "#0066ff",
         "badge_text_color": "#ffffff",
-        "heading_color": "#0A1F44",
-        "heading_accent_color": "#0066FF",
-        "subtext_color": "#5C6577",
-        "button_bg": "#0066FF",
+        "heading_color": "#0a1f44",
+        "heading_accent_color": "#0066ff",
+        "subtext_color": "#5c6577",
+        "button_bg": "#0066ff",
         "button_text_color": "#ffffff",
-        "divider_color": "#D8DCE3",
-        "stat_number_color": "#0A1F44",
-        "stat_label_color": "#6B7280"
+        "divider_color": "#d8dce3",
+        "stat_number_color": "#0a1f44",
+        "stat_label_color": "#6b7280"
+      }
+    },
+    "trustlogo_ymtPjm": {
+      "type": "trustlogo",
+      "blocks": {
+        "logo_6NNEkm": {
+          "type": "logo",
+          "settings": {
+            "alt": "Krys",
+            "link": ""
+          }
+        },
+        "logo_wcKxpH": {
+          "type": "logo",
+          "settings": {
+            "alt": "Decathlon",
+            "link": ""
+          }
+        },
+        "logo_xYnxwn": {
+          "type": "logo",
+          "settings": {
+            "alt": "Au Bureau",
+            "link": ""
+          }
+        },
+        "logo_tUjpbA": {
+          "type": "logo",
+          "settings": {
+            "alt": "Besson",
+            "link": ""
+          }
+        },
+        "logo_tFMk8P": {
+          "type": "logo",
+          "settings": {
+            "alt": "Atol",
+            "link": ""
+          }
+        },
+        "logo_9MFaAa": {
+          "type": "logo",
+          "settings": {
+            "alt": "McDonald's",
+            "link": ""
+          }
+        },
+        "logo_NBG7VL": {
+          "type": "logo",
+          "settings": {
+            "alt": "Orpi",
+            "link": ""
+          }
+        },
+        "logo_7yLDd4": {
+          "type": "logo",
+          "settings": {
+            "alt": "Burger King",
+            "link": ""
+          }
+        },
+        "logo_A4GE7D": {
+          "type": "logo",
+          "settings": {
+            "alt": "Franck Provost",
+            "link": ""
+          }
+        },
+        "logo_DNWD3p": {
+          "type": "logo",
+          "settings": {
+            "alt": "New School",
+            "link": ""
+          }
+        },
+        "logo_eqyAdx": {
+          "type": "logo",
+          "settings": {
+            "alt": "E.Leclerc",
+            "link": ""
+          }
+        },
+        "logo_wdFt8r": {
+          "type": "logo",
+          "settings": {
+            "alt": "Elec Depot",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_6NNEkm",
+        "logo_wcKxpH",
+        "logo_xYnxwn",
+        "logo_tUjpbA",
+        "logo_tFMk8P",
+        "logo_9MFaAa",
+        "logo_NBG7VL",
+        "logo_7yLDd4",
+        "logo_A4GE7D",
+        "logo_DNWD3p",
+        "logo_eqyAdx",
+        "logo_wdFt8r"
+      ],
+      "name": "Trust Logo Marquee",
+      "settings": {
+        "heading": "ILS COMMUNIQUENT DÉJÀ AVEC IZIKARD",
+        "scroll_speed": 25,
+        "reverse_direction": false,
+        "pause_on_hover": true,
+        "grayscale": true,
+        "fade_width": 80,
+        "logo_height": 40,
+        "logo_height_mobile": 28,
+        "logo_gap": 64,
+        "padding_top_desktop": 48,
+        "padding_bottom_desktop": 48,
+        "padding_top_mobile": 32,
+        "padding_bottom_mobile": 32,
+        "bg_color": "#ffffff",
+        "heading_color": "#8A94A6",
+        "heading_font_size": 13
       }
     },
     "benefitsection_VtJMGb": {
@@ -212,6 +334,7 @@
   },
   "order": [
     "herobannernfc_PGHQNq",
+    "trustlogo_ymtPjm",
     "benefitsection_VtJMGb",
     "featured_collection_yezJaT",
     "faq"
