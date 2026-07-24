@@ -233,13 +233,13 @@
       "settings": {
         "heading": "איך זה עובד?",
         "subtitle": "3 שלבים פשוטים לאיסוף יותר ביקורות",
-        "background_color": "#FFFFFF",
-        "card_background": "#FFFFFF",
-        "accent_color": "#0066FF",
-        "heading_color": "#10131A",
+        "background_color": "#ffffff",
+        "card_background": "#ffffff",
+        "accent_color": "#0066ff",
+        "heading_color": "#10131a",
         "text_color": "#303641",
         "muted_color": "#697181",
-        "border_color": "#E5EAF2",
+        "border_color": "#e5eaf2",
         "max_width": 1320,
         "header_max_width": 700,
         "desktop_slides_visible": 3,
@@ -647,6 +647,75 @@
         "accordion_background": "",
         "accordion_text_color": ""
       }
+    },
+    "ctafinal_aGztMy": {
+      "type": "ctafinal",
+      "blocks": {
+        "slide_6TFxw9": {
+          "type": "slide",
+          "settings": {
+            "heading": "מוכנים לחזק את הביקורות שלכם בגוגל?",
+            "text": "הצטרפו לעסקים שכבר בוחרים ב-Avisi כדי לחזק את המוניטין הדיגיטלי שלהם ולקבל יותר ביקורות.",
+            "button_text": "להזמנה עכשיו",
+            "button_link": "shopify://products/שלט-nfc-לביקורות-גוגל"
+          }
+        }
+      },
+      "block_order": [
+        "slide_6TFxw9"
+      ],
+      "name": "Bannière CTA Avisi",
+      "settings": {
+        "outer_background": "#FFFFFF",
+        "section_background": "#0066FF",
+        "accent_color": "#0066FF",
+        "text_color": "#F9FAFB",
+        "subtext_color": "#F9FAFB",
+        "button_background": "#F9FAFB",
+        "button_text_color": "#0066FF",
+        "button_border_color": "#F9FAFB",
+        "dot_color": "rgba(249,250,251,0.35)",
+        "dot_active_color": "#F9FAFB",
+        "max_width": 1800,
+        "content_max_width": 1100,
+        "section_radius": 0,
+        "min_height_desktop": 320,
+        "min_height_mobile": 280,
+        "content_padding_vertical": 48,
+        "content_padding_vertical_mobile": 40,
+        "heading_size_desktop": 32,
+        "heading_size_mobile": 24,
+        "heading_weight": "700",
+        "text_size_desktop": 18,
+        "text_size_mobile": 16,
+        "text_weight": "400",
+        "text_line_height": 155,
+        "text_max_width": 620,
+        "show_button_arrow": true,
+        "button_top_spacing": 28,
+        "button_top_spacing_mobile": 24,
+        "button_min_width": 230,
+        "button_mobile_width": 240,
+        "button_height": 48,
+        "button_height_mobile": 46,
+        "button_radius": 12,
+        "button_font_size": 16,
+        "button_font_size_mobile": 15,
+        "button_weight": "700",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "show_controls": true,
+        "autoplay": false,
+        "autoplay_delay": 5,
+        "controls_top_spacing": 18,
+        "controls_top_spacing_mobile": 14,
+        "slider_accessibility_label": "באנר קריאה לפעולה",
+        "previous_label": "השקופית הקודמת",
+        "next_label": "השקופית הבאה",
+        "pagination_label": "ניווט בין השקופיות"
+      }
     }
   },
   "order": [
@@ -659,6 +728,7 @@
     "featured_collection_yezJaT",
     "whychoose_zV64bJ",
     "avisclients_zkxwt3",
-    "faq"
+    "faq",
+    "ctafinal_aGztMy"
   ]
 }
