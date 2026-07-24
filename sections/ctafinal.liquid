@@ -1,0 +1,980 @@
+{% comment %}
+  Section Shopify : Bannière CTA / Slider Avisi
+  - Textes visibles par défaut en hébreu
+  - Responsive PC et mobile
+  - Slider si plusieurs slides sont ajoutés
+  - Tous les contenus et styles sont modifiables dans l'éditeur Shopify
+{% endcomment %}
+
+<section
+  id="avisi-cta-slider-{{ section.id }}"
+  class="avisi-cta-slider"
+  dir="rtl"
+  style="
+    --avisi-bg: {{ section.settings.section_background }};
+    --avisi-accent: {{ section.settings.accent_color }};
+    --avisi-text: {{ section.settings.text_color }};
+    --avisi-muted: {{ section.settings.subtext_color }};
+    --avisi-button-bg: {{ section.settings.button_background }};
+    --avisi-button-text: {{ section.settings.button_text_color }};
+    --avisi-button-border: {{ section.settings.button_border_color }};
+    --avisi-dot: {{ section.settings.dot_color }};
+    --avisi-dot-active: {{ section.settings.dot_active_color }};
+    --avisi-max-width: {{ section.settings.max_width }}px;
+    --avisi-radius: {{ section.settings.section_radius }}px;
+  "
+>
+  <div class="avisi-cta-slider__container">
+    <div class="avisi-cta-slider__viewport">
+      <div
+        class="avisi-cta-slider__track"
+        data-avisi-track
+        role="region"
+        aria-label="{{ section.settings.slider_accessibility_label | escape }}"
+        tabindex="0"
+      >
+        {% for block in section.blocks %}
+          <div
+            class="avisi-cta-slider__slide"
+            data-avisi-slide
+            {{ block.shopify_attributes }}
+          >
+            <div class="avisi-cta-slider__content">
+              {% if block.settings.heading != blank %}
+                <h2 class="avisi-cta-slider__title">{{ block.settings.heading | escape }}</h2>
+              {% endif %}
+
+              {% if block.settings.text != blank %}
+                <div class="avisi-cta-slider__text">{{ block.settings.text | escape | newline_to_br }}</div>
+              {% endif %}
+
+              {% if block.settings.button_text != blank %}
+                <div class="avisi-cta-slider__button-wrap">
+                  <a
+                    class="avisi-cta-slider__button"
+                    href="{{ block.settings.button_link | default: '#' }}"
+                    {% if block.settings.button_link == blank %}role="link" aria-disabled="true"{% endif %}
+                  >
+                    <span>{{ block.settings.button_text | escape }}</span>
+                    {% if section.settings.show_button_arrow %}
+                      <span class="avisi-cta-slider__button-arrow" aria-hidden="true">←</span>
+                    {% endif %}
+                  </a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    {% if section.blocks.size > 1 and section.settings.show_controls %}
+      <div class="avisi-cta-slider__controls">
+        <button
+          type="button"
+          class="avisi-cta-slider__arrow"
+          data-avisi-prev
+          aria-label="{{ section.settings.previous_label | escape }}"
+        >
+          <span aria-hidden="true">→</span>
+        </button>
+
+        <div class="avisi-cta-slider__dots" aria-label="{{ section.settings.pagination_label | escape }}">
+          {% for block in section.blocks %}
+            <button
+              type="button"
+              class="avisi-cta-slider__dot{% if forloop.first %} is-active{% endif %}"
+              data-avisi-dot="{{ forloop.index0 }}"
+              aria-label="הצגת שקופית {{ forloop.index }}"
+              {% if forloop.first %}aria-current="true"{% endif %}
+            ></button>
+          {% endfor %}
+        </div>
+
+        <button
+          type="button"
+          class="avisi-cta-slider__arrow"
+          data-avisi-next
+          aria-label="{{ section.settings.next_label | escape }}"
+        >
+          <span aria-hidden="true">←</span>
+        </button>
+      </div>
+    {% endif %}
+
+    {% if section.blocks.size == 0 and request.design_mode %}
+      <div class="avisi-cta-slider__empty">
+        הוסיפו שקופית בעורך התבנית.
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% style %}
+  #avisi-cta-slider-{{ section.id }} {
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.outer_background }};
+  }
+
+  #avisi-cta-slider-{{ section.id }} * {
+    box-sizing: border-box;
+  }
+
+  #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__container {
+    width: min(calc(100% - 40px), var(--avisi-max-width));
+    margin: 0 auto;
+  }
+
+  #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__viewport {
+    overflow: hidden;
+    border-radius: var(--avisi-radius);
+  }
+
+  #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__track {
+    direction: ltr;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__track::-webkit-scrollbar {
+    display: none;
+  }
+
+  #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__slide {
+    direction: rtl;
+    flex: 0 0 100%;
+    min-height: {{ section.settings.min_height_desktop }}px;
+    background: var(--avisi-bg);
+    color: var(--avisi-text);
+    scroll-snap-align: start;
+  }
+
+  #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__content {
+    width: min(calc(100% - 40px), {{ section.settings.content_max_width }}px);
+    min-height: {{ section.settings.min_height_desktop }}px;
+    margin: 0 auto;
+    padding: {{ section.settings.content_padding_vertical }}px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__title {
+    margin: 0;
+    color: var(--avisi-text);
+    font-size: clamp({{ section.settings.heading_size_mobile }}px, 3.2vw, {{ section.settings.heading_size_desktop }}px);
+    font-weight: {{ section.settings.heading_weight }};
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+  }
+
+  #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__text {
+    max-width: {{ section.settings.text_max_width }}px;
+    margin-top: 18px;
+    color: var(--avisi-muted);
+    font-size: {{ section.settings.text_size_desktop }}px;
+    font-weight: {{ section.settings.text_weight }};
+    line-height: {{ section.settings.text_line_height | divided_by: 100.0 }};
+  }
+
+  #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__button-wrap {
+    margin-top: {{ section.settings.button_top_spacing }}px;
+  }
+
+  #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: {{ section.settings.button_min_width }}px;
+    min-height: {{ section.settings.button_height }}px;
+    padding: 12px 24px;
+    background: var(--avisi-button-bg);
+    border: 1px solid var(--avisi-button-border);
+    border-radius: {{ section.settings.button_radius }}px;
+    color: var(--avisi-button-text);
+    font-size: {{ section.settings.button_font_size }}px;
+    font-weight: {{ section.settings.button_weight }};
+    line-height: 1.2;
+    text-decoration: none;
+    transition: transform .16s ease, opacity .16s ease;
+  }
+
+  #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__button:hover {
+    transform: translateY(-1px);
+  }
+
+  #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__button:active {
+    transform: scale(.98);
+  }
+
+  #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__button[aria-disabled="true"] {
+    pointer-events: none;
+    opacity: .8;
+  }
+
+  #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__button-arrow {
+    font-size: 1em;
+    line-height: 1;
+  }
+
+  #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__controls {
+    direction: ltr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: {{ section.settings.controls_top_spacing }}px;
+  }
+
+  #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__arrow {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    padding: 0;
+    background: transparent;
+    border: 1px solid rgba(0, 102, 255, 0.18);
+    border-radius: 999px;
+    color: var(--avisi-accent);
+    cursor: pointer;
+    font: inherit;
+    font-size: 20px;
+    transition: transform .16s ease, opacity .16s ease;
+  }
+
+  #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__arrow:hover {
+    transform: translateY(-1px);
+  }
+
+  #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__arrow:active {
+    transform: scale(.96);
+  }
+
+  #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__arrow:disabled {
+    cursor: not-allowed;
+    opacity: .35;
+  }
+
+  #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    background: var(--avisi-dot);
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: width .16s ease, background-color .16s ease;
+  }
+
+  #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__dot.is-active {
+    width: 24px;
+    background: var(--avisi-dot-active);
+  }
+
+  #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__empty {
+    padding: 32px;
+    border: 1px dashed rgba(0, 102, 255, .2);
+    border-radius: var(--avisi-radius);
+    color: #5f6b7a;
+    text-align: center;
+    background: #ffffff;
+  }
+
+  @media screen and (max-width: 749px) {
+    #avisi-cta-slider-{{ section.id }} {
+      padding: {{ section.settings.padding_top_mobile }}px 0 {{ section.settings.padding_bottom_mobile }}px;
+    }
+
+    #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__container {
+      width: min(calc(100% - 28px), var(--avisi-max-width));
+    }
+
+    #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__slide,
+    #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__content {
+      min-height: {{ section.settings.min_height_mobile }}px;
+    }
+
+    #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__content {
+      width: min(calc(100% - 28px), {{ section.settings.content_max_width }}px);
+      padding: {{ section.settings.content_padding_vertical_mobile }}px 0;
+    }
+
+    #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__text {
+      max-width: 100%;
+      margin-top: 14px;
+      font-size: {{ section.settings.text_size_mobile }}px;
+    }
+
+    #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__button-wrap {
+      margin-top: {{ section.settings.button_top_spacing_mobile }}px;
+      width: 100%;
+    }
+
+    #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__button {
+      width: min(100%, {{ section.settings.button_mobile_width }}px);
+      min-width: 0;
+      min-height: {{ section.settings.button_height_mobile }}px;
+      font-size: {{ section.settings.button_font_size_mobile }}px;
+    }
+
+    #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__controls {
+      margin-top: {{ section.settings.controls_top_spacing_mobile }}px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__track {
+      scroll-behavior: auto;
+    }
+
+    #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__button,
+    #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__arrow,
+    #avisi-cta-slider-{{ section.id }} .avisi-cta-slider__dot {
+      transition: none;
+    }
+  }
+{% endstyle %}
+
+<script>
+  (() => {
+    const section = document.getElementById('avisi-cta-slider-{{ section.id }}');
+    if (!section || section.dataset.avisiReady === 'true') return;
+
+    section.dataset.avisiReady = 'true';
+
+    const track = section.querySelector('[data-avisi-track]');
+    const slides = Array.from(section.querySelectorAll('[data-avisi-slide]'));
+    const prev = section.querySelector('[data-avisi-prev]');
+    const next = section.querySelector('[data-avisi-next]');
+    const dots = Array.from(section.querySelectorAll('[data-avisi-dot]'));
+
+    if (!track || slides.length < 2) return;
+
+    let activeIndex = 0;
+    let rafId;
+    let autoplayTimer = null;
+
+    const autoplayEnabled = {{ section.settings.autoplay | json }};
+    const autoplayDelay = {{ section.settings.autoplay_delay | times: 1000 }};
+
+    const offsetFor = (index) => {
+      const slide = slides[index];
+      return slide ? slide.offsetLeft - track.offsetLeft : 0;
+    };
+
+    const updateState = (index) => {
+      activeIndex = Math.max(0, Math.min(index, slides.length - 1));
+
+      dots.forEach((dot, dotIndex) => {
+        const isActive = dotIndex === activeIndex;
+        dot.classList.toggle('is-active', isActive);
+        if (isActive) {
+          dot.setAttribute('aria-current', 'true');
+        } else {
+          dot.removeAttribute('aria-current');
+        }
+      });
+
+      if (prev) prev.disabled = activeIndex === 0;
+      if (next) next.disabled = activeIndex === slides.length - 1;
+    };
+
+    const goTo = (index) => {
+      const target = Math.max(0, Math.min(index, slides.length - 1));
+      track.scrollTo({
+        left: offsetFor(target),
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+      });
+      updateState(target);
+    };
+
+    const syncFromScroll = () => {
+      cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        const current = track.scrollLeft;
+        let closest = 0;
+        let distance = Infinity;
+
+        slides.forEach((slide, index) => {
+          const d = Math.abs(offsetFor(index) - current);
+          if (d < distance) {
+            distance = d;
+            closest = index;
+          }
+        });
+
+        updateState(closest);
+      });
+    };
+
+    const stopAutoplay = () => {
+      if (autoplayTimer) {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+    };
+
+    const startAutoplay = () => {
+      if (!autoplayEnabled || slides.length < 2) return;
+      stopAutoplay();
+      autoplayTimer = setInterval(() => {
+        const nextIndex = activeIndex >= slides.length - 1 ? 0 : activeIndex + 1;
+        goTo(nextIndex);
+      }, autoplayDelay);
+    };
+
+    prev?.addEventListener('click', () => {
+      goTo(activeIndex - 1);
+      startAutoplay();
+    });
+
+    next?.addEventListener('click', () => {
+      goTo(activeIndex + 1);
+      startAutoplay();
+    });
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        goTo(Number(dot.dataset.avisiDot));
+        startAutoplay();
+      });
+    });
+
+    track.addEventListener('scroll', syncFromScroll, { passive: true });
+    track.addEventListener('mouseenter', stopAutoplay);
+    track.addEventListener('mouseleave', startAutoplay);
+    track.addEventListener('focusin', stopAutoplay);
+    track.addEventListener('focusout', startAutoplay);
+    track.addEventListener('touchstart', stopAutoplay, { passive: true });
+    track.addEventListener('touchend', startAutoplay, { passive: true });
+
+    window.addEventListener('resize', () => {
+      goTo(activeIndex);
+    });
+
+    updateState(0);
+    startAutoplay();
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Bannière CTA Avisi",
+  "tag": "section",
+  "class": "section-avisi-cta-slider",
+  "max_blocks": 8,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Couleurs"
+    },
+    {
+      "type": "color",
+      "id": "outer_background",
+      "label": "Fond extérieur",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Fond de la bannière",
+      "default": "#0066FF"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Couleur principale",
+      "default": "#0066FF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Titre",
+      "default": "#F9FAFB"
+    },
+    {
+      "type": "color",
+      "id": "subtext_color",
+      "label": "Texte secondaire",
+      "default": "#F9FAFB"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Fond du bouton",
+      "default": "#F9FAFB"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Texte du bouton",
+      "default": "#0066FF"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Bordure du bouton",
+      "default": "#F9FAFB"
+    },
+    {
+      "type": "color",
+      "id": "dot_color",
+      "label": "Points inactifs",
+      "default": "rgba(249,250,251,0.35)"
+    },
+    {
+      "type": "color",
+      "id": "dot_active_color",
+      "label": "Point actif",
+      "default": "#F9FAFB"
+    },
+    {
+      "type": "header",
+      "content": "Disposition"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Largeur maximale",
+      "min": 900,
+      "max": 1800,
+      "step": 20,
+      "unit": "px",
+      "default": 1600
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "label": "Largeur maximale du contenu",
+      "min": 420,
+      "max": 1100,
+      "step": 20,
+      "unit": "px",
+      "default": 720
+    },
+    {
+      "type": "range",
+      "id": "section_radius",
+      "label": "Arrondi de la bannière",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "min_height_desktop",
+      "label": "Hauteur minimale sur ordinateur",
+      "min": 220,
+      "max": 520,
+      "step": 10,
+      "unit": "px",
+      "default": 320
+    },
+    {
+      "type": "range",
+      "id": "min_height_mobile",
+      "label": "Hauteur minimale sur mobile",
+      "min": 220,
+      "max": 520,
+      "step": 10,
+      "unit": "px",
+      "default": 280
+    },
+    {
+      "type": "range",
+      "id": "content_padding_vertical",
+      "label": "Marge intérieure verticale ordinateur",
+      "min": 20,
+      "max": 140,
+      "step": 4,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "content_padding_vertical_mobile",
+      "label": "Marge intérieure verticale mobile",
+      "min": 20,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Typographie"
+    },
+    {
+      "type": "range",
+      "id": "heading_size_desktop",
+      "label": "Taille du titre sur ordinateur",
+      "min": 24,
+      "max": 68,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "label": "Taille du titre sur mobile",
+      "min": 22,
+      "max": 46,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "select",
+      "id": "heading_weight",
+      "label": "Graisse du titre",
+      "default": "700",
+      "options": [
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi-gras" },
+        { "value": "700", "label": "Gras" },
+        { "value": "800", "label": "Très gras" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "text_size_desktop",
+      "label": "Taille du texte sur ordinateur",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "text_size_mobile",
+      "label": "Taille du texte sur mobile",
+      "min": 14,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "text_weight",
+      "label": "Graisse du texte",
+      "default": "400",
+      "options": [
+        { "value": "400", "label": "Normal" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi-gras" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "text_line_height",
+      "label": "Interligne du texte",
+      "min": 120,
+      "max": 190,
+      "step": 5,
+      "unit": "%",
+      "default": 155
+    },
+    {
+      "type": "range",
+      "id": "text_max_width",
+      "label": "Largeur maximale du texte",
+      "min": 280,
+      "max": 820,
+      "step": 20,
+      "unit": "px",
+      "default": 620
+    },
+    {
+      "type": "header",
+      "content": "Bouton"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button_arrow",
+      "label": "Afficher une flèche dans le bouton",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "button_top_spacing",
+      "label": "Espace au-dessus du bouton ordinateur",
+      "min": 8,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "button_top_spacing_mobile",
+      "label": "Espace au-dessus du bouton mobile",
+      "min": 8,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "button_min_width",
+      "label": "Largeur minimale du bouton ordinateur",
+      "min": 140,
+      "max": 360,
+      "step": 10,
+      "unit": "px",
+      "default": 230
+    },
+    {
+      "type": "range",
+      "id": "button_mobile_width",
+      "label": "Largeur du bouton sur mobile",
+      "min": 180,
+      "max": 360,
+      "step": 10,
+      "unit": "px",
+      "default": 240
+    },
+    {
+      "type": "range",
+      "id": "button_height",
+      "label": "Hauteur du bouton ordinateur",
+      "min": 40,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "button_height_mobile",
+      "label": "Hauteur du bouton mobile",
+      "min": 40,
+      "max": 68,
+      "step": 2,
+      "unit": "px",
+      "default": 46
+    },
+    {
+      "type": "range",
+      "id": "button_radius",
+      "label": "Arrondi du bouton",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "label": "Taille du texte du bouton ordinateur",
+      "min": 13,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "button_font_size_mobile",
+      "label": "Taille du texte du bouton mobile",
+      "min": 13,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "select",
+      "id": "button_weight",
+      "label": "Graisse du bouton",
+      "default": "700",
+      "options": [
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi-gras" },
+        { "value": "700", "label": "Gras" },
+        { "value": "800", "label": "Très gras" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Espacements extérieurs"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Marge haute ordinateur",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Marge basse ordinateur",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Marge haute mobile",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Marge basse mobile",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Slider"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_controls",
+      "label": "Afficher les contrôles du slider",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Lecture automatique",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_delay",
+      "label": "Délai de lecture automatique",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "unit": "s",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "controls_top_spacing",
+      "label": "Espace au-dessus des contrôles ordinateur",
+      "min": 8,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "controls_top_spacing_mobile",
+      "label": "Espace au-dessus des contrôles mobile",
+      "min": 8,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "text",
+      "id": "slider_accessibility_label",
+      "label": "Libellé accessible du slider",
+      "default": "באנר קריאה לפעולה"
+    },
+    {
+      "type": "text",
+      "id": "previous_label",
+      "label": "Bouton précédent",
+      "default": "השקופית הקודמת"
+    },
+    {
+      "type": "text",
+      "id": "next_label",
+      "label": "Bouton suivant",
+      "default": "השקופית הבאה"
+    },
+    {
+      "type": "text",
+      "id": "pagination_label",
+      "label": "Libellé de la pagination",
+      "default": "ניווט בין השקופיות"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide CTA",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Titre visible",
+          "default": "מוכנים לחזק את הביקורות שלכם בגוגל?"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Texte visible",
+          "default": "הצטרפו לעסקים שכבר בוחרים ב-Avisi כדי לחזק את המוניטין הדיגיטלי שלהם ולקבל יותר ביקורות."
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Texte du bouton visible",
+          "default": "להזמנה עכשיו"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Lien du bouton"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bannière CTA Avisi",
+      "blocks": [
+        {
+          "type": "slide",
+          "settings": {
+            "heading": "מוכנים לחזק את הביקורות שלכם בגוגל?",
+            "text": "הצטרפו לעסקים שכבר בוחרים ב-Avisi כדי לחזק את המוניטין הדיגיטלי שלהם ולקבל יותר ביקורות.",
+            "button_text": "להזמנה עכשיו"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
