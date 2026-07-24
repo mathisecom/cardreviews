@@ -118,48 +118,6 @@
     "trustlogo_6PVqJq": {
       "type": "trustlogo",
       "blocks": {
-        "logo_CjqUg8": {
-          "type": "logo",
-          "settings": {
-            "alt": "Krys",
-            "link": ""
-          }
-        },
-        "logo_ALYwiX": {
-          "type": "logo",
-          "settings": {
-            "alt": "Decathlon",
-            "link": ""
-          }
-        },
-        "logo_XeMQ8L": {
-          "type": "logo",
-          "settings": {
-            "alt": "Au Bureau",
-            "link": ""
-          }
-        },
-        "logo_VdNfUj": {
-          "type": "logo",
-          "settings": {
-            "alt": "Besson",
-            "link": ""
-          }
-        },
-        "logo_DXhe8T": {
-          "type": "logo",
-          "settings": {
-            "alt": "Atol",
-            "link": ""
-          }
-        },
-        "logo_rnricM": {
-          "type": "logo",
-          "settings": {
-            "alt": "McDonald's",
-            "link": ""
-          }
-        },
         "logo_jHa3BR": {
           "type": "logo",
           "settings": {
@@ -194,28 +152,14 @@
             "alt": "E.Leclerc",
             "link": ""
           }
-        },
-        "logo_CqXVNE": {
-          "type": "logo",
-          "settings": {
-            "alt": "Elec Depot",
-            "link": ""
-          }
         }
       },
       "block_order": [
-        "logo_CjqUg8",
-        "logo_ALYwiX",
-        "logo_XeMQ8L",
-        "logo_VdNfUj",
-        "logo_DXhe8T",
-        "logo_rnricM",
         "logo_jHa3BR",
         "logo_CFQ7L7",
         "logo_fWXDpQ",
         "logo_ybrG7M",
-        "logo_ytyVBd",
-        "logo_CqXVNE"
+        "logo_ytyVBd"
       ],
       "name": "Trust Logo Marquee",
       "settings": {
@@ -236,10 +180,75 @@
         "heading_color": "#8A94A6",
         "heading_font_size": 13
       }
+    },
+    "iconsfeature_icPqjF": {
+      "type": "iconsfeature",
+      "blocks": {
+        "item_Mifz7R": {
+          "type": "item",
+          "settings": {
+            "icon_type": "google_badge",
+            "icon_alt": "",
+            "text": "<p><strong>היו במקום הראשון בגוגל!</strong> ושמרו על היתרון</p>"
+          }
+        },
+        "item_EAbYMy": {
+          "type": "item",
+          "settings": {
+            "icon_type": "bolt",
+            "icon_alt": "",
+            "text": "<p><strong>הפניה מיידית</strong> לביקורות שלכם בגוגל</p>"
+          }
+        },
+        "item_GE49RV": {
+          "type": "item",
+          "settings": {
+            "icon_type": "sparkles",
+            "icon_alt": "",
+            "text": "<p><strong>הלקוחות אוהבים את זה!</strong> פשוט וכיפי</p>"
+          }
+        },
+        "item_6YhiRU": {
+          "type": "item",
+          "settings": {
+            "icon_type": "handshake",
+            "icon_alt": "",
+            "text": "<p>תנו ל<strong>לקוחות האמיתיים</strong> שלכם לדבר בשמכם!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_Mifz7R",
+        "item_EAbYMy",
+        "item_GE49RV",
+        "item_6YhiRU"
+      ],
+      "name": "Icon Feature Row",
+      "settings": {
+        "text_direction": "rtl",
+        "heading": "",
+        "heading_font_size": 28,
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "item_gap": 32,
+        "icon_size": 48,
+        "text_font_size": 15,
+        "padding_top_desktop": 64,
+        "padding_bottom_desktop": 64,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "bg_color": "#ffffff",
+        "icon_color": "#0A1F44",
+        "star_color": "#FBBC05",
+        "google_g_color": "#0A1F44",
+        "text_color": "#5C6577",
+        "text_strong_color": "#0A1F44"
+      }
     }
   },
   "order": [
     "main",
-    "trustlogo_6PVqJq"
+    "trustlogo_6PVqJq",
+    "iconsfeature_icPqjF"
   ]
 }
