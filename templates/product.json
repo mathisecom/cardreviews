@@ -271,7 +271,7 @@
         "padding_bottom_desktop": 64,
         "padding_top_mobile": 24,
         "padding_bottom_mobile": 24,
-        "bg_color": "#ffffff",
+        "bg_color": "#F9FAFB",
         "heading_color": "#0a1f44",
         "accent_color": "#0066ff",
         "text_color": "#5c6577",
@@ -284,6 +284,79 @@
         "content_heading_font_size_mobile": 24,
         "text_font_size": 17,
         "button_font_size": 16
+      }
+    },
+    "whychoose_baqrgF": {
+      "type": "whychoose",
+      "blocks": {
+        "feature_NQ4hRD": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "check",
+            "icon_text": "IL",
+            "icon_bg": "#dcfce7",
+            "icon_color": "#16a34a",
+            "title": "יותר ביקורות בגוגל",
+            "text": "הכפילו פי 5 את מספר הביקורות בעמוד העסק שלכם בגוגל בעזרת שלטי ה-NFC שלנו."
+          }
+        },
+        "feature_hYA3DW": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "bolt",
+            "icon_text": "IL",
+            "icon_bg": "#dbeafe",
+            "icon_color": "#0066ff",
+            "title": "התקנה מיידית",
+            "text": "הדביקו את השלט וזהו! לא נדרשת שום הגדרה טכנית."
+          }
+        },
+        "feature_T8baP3": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "clock",
+            "icon_text": "IL",
+            "icon_bg": "#ede9fe",
+            "icon_color": "#7c3aed",
+            "title": "שימוש לכל החיים",
+            "text": "ללא מנוי, ללא עלויות נסתרות. לאחר הרכישה, השלט שלכם לתמיד."
+          }
+        },
+        "feature_hHR3qr": {
+          "type": "feature",
+          "settings": {
+            "icon_type": "text",
+            "icon_text": "IL",
+            "icon_bg": "#fef9c3",
+            "icon_color": "#854d0e",
+            "title": "מיוצר בישראל",
+            "text": "איכות פרימיום, ייצור מקומי ומשלוח מהיר מובטח."
+          }
+        }
+      },
+      "block_order": [
+        "feature_NQ4hRD",
+        "feature_hYA3DW",
+        "feature_T8baP3",
+        "feature_hHR3qr"
+      ],
+      "name": "Why Choose Us",
+      "settings": {
+        "text_direction": "rtl",
+        "heading": "?למה לבחור ב-Avisi",
+        "image_position": "right",
+        "padding_top_desktop": 80,
+        "padding_bottom_desktop": 80,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "bg_color": "#ffffff",
+        "heading_color": "#0A1F44",
+        "item_title_color": "#0A1F44",
+        "item_text_color": "#5C6577",
+        "heading_font_size_desktop": 34,
+        "heading_font_size_mobile": 26,
+        "item_title_font_size": 17,
+        "item_text_font_size": 15
       }
     },
     "avisclients_KnPTMp": {
@@ -451,6 +524,7 @@
     "trustlogo_6PVqJq",
     "iconsfeature_icPqjF",
     "doublereviwsection_YWQRhB",
+    "whychoose_baqrgF",
     "avisclients_KnPTMp",
     "faq_UKMdi7"
   ]
