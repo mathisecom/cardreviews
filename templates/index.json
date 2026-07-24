@@ -104,55 +104,6 @@
             "alt": "Atol",
             "link": ""
           }
-        },
-        "logo_9MFaAa": {
-          "type": "logo",
-          "settings": {
-            "alt": "McDonald's",
-            "link": ""
-          }
-        },
-        "logo_NBG7VL": {
-          "type": "logo",
-          "settings": {
-            "alt": "Orpi",
-            "link": ""
-          }
-        },
-        "logo_7yLDd4": {
-          "type": "logo",
-          "settings": {
-            "alt": "Burger King",
-            "link": ""
-          }
-        },
-        "logo_A4GE7D": {
-          "type": "logo",
-          "settings": {
-            "alt": "Franck Provost",
-            "link": ""
-          }
-        },
-        "logo_DNWD3p": {
-          "type": "logo",
-          "settings": {
-            "alt": "New School",
-            "link": ""
-          }
-        },
-        "logo_eqyAdx": {
-          "type": "logo",
-          "settings": {
-            "alt": "E.Leclerc",
-            "link": ""
-          }
-        },
-        "logo_wdFt8r": {
-          "type": "logo",
-          "settings": {
-            "alt": "Elec Depot",
-            "link": ""
-          }
         }
       },
       "block_order": [
@@ -160,18 +111,11 @@
         "logo_wcKxpH",
         "logo_xYnxwn",
         "logo_tUjpbA",
-        "logo_tFMk8P",
-        "logo_9MFaAa",
-        "logo_NBG7VL",
-        "logo_7yLDd4",
-        "logo_A4GE7D",
-        "logo_DNWD3p",
-        "logo_eqyAdx",
-        "logo_wdFt8r"
+        "logo_tFMk8P"
       ],
       "name": "Trust Logo Marquee",
       "settings": {
-        "heading": "ILS COMMUNIQUENT DÉJÀ AVEC IZIKARD",
+        "heading": "הם כבר סומכים עלינו",
         "scroll_speed": 25,
         "reverse_direction": false,
         "pause_on_hover": true,
@@ -179,12 +123,12 @@
         "fade_width": 80,
         "logo_height": 40,
         "logo_height_mobile": 28,
-        "logo_gap": 64,
+        "logo_gap": 48,
         "padding_top_desktop": 48,
         "padding_bottom_desktop": 48,
         "padding_top_mobile": 32,
         "padding_bottom_mobile": 32,
-        "bg_color": "#ffffff",
+        "bg_color": "#F9FAFB",
         "heading_color": "#8A94A6",
         "heading_font_size": 13
       }
