@@ -128,8 +128,8 @@
         "padding_bottom_desktop": 48,
         "padding_top_mobile": 32,
         "padding_bottom_mobile": 32,
-        "bg_color": "#F9FAFB",
-        "heading_color": "#8A94A6",
+        "bg_color": "#f9fafb",
+        "heading_color": "#8a94a6",
         "heading_font_size": 13
       }
     },
@@ -196,6 +196,34 @@
         "text_color": "#5c6577"
       }
     },
+    "featured_collection_yezJaT": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "collection": "",
+        "products": [
+          "שלט-nfc-לביקורות-גוגל"
+        ],
+        "full_width": true,
+        "stack_products": false,
+        "show_progress_bar": true,
+        "products_count": 7,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "subheading": "",
+        "title": "Featured collection",
+        "content": "",
+        "link_url": "",
+        "link_text": "View all",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
     "whychoose_zV64bJ": {
       "type": "whychoose",
       "blocks": {
@@ -260,39 +288,13 @@
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40,
         "bg_color": "#ffffff",
-        "heading_color": "#0A1F44",
-        "item_title_color": "#0A1F44",
-        "item_text_color": "#5C6577",
+        "heading_color": "#0a1f44",
+        "item_title_color": "#0a1f44",
+        "item_text_color": "#5c6577",
         "heading_font_size_desktop": 34,
         "heading_font_size_mobile": 26,
         "item_title_font_size": 17,
         "item_text_font_size": 15
-      }
-    },
-    "featured_collection_yezJaT": {
-      "type": "featured-collection",
-      "name": "Featured collection",
-      "settings": {
-        "collection": "",
-        "products": [],
-        "full_width": true,
-        "stack_products": false,
-        "show_progress_bar": true,
-        "products_count": 7,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
-        "subheading": "",
-        "title": "Featured collection",
-        "content": "",
-        "link_url": "",
-        "link_text": "View all",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "product_card_background": "",
-        "product_card_text_color": ""
       }
     },
     "faq": {
