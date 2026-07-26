@@ -252,6 +252,77 @@
         "text_strong_color": "#0a1f44"
       }
     },
+    "emplacementcarte_qVtFpq": {
+      "type": "emplacementcarte",
+      "blocks": {
+        "placement_xJybJi": {
+          "type": "placement",
+          "settings": {
+            "image": "shopify://shop_images/SPYaR7F6rt.webp",
+            "caption": "על הדלפק"
+          }
+        },
+        "placement_mfyLnU": {
+          "type": "placement",
+          "settings": {
+            "image": "shopify://shop_images/iOjKAuHze_mid.webp",
+            "caption": "על שולחן הקבלה"
+          }
+        },
+        "placement_wMer8V": {
+          "type": "placement",
+          "settings": {
+            "image": "shopify://shop_images/dentiste.webp",
+            "caption": "על הקיר"
+          }
+        },
+        "placement_Xfznwf": {
+          "type": "placement",
+          "settings": {
+            "image": "shopify://shop_images/iOjKA2uHze_mid.webp",
+            "caption": "על השולחן"
+          }
+        }
+      },
+      "block_order": [
+        "placement_xJybJi",
+        "placement_mfyLnU",
+        "placement_wMer8V",
+        "placement_Xfznwf"
+      ],
+      "name": "Avisi — Emplacements",
+      "settings": {
+        "title": "מצאו את המקום המושלם להצגת השלט שלכם!",
+        "title_size": 34,
+        "title_size_mobile": 27,
+        "caption_size": 16,
+        "caption_size_mobile": 15,
+        "max_width": 1240,
+        "columns_desktop": 4,
+        "cards_mobile": "2",
+        "image_ratio": "4 / 5",
+        "desktop_gap": 26,
+        "mobile_gap": 12,
+        "card_radius": 16,
+        "caption_height": 42,
+        "caption_height_mobile": 42,
+        "background_color": "#FFFFFF",
+        "title_color": "#171717",
+        "caption_background": "#F1F1F1",
+        "caption_color": "#2A2A2A",
+        "arrow_background": "#222222",
+        "arrow_color": "#FFFFFF",
+        "dot_color": "#A9A9A9",
+        "dot_active_color": "#111111",
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "title_bottom_spacing": 30,
+        "title_bottom_spacing_mobile": 28,
+        "dots_top_spacing": 18
+      }
+    },
     "doublereviwsection_YWQRhB": {
       "type": "doublereviwsection",
       "name": "Double Reviews Split",
@@ -265,6 +336,7 @@
         "paragraph_2": "<p>אתם נמצאים במגע עם הלקוחות שלכם <strong>כל יום</strong>, אל תפספסו את ההזדמנות לאסוף <strong>את הביקורת שלהם בגוגל!</strong></p>",
         "button_label": "גלו את המוצרים שלנו",
         "button_link": "",
+        "image": "shopify://shop_images/mmmm.webp",
         "image_position": "left",
         "image_radius": 12,
         "padding_top_desktop": 64,
@@ -523,6 +595,7 @@
     "main",
     "trustlogo_6PVqJq",
     "iconsfeature_icPqjF",
+    "emplacementcarte_qVtFpq",
     "doublereviwsection_YWQRhB",
     "whychoose_baqrgF",
     "avisclients_KnPTMp",
