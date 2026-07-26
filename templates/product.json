@@ -71,7 +71,7 @@
           "settings": {
             "show_payment_button": true,
             "show_gift_card_recipient": true,
-            "atc_button_background": "#0066FF",
+            "atc_button_background": "#111827",
             "atc_button_text_color": "",
             "payment_button_background": "",
             "payment_button_text_color": ""
@@ -88,8 +88,8 @@
           "settings": {
             "icon": "none",
             "icon_width": 20,
-            "title": "Title",
-            "content": "<p>Share some content to your customers about your products.</p>",
+            "title": "איך זה עובד?",
+            "content": "<p>קבלו יותר ביקורות בגוגל בתוך 3 שניות בלבד:</p><ul><li>אנחנו יוצרים עבורכם קוד QR מותאם אישית.<br/></li><li>סורקים, מזינים את הקוד — ומוכנים להתחיל.<br/></li><li>הלקוחות מצמידים את הטלפון, משאירים ביקורת ומגדילים את החשיפה שלכם.<br/></li><li>שימוש ללא הגבלה: אין צורך ב־Wi-Fi או בחיבור לחשמל.</li></ul>",
             "page": ""
           }
         },
