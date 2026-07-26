@@ -12,6 +12,12 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "liquid_UXAqWK": {
+          "type": "liquid",
+          "settings": {
+            "liquid": ""
+          }
+        },
         "liquid_MJj747": {
           "type": "liquid",
           "settings": {
@@ -127,6 +133,7 @@
         }
       },
       "block_order": [
+        "liquid_UXAqWK",
         "liquid_MJj747",
         "title",
         "price",
