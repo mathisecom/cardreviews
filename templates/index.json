@@ -403,6 +403,7 @@
           "type": "item",
           "settings": {
             "icon_type": "google_badge",
+            "custom_icon": "shopify://shop_images/4389481c-e057-46ca-b9eb-bff8f26b6600.png",
             "icon_alt": "",
             "text": "<p><strong>היו במקום הראשון בגוגל!</strong> ושמרו על היתרון</p>"
           }
@@ -411,6 +412,7 @@
           "type": "item",
           "settings": {
             "icon_type": "bolt",
+            "custom_icon": "shopify://shop_images/5b23cece-bbd6-43aa-be9c-71d7e5069475.png",
             "icon_alt": "",
             "text": "<p><strong>הפניה מיידית</strong> לביקורות שלכם בגוגל</p>"
           }
@@ -419,6 +421,7 @@
           "type": "item",
           "settings": {
             "icon_type": "sparkles",
+            "custom_icon": "shopify://shop_images/Add_photos_16.png",
             "icon_alt": "",
             "text": "<p><strong>הלקוחות אוהבים את זה!</strong> פשוט וכיפי</p>"
           }
@@ -427,6 +430,7 @@
           "type": "item",
           "settings": {
             "icon_type": "handshake",
+            "custom_icon": "shopify://shop_images/3b1d206f-4eba-406d-aa1a-a139a23d1282.png",
             "icon_alt": "",
             "text": "<p>תנו ל<strong>לקוחות האמיתיים</strong> שלכם לדבר בשמכם!</p>"
           }
@@ -446,7 +450,7 @@
         "columns_desktop": 4,
         "columns_mobile": 2,
         "item_gap": 32,
-        "icon_size": 48,
+        "icon_size": 78,
         "text_font_size": 15,
         "padding_top_desktop": 64,
         "padding_bottom_desktop": 64,
