@@ -233,7 +233,7 @@
       "settings": {
         "heading": "איך זה עובד?",
         "subtitle": "3 שלבים פשוטים לאיסוף יותר ביקורות",
-        "background_color": "#F9FAFB",
+        "background_color": "#f9fafb",
         "card_background": "#ffffff",
         "accent_color": "#0066ff",
         "heading_color": "#10131a",
@@ -344,15 +344,15 @@
         "card_radius": 16,
         "caption_height": 42,
         "caption_height_mobile": 42,
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "title_color": "#171717",
-        "caption_background": "#F1F1F1",
-        "caption_color": "#2A2A2A",
+        "caption_background": "#f1f1f1",
+        "caption_color": "#2a2a2a",
         "arrow_background": "#222222",
-        "arrow_color": "#FFFFFF",
-        "dot_color": "#A9A9A9",
+        "arrow_color": "#ffffff",
+        "dot_color": "#a9a9a9",
         "dot_active_color": "#111111",
-        "padding_top": 0,
+        "padding_top": 68,
         "padding_bottom": 72,
         "padding_top_mobile": 52,
         "padding_bottom_mobile": 52,
@@ -563,6 +563,98 @@
         "heading_font_size_mobile": 26,
         "item_title_font_size": 17,
         "item_text_font_size": 15
+      }
+    },
+    "logoscroll_gGPUFh": {
+      "type": "logoscroll",
+      "blocks": {
+        "image_rkmMGf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_64.png",
+            "url": ""
+          }
+        },
+        "image_iYfqzx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_65.png",
+            "url": ""
+          }
+        },
+        "image_KiqDjR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_66.png",
+            "url": ""
+          }
+        },
+        "image_UwwVAL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_67.png",
+            "url": ""
+          }
+        },
+        "image_6DtCR4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_68.png",
+            "url": ""
+          }
+        },
+        "image_y4p9rB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_69.png",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_rkmMGf",
+        "image_iYfqzx",
+        "image_KiqDjR",
+        "image_UwwVAL",
+        "image_6DtCR4",
+        "image_y4p9rB"
+      ],
+      "name": "SS - Scrolling logo cloud #5",
+      "settings": {
+        "layout_radius": 30,
+        "layout_border_thickness": 0,
+        "heading": "",
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 18,
+        "heading_size_mobile": 18,
+        "heading_height": 130,
+        "scrolling_velocity": 18,
+        "scrolling_velocity_mobile": 20,
+        "scrolling_direction": "left",
+        "pause_hover": false,
+        "scrolling_gap": 70,
+        "scrolling_gap_mobile": 30,
+        "card_width_desktop": 150,
+        "card_width_mobile": 140,
+        "heading_color": "#121212",
+        "layout_bg_color": "#FFFFFF",
+        "layout_border_color": "#121212",
+        "background_color": "#FFFFFF",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 0,
+        "full_width": true,
+        "content_width": 1200,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
       }
     },
     "avisclients_zkxwt3": {
@@ -845,6 +937,7 @@
     "iconsfeature_myNHRE",
     "featured_collection_yezJaT",
     "whychoose_zV64bJ",
+    "logoscroll_gGPUFh",
     "avisclients_zkxwt3",
     "faq",
     "ctafinal_aGztMy"
