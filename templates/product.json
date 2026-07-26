@@ -591,115 +591,115 @@
         "lazy": true
       }
     },
-    "avisclients_KnPTMp": {
+    "avisclients_HBFNF3": {
       "type": "avisclients",
       "blocks": {
-        "review_DX6Bzi": {
+        "review_arKnM9": {
           "type": "review",
           "settings": {
             "rating": 5,
-            "review": "שירות לקוחות מהיר ומקצועי במיוחד! תודה שפתרתם את הבעיה שלי במהירות רבה.",
-            "name": "סמנתה היולין",
-            "date": "04/09/2025",
-            "verified": false,
-            "initial": "S",
-            "avatar_bg": "#0066ff",
-            "avatar_color": "#ffffff"
+            "review": "הלוחית נראית מצוין על הדלפק והלקוחות מבינים מיד מה לעשות. ההתקנה הייתה פשוטה והכול עבד כבר מהנגיעה הראשונה.",
+            "name": "בעלת מסעדה בתל אביב",
+            "date": "יוני 2026",
+            "verified": true,
+            "initial": "מ",
+            "avatar_bg": "#0066FF",
+            "avatar_color": "#FFFFFF"
           }
         },
-        "review_XjD4k8": {
+        "review_haUMQd": {
           "type": "review",
           "settings": {
             "rating": 5,
-            "review": "תודה גדולה לצוות על ליווי מקצועי וללא דופי. הכול היה ברור, פשוט ומהיר.",
-            "name": "בומין פריירה",
-            "date": "02/09/2025",
-            "verified": false,
-            "initial": "B",
-            "avatar_bg": "#0066ff",
-            "avatar_color": "#ffffff"
+            "review": "פתרון נוח מאוד לעסק. במקום להסביר לכל לקוח איך למצוא אותנו בגוגל, הוא פשוט מקרב את הטלפון ומשאיר ביקורת.",
+            "name": "בעל מספרה בחיפה",
+            "date": "מאי 2026",
+            "verified": true,
+            "initial": "ס",
+            "avatar_bg": "#0066FF",
+            "avatar_color": "#FFFFFF"
           }
         },
-        "review_q37VGW": {
+        "review_yrkWVq": {
           "type": "review",
           "settings": {
             "rating": 5,
-            "review": "מושלם, מהיר ואיכותי. אני מרוצה מאוד מהרכישה שלי, תודה רבה!",
-            "name": "קבאבין רוניאק",
-            "date": "02/09/2025",
-            "verified": false,
-            "initial": "C",
-            "avatar_bg": "#0066ff",
-            "avatar_color": "#ffffff"
+            "review": "העיצוב מקצועי ומתאים מאוד לקליניקה שלנו. השירות היה מהיר והקישור לעמוד הביקורות הוגדר בדיוק כמו שביקשנו.",
+            "name": "מנהלת קליניקה בירושלים",
+            "date": "אפריל 2026",
+            "verified": true,
+            "initial": "ק",
+            "avatar_bg": "#0066FF",
+            "avatar_color": "#FFFFFF"
           }
         },
-        "review_Qbg4zy": {
+        "review_hBiLjt": {
           "type": "review",
           "settings": {
             "rating": 5,
-            "review": "שירות לקוחות מהיר ומקצועי במיוחד! תודה שפתרתם את הבעיה שלי במהירות רבה.",
-            "name": "סמנתה היולין",
-            "date": "04/09/2025",
-            "verified": false,
-            "initial": "S",
-            "avatar_bg": "#0066ff",
-            "avatar_color": "#ffffff"
+            "review": "מאז שהצבנו את הלוחית ליד הקופה, הרבה יותר לקוחות זוכרים להשאיר לנו ביקורת. מוצר קטן שעושה עבודה גדולה.",
+            "name": "בעל בית קפה בראשון לציון",
+            "date": "מרץ 2026",
+            "verified": true,
+            "initial": "ק",
+            "avatar_bg": "#0066FF",
+            "avatar_color": "#FFFFFF"
           }
         },
-        "review_xNeRdR": {
+        "review_JneXTn": {
           "type": "review",
           "settings": {
-            "rating": 5,
-            "review": "שירות לקוחות מהיר ומקצועי במיוחד! תודה שפתרתם את הבעיה שלי במהירות רבה.",
-            "name": "סמנתה היולין",
-            "date": "04/09/2025",
-            "verified": false,
-            "initial": "S",
-            "avatar_bg": "#0066ff",
-            "avatar_color": "#ffffff"
+            "rating": 4,
+            "review": "אהבתי שאין צורך באפליקציה או במנוי חודשי. הלקוחות משתמשים בלוחית בקלות גם באייפון וגם באנדרואיד.",
+            "name": "מנהל חדר כושר בנתניה",
+            "date": "פברואר 2026",
+            "verified": true,
+            "initial": "כ",
+            "avatar_bg": "#0066FF",
+            "avatar_color": "#FFFFFF"
           }
         },
-        "review_ERFHnH": {
+        "review_hKxVy7": {
           "type": "review",
           "settings": {
             "rating": 5,
-            "review": "שירות לקוחות מהיר ומקצועי במיוחד! תודה שפתרתם את הבעיה שלי במהירות רבה.",
-            "name": "סמנתה היולין",
-            "date": "04/09/2025",
-            "verified": false,
-            "initial": "S",
-            "avatar_bg": "#0066ff",
-            "avatar_color": "#ffffff"
+            "review": "המשלוח הגיע מהר, האיכות טובה מאוד והצוות עזר לנו להגדיר את כרטיס Google של העסק. שירות מצוין ומומלץ.",
+            "name": "בעלת חנות בבאר שבע",
+            "date": "ינואר 2026",
+            "verified": true,
+            "initial": "ח",
+            "avatar_bg": "#0066FF",
+            "avatar_color": "#FFFFFF"
           }
         }
       },
       "block_order": [
-        "review_DX6Bzi",
-        "review_XjD4k8",
-        "review_q37VGW",
-        "review_Qbg4zy",
-        "review_xNeRdR",
-        "review_ERFHnH"
+        "review_arKnM9",
+        "review_haUMQd",
+        "review_yrkWVq",
+        "review_hBiLjt",
+        "review_JneXTn",
+        "review_hKxVy7"
       ],
       "name": "Avis clients Avisi",
       "settings": {
         "eyebrow": "חוות דעת של לקוחות",
-        "heading": "שירות שעושה את ההבדל.",
+        "heading": "מה הלקוחות שלנו אומרים?",
         "intro": "",
         "show_summary": true,
-        "summary_title": "מצוין",
+        "summary_title": "4.8 מתוך 5",
         "summary_rating": 5,
         "summary_prefix": "מבוסס על",
-        "summary_count": "3,177 ביקורות",
+        "summary_count": "3,177, ביקורות",
         "summary_source": "לקוחות",
-        "section_bg": "#ffffff",
-        "card_bg": "#f9fafb",
-        "accent": "#0066ff",
+        "section_bg": "#FFFFFF",
+        "card_bg": "#F9FAFB",
+        "accent": "#0066FF",
         "title_color": "#101218",
-        "text_color": "#363a44",
-        "muted_color": "#747a89",
-        "border_color": "#e5eaf2",
-        "star_inactive": "#d8dee8",
+        "text_color": "#363A44",
+        "muted_color": "#747A89",
+        "border_color": "#E5EAF2",
+        "star_inactive": "#D8DEE8",
         "max_width": 1320,
         "columns": 3,
         "gap": 20,
@@ -709,7 +709,7 @@
         "radius": 22,
         "summary_radius": 16,
         "border_width": 1,
-        "shadow_opacity": 0,
+        "shadow_opacity": 6,
         "eyebrow_size": 12,
         "heading_desktop": 46,
         "heading_mobile": 34,
@@ -724,10 +724,10 @@
         "avatar_size": 46,
         "avatar_font": 16,
         "padding_top": 80,
-        "padding_bottom": 32,
-        "header_gap": 32,
-        "padding_top_mobile": 28,
-        "padding_bottom_mobile": 28,
+        "padding_bottom": 80,
+        "header_gap": 48,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56,
         "header_gap_mobile": 32,
         "mobile_width": 88,
         "mobile_gap": 14,
@@ -861,10 +861,10 @@
       "name": "Avisi - Avantages",
       "settings": {
         "heading": "",
-        "brand_color": "#0066FF",
+        "brand_color": "#0066ff",
         "text_color": "#111827",
         "muted_color": "#505050",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "max_width": 1400,
         "padding_top": 24,
         "padding_bottom": 44,
@@ -881,7 +881,7 @@
     "doublereviwsection_YWQRhB",
     "whychoose_baqrgF",
     "logoscroll_XPc78M",
-    "avisclients_KnPTMp",
+    "avisclients_HBFNF3",
     "faq_UKMdi7",
     "iconsfooter_hUCcbh"
   ]
