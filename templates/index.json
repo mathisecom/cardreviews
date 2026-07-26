@@ -74,6 +74,7 @@
         "logo_6NNEkm": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/Nouveau_projet_45.png",
             "alt": "Krys",
             "link": ""
           }
@@ -81,6 +82,7 @@
         "logo_wcKxpH": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/Nouveau_projet_44.png",
             "alt": "Decathlon",
             "link": ""
           }
@@ -88,6 +90,7 @@
         "logo_xYnxwn": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/Nouveau_projet_46.png",
             "alt": "Au Bureau",
             "link": ""
           }
@@ -95,6 +98,7 @@
         "logo_tUjpbA": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/Nouveau_projet_47.png",
             "alt": "Besson",
             "link": ""
           }
@@ -102,7 +106,16 @@
         "logo_tFMk8P": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/KELLERW.webp",
             "alt": "Atol",
+            "link": ""
+          }
+        },
+        "logo_qweFUV": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/SUPERCUTS_ee1b0383-fa5c-44c7-aa19-ed3e67b84e14.webp",
+            "alt": "Brand",
             "link": ""
           }
         }
@@ -112,7 +125,8 @@
         "logo_wcKxpH",
         "logo_xYnxwn",
         "logo_tUjpbA",
-        "logo_tFMk8P"
+        "logo_tFMk8P",
+        "logo_qweFUV"
       ],
       "name": "Trust Logo Marquee",
       "settings": {
