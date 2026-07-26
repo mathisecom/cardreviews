@@ -102,6 +102,16 @@
             "content": "<p>אם מספר הביקורות שלכם בגוגל לא יוכפל לפחות בתוך 30 יום, תקבלו החזר כספי מלא — בהתחייבות.</p>",
             "page": ""
           }
+        },
+        "collapsible_text_hYLxnx": {
+          "type": "collapsible_text",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "פרטי המוצר",
+            "content": "<ul><li>עשוי מפרספקס איכותי<br/></li><li>מידות: <strong>12 × 12 ס״מ</strong><br/></li><li>עובי: <strong>3 מ״מ</strong><br/></li><li>מסופק עם מדבקה חזקה המותקנת בגב הלוחית<br/></li></ul><p><strong>שימו לב:</strong> משטחי מתכת עלולים להפריע לפעולת טכנולוגיית ה־NFC. במקרה של התקנה על מתכת, מומלץ להשתמש בקוד ה־QR.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -116,7 +126,8 @@
         "buy_buttons",
         "liquid_EzqBR4",
         "collapsible_text_DMkqfL",
-        "collapsible_text_dpVXJD"
+        "collapsible_text_dpVXJD",
+        "collapsible_text_hYLxnx"
       ],
       "settings": {
         "full_width": true,
