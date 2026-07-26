@@ -98,8 +98,8 @@
           "settings": {
             "icon": "none",
             "icon_width": 20,
-            "title": "Title",
-            "content": "<p>Share some content to your customers about your products.</p>",
+            "title": "התחייבות להחזר כספי תוך 30 יום",
+            "content": "<p>אם מספר הביקורות שלכם בגוגל לא יוכפל לפחות בתוך 30 יום, תקבלו החזר כספי מלא — בהתחייבות.</p>",
             "page": ""
           }
         }
