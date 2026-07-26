@@ -567,13 +567,13 @@
   "settings": [
     { "type": "header", "content": "Contenu" },
     { "type": "text", "id": "eyebrow", "label": "Sur-titre", "default": "חוות דעת של לקוחות" },
-    { "type": "text", "id": "heading", "label": "Titre", "default": "שירות שעושה את ההבדל." },
+    { "type": "text", "id": "heading", "label": "Titre", "default": "מה הלקוחות שלנו אומרים?" },
     { "type": "richtext", "id": "intro", "label": "Introduction" },
     { "type": "checkbox", "id": "show_summary", "label": "Afficher le résumé", "default": true },
-    { "type": "text", "id": "summary_title", "label": "Mention principale", "default": "מצוין" },
+    { "type": "text", "id": "summary_title", "label": "Mention principale", "default": "4.8 מתוך 5" },
     { "type": "range", "id": "summary_rating", "label": "Note globale", "min": 1, "max": 5, "step": 1, "default": 5 },
     { "type": "text", "id": "summary_prefix", "label": "Texte avant le nombre", "default": "מבוסס על" },
-    { "type": "text", "id": "summary_count", "label": "Nombre d’avis", "default": "77 ביקורות" },
+    { "type": "text", "id": "summary_count", "label": "Nombre d’avis", "default": "6 ביקורות" },
     { "type": "text", "id": "summary_source", "label": "Source", "default": "לקוחות" },
 
     { "type": "header", "content": "Couleurs" },
@@ -658,12 +658,12 @@
       "name": "Avis client",
       "settings": [
         { "type": "range", "id": "rating", "label": "Note", "min": 1, "max": 5, "step": 1, "default": 5 },
-        { "type": "textarea", "id": "review", "label": "Avis", "default": "שירות לקוחות מהיר ומקצועי במיוחד! תודה שפתרתם את הבעיה שלי במהירות רבה." },
-        { "type": "text", "id": "name", "label": "Nom du client", "default": "סמנתה היולין" },
-        { "type": "text", "id": "date", "label": "Date", "default": "04/09/2025" },
-        { "type": "checkbox", "id": "verified", "label": "Afficher Avis vérifié", "default": false },
+        { "type": "textarea", "id": "review", "label": "Avis", "default": "הלוחית נראית מצוין על הדלפק והלקוחות מבינים מיד מה לעשות. ההתקנה הייתה פשוטה והכול עבד כבר מהנגיעה הראשונה." },
+        { "type": "text", "id": "name", "label": "Nom du client", "default": "בעלת מסעדה בתל אביב" },
+        { "type": "text", "id": "date", "label": "Date", "default": "יוני 2026" },
+        { "type": "checkbox", "id": "verified", "label": "Afficher Avis vérifié", "default": true },
         { "type": "image_picker", "id": "photo", "label": "Photo du client" },
-        { "type": "text", "id": "initial", "label": "Initiale", "default": "S" },
+        { "type": "text", "id": "initial", "label": "Initiale", "default": "מ" },
         { "type": "color", "id": "avatar_bg", "label": "Fond de l’avatar", "default": "#0066FF" },
         { "type": "color", "id": "avatar_color", "label": "Couleur de l’initiale", "default": "#FFFFFF" }
       ]
@@ -677,30 +677,66 @@
           "type": "review",
           "settings": {
             "rating": 5,
-            "review": "שירות לקוחות מהיר ומקצועי במיוחד! תודה שפתרתם את הבעיה שלי במהירות רבה.",
-            "name": "סמנתה היולין",
-            "date": "04/09/2025",
-            "initial": "S"
+            "review": "הלוחית נראית מצוין על הדלפק והלקוחות מבינים מיד מה לעשות. ההתקנה הייתה פשוטה והכול עבד כבר מהנגיעה הראשונה.",
+            "name": "בעלת מסעדה בתל אביב",
+            "date": "יוני 2026",
+            "verified": true,
+            "initial": "מ"
           }
         },
         {
           "type": "review",
           "settings": {
             "rating": 5,
-            "review": "תודה גדולה לצוות על ליווי מקצועי וללא דופי. הכול היה ברור, פשוט ומהיר.",
-            "name": "בומין פריירה",
-            "date": "02/09/2025",
-            "initial": "B"
+            "review": "פתרון נוח מאוד לעסק. במקום להסביר לכל לקוח איך למצוא אותנו בגוגל, הוא פשוט מקרב את הטלפון ומשאיר ביקורת.",
+            "name": "בעל מספרה בחיפה",
+            "date": "מאי 2026",
+            "verified": true,
+            "initial": "ס"
           }
         },
         {
           "type": "review",
           "settings": {
             "rating": 5,
-            "review": "מושלם, מהיר ואיכותי. אני מרוצה מאוד מהרכישה שלי, תודה רבה!",
-            "name": "קבאבין רוניאק",
-            "date": "02/09/2025",
-            "initial": "C"
+            "review": "העיצוב מקצועי ומתאים מאוד לקליניקה שלנו. השירות היה מהיר והקישור לעמוד הביקורות הוגדר בדיוק כמו שביקשנו.",
+            "name": "מנהלת קליניקה בירושלים",
+            "date": "אפריל 2026",
+            "verified": true,
+            "initial": "ק"
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review": "מאז שהצבנו את הלוחית ליד הקופה, הרבה יותר לקוחות זוכרים להשאיר לנו ביקורת. מוצר קטן שעושה עבודה גדולה.",
+            "name": "בעל בית קפה בראשון לציון",
+            "date": "מרץ 2026",
+            "verified": true,
+            "initial": "ק"
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "rating": 4,
+            "review": "אהבתי שאין צורך באפליקציה או במנוי חודשי. הלקוחות משתמשים בלוחית בקלות גם באייפון וגם באנדרואיד.",
+            "name": "מנהל חדר כושר בנתניה",
+            "date": "פברואר 2026",
+            "verified": true,
+            "initial": "כ"
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review": "המשלוח הגיע מהר, האיכות טובה מאוד והצוות עזר לנו להגדיר את כרטיס Google של העסק. שירות מצוין ומומלץ.",
+            "name": "בעלת חנות בבאר שבע",
+            "date": "ינואר 2026",
+            "verified": true,
+            "initial": "ח"
           }
         }
       ]
