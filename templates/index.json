@@ -361,6 +361,124 @@
         "dots_top_spacing": 18
       }
     },
+    "rich_text_K8Fkm3": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_zhpjJN": {
+          "type": "heading",
+          "settings": {
+            "text": "+3,177 לקוחות מרוצים",
+            "heading_tag": "h3",
+            "text_color": "#0066FF",
+            "gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_zhpjJN"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "logoscroll_gGPUFh": {
+      "type": "logoscroll",
+      "blocks": {
+        "image_rkmMGf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_64.png",
+            "url": ""
+          }
+        },
+        "image_iYfqzx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_65.png",
+            "url": ""
+          }
+        },
+        "image_KiqDjR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_66.png",
+            "url": ""
+          }
+        },
+        "image_UwwVAL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_67.png",
+            "url": ""
+          }
+        },
+        "image_6DtCR4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_68.png",
+            "url": ""
+          }
+        },
+        "image_y4p9rB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_69.png",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_rkmMGf",
+        "image_iYfqzx",
+        "image_KiqDjR",
+        "image_UwwVAL",
+        "image_6DtCR4",
+        "image_y4p9rB"
+      ],
+      "name": "SS - Scrolling logo cloud #5",
+      "settings": {
+        "layout_radius": 30,
+        "layout_border_thickness": 0,
+        "heading": "",
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 18,
+        "heading_size_mobile": 18,
+        "heading_height": 130,
+        "scrolling_velocity": 18,
+        "scrolling_velocity_mobile": 20,
+        "scrolling_direction": "left",
+        "pause_hover": false,
+        "scrolling_gap": 70,
+        "scrolling_gap_mobile": 30,
+        "card_width_desktop": 160,
+        "card_width_mobile": 160,
+        "heading_color": "#121212",
+        "layout_bg_color": "#ffffff",
+        "layout_border_color": "#121212",
+        "background_color": "#ffffff",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 40,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_horizontal": 0,
+        "padding_horizontal_mobile": 0,
+        "full_width": true,
+        "content_width": 1200,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
+      }
+    },
     "doublereviwsection_9Ybpt6": {
       "type": "doublereviwsection",
       "name": "Double Reviews Split",
@@ -550,6 +668,7 @@
       "settings": {
         "text_direction": "rtl",
         "heading": "?למה לבחור ב-Avisi",
+        "image": "shopify://shop_images/0c49d315-0d89-4ff1-963a-63950399f1f4_a5b0eb12-8e09-4a5d-8858-8c18f16d5634.png",
         "image_position": "right",
         "padding_top_desktop": 52,
         "padding_bottom_desktop": 52,
@@ -565,45 +684,45 @@
         "item_text_font_size": 15
       }
     },
-    "logoscroll_gGPUFh": {
+    "logoscroll_byYiLc": {
       "type": "logoscroll",
       "blocks": {
-        "image_rkmMGf": {
+        "image_Qg8nBf": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/BANNER_MOBILE_64.png",
             "url": ""
           }
         },
-        "image_iYfqzx": {
+        "image_9weRg9": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/BANNER_MOBILE_65.png",
             "url": ""
           }
         },
-        "image_KiqDjR": {
+        "image_TQAJDB": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/BANNER_MOBILE_66.png",
             "url": ""
           }
         },
-        "image_UwwVAL": {
+        "image_T4CyiQ": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/BANNER_MOBILE_67.png",
             "url": ""
           }
         },
-        "image_6DtCR4": {
+        "image_aCNzEr": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/BANNER_MOBILE_68.png",
             "url": ""
           }
         },
-        "image_y4p9rB": {
+        "image_fgCwcF": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/BANNER_MOBILE_69.png",
@@ -612,12 +731,12 @@
         }
       },
       "block_order": [
-        "image_rkmMGf",
-        "image_iYfqzx",
-        "image_KiqDjR",
-        "image_UwwVAL",
-        "image_6DtCR4",
-        "image_y4p9rB"
+        "image_Qg8nBf",
+        "image_9weRg9",
+        "image_TQAJDB",
+        "image_T4CyiQ",
+        "image_aCNzEr",
+        "image_fgCwcF"
       ],
       "name": "SS - Scrolling logo cloud #5",
       "settings": {
@@ -957,11 +1076,13 @@
     "benefitsection_VtJMGb",
     "commentcafonctionne_x3KEFx",
     "emplacementcarte_Hw4NGY",
+    "rich_text_K8Fkm3",
+    "logoscroll_gGPUFh",
     "doublereviwsection_9Ybpt6",
     "iconsfeature_myNHRE",
     "featured_collection_yezJaT",
     "whychoose_zV64bJ",
-    "logoscroll_gGPUFh",
+    "logoscroll_byYiLc",
     "avisclients_zkxwt3",
     "faq",
     "ctafinal_aGztMy"
