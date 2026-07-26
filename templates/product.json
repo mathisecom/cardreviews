@@ -30,12 +30,6 @@
             "heading_tag": "h2"
           }
         },
-        "price": {
-          "type": "price",
-          "settings": {
-            "show_taxes_notice": false
-          }
-        },
         "liquid_NYPjr3": {
           "type": "liquid",
           "settings": {
@@ -139,7 +133,6 @@
         "liquid_UXAqWK",
         "liquid_MJj747",
         "title",
-        "price",
         "liquid_NYPjr3",
         "rating",
         "description",
