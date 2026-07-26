@@ -294,7 +294,7 @@
       "settings": {
         "title": "מצאו את המקום המושלם להצגת השלט שלכם!",
         "title_size": 34,
-        "title_size_mobile": 27,
+        "title_size_mobile": 30,
         "caption_size": 16,
         "caption_size_mobile": 15,
         "max_width": 1240,
@@ -316,8 +316,8 @@
         "dot_active_color": "#111111",
         "padding_top": 24,
         "padding_bottom": 24,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 44,
         "title_bottom_spacing": 30,
         "title_bottom_spacing_mobile": 28,
         "dots_top_spacing": 18
