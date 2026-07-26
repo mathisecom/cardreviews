@@ -48,6 +48,7 @@
         "subtext": "<p>אספו יותר ביקורות בגוגל והגבירו את הנוכחות שלכם ברשתות החברתיות עם שלטי ה-NFC החדשניים שלנו.</p>",
         "button_label": "גלו את המוצרים שלנו",
         "button_link": "shopify://products/שלט-nfc-לביקורות-גוגל",
+        "hero_image": "shopify://shop_images/icone_31.png",
         "image_position": "right",
         "padding_top_desktop": 56,
         "padding_bottom_desktop": 56,
@@ -369,7 +370,7 @@
           "settings": {
             "text": "+3,177 לקוחות מרוצים",
             "heading_tag": "h3",
-            "text_color": "#0066FF",
+            "text_color": "#0066ff",
             "gradient": ""
           }
         }
@@ -595,7 +596,7 @@
         "show_progress_bar": true,
         "products_count": 7,
         "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
+        "products_per_row_desktop": 3,
         "subheading": "",
         "title": "הנמכרים ביותר",
         "content": "",
