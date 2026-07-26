@@ -815,6 +815,62 @@
         "accordion_background": "#f9fafb",
         "accordion_text_color": "#111827"
       }
+    },
+    "iconsfooter_hUCcbh": {
+      "type": "iconsfooter",
+      "blocks": {
+        "benefit_iTmwW7": {
+          "type": "benefit",
+          "settings": {
+            "icon": "delivery",
+            "title": "משלוח מהיר",
+            "text": "<p>משלוח מהיר עם מעקב מלא.</p>"
+          }
+        },
+        "benefit_PQdVmQ": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shield",
+            "title": "אחריות כלולה",
+            "text": "<p>קנו בראש שקט ובביטחון מלא.</p>"
+          }
+        },
+        "benefit_A6A8tP": {
+          "type": "benefit",
+          "settings": {
+            "icon": "return",
+            "title": "החזרה קלה",
+            "text": "<p>תהליך החזרה פשוט ומהיר.</p>"
+          }
+        },
+        "benefit_agxFKn": {
+          "type": "benefit",
+          "settings": {
+            "icon": "support",
+            "title": "שירות לקוחות זמין",
+            "text": "<p>צוות זמין לכל שאלה או בקשה.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_iTmwW7",
+        "benefit_PQdVmQ",
+        "benefit_A6A8tP",
+        "benefit_agxFKn"
+      ],
+      "name": "Avisi - Avantages",
+      "settings": {
+        "heading": "",
+        "brand_color": "#0066FF",
+        "text_color": "#111827",
+        "muted_color": "#505050",
+        "background_color": "#FFFFFF",
+        "max_width": 1400,
+        "padding_top": 24,
+        "padding_bottom": 44,
+        "mobile_padding_top": 24,
+        "mobile_padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -826,6 +882,7 @@
     "whychoose_baqrgF",
     "logoscroll_XPc78M",
     "avisclients_KnPTMp",
-    "faq_UKMdi7"
+    "faq_UKMdi7",
+    "iconsfooter_hUCcbh"
   ]
 }
