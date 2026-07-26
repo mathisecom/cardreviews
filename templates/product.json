@@ -15,7 +15,7 @@
         "liquid_UXAqWK": {
           "type": "liquid",
           "settings": {
-            "liquid": ""
+            "liquid": "<div class=\"product-info__liquid\">\n  <div class=\"main-product__block main-product__block-custom_liquid\">\n    <div class=\"m-product-text\">\n\n      <style>\n        .badges-container {\n          display: flex;\n          flex-direction: row;\n          justify-content: flex-start;\n          align-items: center;\n          gap: 6px;\n          width: 100%;\n          padding: 0;\n          margin: 0;\n          direction: ltr;\n        }\n\n        .badge {\n          display: inline-block;\n          padding: 4px 10px;\n          font-size: 12px;\n          font-weight: 700;\n          color: #FFFFFF;\n          background-color: #0066FF;\n          border-radius: 15px;\n          white-space: nowrap;\n          margin: 0;\n          direction: rtl;\n        }\n\n        .badge-2 {\n          display: inline-block;\n          padding: 4px 10px;\n          font-size: 12px;\n          font-weight: 700;\n          color: #FFFFFF;\n          background-color: #111827;\n          border-radius: 15px;\n          white-space: nowrap;\n          margin: 0;\n          direction: rtl;\n        }\n      </style>\n\n      <div class=\"badges-container\">\n        <div class=\"badge-2\">רב־מכר</div>\n        <div class=\"badge\">מבצע קיץ</div>\n      </div>\n\n    </div>\n  </div>\n</div>"
           }
         },
         "liquid_MJj747": {
