@@ -104,14 +104,14 @@
           "settings": {
             "menu": "footer",
             "show_menu_title": true,
-            "menu_title": "Informations Légales"
+            "menu_title": "מידע משפטי"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "title": "Contactez-Nous",
-            "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.</p>",
+            "title": "צרו קשר",
+            "content": "",
             "enable_follow_on_shop": true
           }
         }
