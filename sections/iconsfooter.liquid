@@ -1,0 +1,523 @@
+{% comment %}
+  Section : Avisi - Avantages
+  Fichier : sections/avisi-benefits.liquid
+{% endcomment %}
+
+<section
+  id="avisi-benefits-{{ section.id }}"
+  class="avisi-benefits"
+  dir="rtl"
+>
+  <div class="avisi-benefits__container">
+
+    {% if section.settings.heading != blank %}
+      <h2 class="avisi-benefits__heading">
+        {{ section.settings.heading }}
+      </h2>
+    {% endif %}
+
+    <div class="avisi-benefits__grid">
+      {% for block in section.blocks %}
+        <div
+          class="avisi-benefits__item"
+          {{ block.shopify_attributes }}
+        >
+          <div class="avisi-benefits__icon" aria-hidden="true">
+
+            {% case block.settings.icon %}
+
+              {% when 'delivery' %}
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M3 6.5H14V16.5H3V6.5Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M14 10H18L21 13V16.5H14V10Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M6.5 19A2 2 0 1 0 6.5 15A2 2 0 0 0 6.5 19Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+                  <path
+                    d="M17.5 19A2 2 0 1 0 17.5 15A2 2 0 0 0 17.5 19Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+                  <path
+                    d="M1.5 9H7"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M1.5 12H6"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+
+              {% when 'shield' %}
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 3L20 6V11.5C20 16.4 16.8 20.2 12 21.5C7.2 20.2 4 16.4 4 11.5V6L12 3Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8.5 12L10.8 14.3L15.8 9.3"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+              {% when 'return' %}
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 5V10H9"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M5.2 9A8 8 0 1 1 4.8 15"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M12 8V12L15 14"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+              {% when 'support' %}
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 13V11A8 8 0 0 1 20 11V13"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M4 12H6.5V18H4.5C3.7 18 3 17.3 3 16.5V13.5C3 12.7 3.4 12 4 12Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M20 12H17.5V18H19.5C20.3 18 21 17.3 21 16.5V13.5C21 12.7 20.6 12 20 12Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17.5 18C17 20 15.3 21 13 21"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+
+              {% when 'nfc' %}
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M7 8.5C9 10.5 9 13.5 7 15.5"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M4 5.5C8 9.5 8 14.5 4 18.5"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M10 11C10.7 11.7 10.7 12.3 10 13"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                  <rect
+                    x="13"
+                    y="4"
+                    width="7"
+                    height="16"
+                    rx="1.5"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+                </svg>
+
+            {% endcase %}
+
+          </div>
+
+          {% if block.settings.title != blank %}
+            <h3 class="avisi-benefits__title">
+              {{ block.settings.title }}
+            </h3>
+          {% endif %}
+
+          {% if block.settings.text != blank %}
+            <div class="avisi-benefits__text">
+              {{ block.settings.text }}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+<style>
+  #avisi-benefits-{{ section.id }} {
+    --avisi-benefits-blue: {{ section.settings.brand_color }};
+    --avisi-benefits-text: {{ section.settings.text_color }};
+    --avisi-benefits-muted: {{ section.settings.muted_color }};
+    --avisi-benefits-background: {{ section.settings.background_color }};
+
+    width: 100%;
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    background: var(--avisi-benefits-background);
+    color: var(--avisi-benefits-text);
+    direction: rtl;
+    text-align: center;
+    font-family: inherit;
+  }
+
+  #avisi-benefits-{{ section.id }} *,
+  #avisi-benefits-{{ section.id }} *::before,
+  #avisi-benefits-{{ section.id }} *::after {
+    box-sizing: border-box;
+  }
+
+  #avisi-benefits-{{ section.id }} .avisi-benefits__container {
+    width: min(100% - 40px, {{ section.settings.max_width }}px);
+    margin: 0 auto;
+  }
+
+  #avisi-benefits-{{ section.id }} .avisi-benefits__heading {
+    margin: 0 0 35px;
+    padding: 0;
+    font-family: inherit;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.35;
+    color: var(--avisi-benefits-text);
+    text-align: center;
+  }
+
+  #avisi-benefits-{{ section.id }} .avisi-benefits__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: start;
+    gap: 35px;
+  }
+
+  #avisi-benefits-{{ section.id }} .avisi-benefits__item {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #avisi-benefits-{{ section.id }} .avisi-benefits__icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 0 18px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--avisi-benefits-blue);
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 102, 255, 0.16);
+  }
+
+  #avisi-benefits-{{ section.id }} .avisi-benefits__icon svg {
+    width: 27px;
+    height: 27px;
+    display: block;
+  }
+
+  #avisi-benefits-{{ section.id }} .avisi-benefits__title {
+    margin: 0 0 9px;
+    padding: 0;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.4;
+    color: var(--avisi-benefits-text);
+  }
+
+  #avisi-benefits-{{ section.id }} .avisi-benefits__text {
+    max-width: 260px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: var(--avisi-benefits-muted);
+  }
+
+  #avisi-benefits-{{ section.id }} .avisi-benefits__text p {
+    margin: 0;
+  }
+
+  @media screen and (max-width: 989px) {
+    #avisi-benefits-{{ section.id }} .avisi-benefits__grid {
+      gap: 28px 20px;
+    }
+
+    #avisi-benefits-{{ section.id }} .avisi-benefits__icon {
+      width: 55px;
+      height: 55px;
+      border-radius: 14px;
+    }
+
+    #avisi-benefits-{{ section.id }} .avisi-benefits__icon svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    #avisi-benefits-{{ section.id }} {
+      padding-top: {{ section.settings.mobile_padding_top }}px;
+      padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+    }
+
+    #avisi-benefits-{{ section.id }} .avisi-benefits__container {
+      width: min(100% - 30px, {{ section.settings.max_width }}px);
+    }
+
+    #avisi-benefits-{{ section.id }} .avisi-benefits__heading {
+      margin-bottom: 28px;
+      font-size: 22px;
+    }
+
+    #avisi-benefits-{{ section.id }} .avisi-benefits__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 14px;
+      row-gap: 46px;
+    }
+
+    #avisi-benefits-{{ section.id }} .avisi-benefits__icon {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 14px;
+      border-radius: 13px;
+    }
+
+    #avisi-benefits-{{ section.id }} .avisi-benefits__icon svg {
+      width: 23px;
+      height: 23px;
+    }
+
+    #avisi-benefits-{{ section.id }} .avisi-benefits__title {
+      margin-bottom: 7px;
+      font-size: 14px;
+    }
+
+    #avisi-benefits-{{ section.id }} .avisi-benefits__text {
+      max-width: 180px;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Avisi - Avantages",
+  "tag": "section",
+  "class": "section-avisi-benefits",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Titre de la section"
+    },
+    {
+      "type": "color",
+      "id": "brand_color",
+      "label": "Couleur du branding",
+      "default": "#0066FF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Couleur des titres",
+      "default": "#111827"
+    },
+    {
+      "type": "color",
+      "id": "muted_color",
+      "label": "Couleur des descriptions",
+      "default": "#505050"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Couleur du fond",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 900,
+      "max": 1600,
+      "step": 50,
+      "unit": "px",
+      "label": "Largeur maximale",
+      "default": 1400
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Espacement supérieur",
+      "default": 44
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Espacement inférieur",
+      "default": 44
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Espacement supérieur mobile",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Espacement inférieur mobile",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Avantage",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icône",
+          "options": [
+            {
+              "value": "delivery",
+              "label": "Livraison"
+            },
+            {
+              "value": "shield",
+              "label": "Garantie"
+            },
+            {
+              "value": "return",
+              "label": "Retour"
+            },
+            {
+              "value": "support",
+              "label": "Support"
+            },
+            {
+              "value": "nfc",
+              "label": "NFC"
+            }
+          ],
+          "default": "delivery"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titre",
+          "default": "משלוח מהיר"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Description",
+          "default": "<p>משלוח מהיר עם מעקב מלא.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Avisi - Avantages",
+      "blocks": [
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "delivery",
+            "title": "משלוח מהיר",
+            "text": "<p>משלוח מהיר עם מעקב מלא.</p>"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "shield",
+            "title": "אחריות כלולה",
+            "text": "<p>קנו בראש שקט ובביטחון מלא.</p>"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "return",
+            "title": "החזרה קלה",
+            "text": "<p>תהליך החזרה פשוט ומהיר.</p>"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "support",
+            "title": "שירות לקוחות זמין",
+            "text": "<p>צוות זמין לכל שאלה או בקשה.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
