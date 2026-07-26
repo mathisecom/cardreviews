@@ -170,6 +170,7 @@
         "logo_jHa3BR": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/Nouveau_projet_44.png",
             "alt": "Orpi",
             "link": ""
           }
@@ -177,6 +178,7 @@
         "logo_CFQ7L7": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/Nouveau_projet_45.png",
             "alt": "Burger King",
             "link": ""
           }
@@ -184,6 +186,7 @@
         "logo_fWXDpQ": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/Nouveau_projet_46.png",
             "alt": "Franck Provost",
             "link": ""
           }
