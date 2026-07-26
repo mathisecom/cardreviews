@@ -811,8 +811,8 @@
         "166442457738b23caf-0": {
           "type": "item",
           "settings": {
-            "title": "Do you ship overseas?",
-            "content": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
+            "title": "איך מוצאים את הקישור הישיר לעמוד הביקורות שלי בגוגל?",
+            "content": "<ol><li>התחברו לחשבון <strong>Google Business Profile</strong> של העסק שלכם.<br/></li><li>הקלידו בגוגל את שם העסק.<br/></li><li>כרטיס העסק שלכם יופיע בתוצאות — לחצו עליו.<br/></li><li>עברו לאזור <strong>„ביקורות”</strong>.<br/></li><li>לחצו על האפשרות <strong>„קבלת ביקורות נוספות”</strong>.<br/></li><li>גוגל יציג לכם קישור ישיר שאפשר לשתף עם הלקוחות.<br/></li></ol><p>את הקישור הזה יש להדביק בהגדרות של לוחית <strong>Avisi</strong> שלכם.</p>"
           }
         },
         "166442457738b23caf-1": {
