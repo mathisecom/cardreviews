@@ -1,0 +1,806 @@
+{% comment %}
+  Section : Emplacements plaque Avisi
+  Fichier conseillé : sections/avisi-emplacements-plaque.liquid
+
+  Affichage :
+  - PC : grille responsive
+  - Mobile : carrousel avec 1 ou 2 cartes visibles, flèches et pagination
+  - Textes visibles en hébreu
+{% endcomment %}
+
+{%- liquid
+  assign uid = section.id
+  assign s = section.settings
+-%}
+
+<style>
+  #avisi-placements-{{ uid }} {
+    --avisi-bg: {{ s.background_color }};
+    --avisi-title: {{ s.title_color }};
+    --avisi-caption-bg: {{ s.caption_background }};
+    --avisi-caption-color: {{ s.caption_color }};
+    --avisi-dot: {{ s.dot_color }};
+    --avisi-dot-active: {{ s.dot_active_color }};
+    --avisi-gap: {{ s.desktop_gap }}px;
+    --avisi-mobile-gap: {{ s.mobile_gap }}px;
+    --avisi-radius: {{ s.card_radius }}px;
+    --avisi-image-ratio: {{ s.image_ratio }};
+    --avisi-mobile-per-view: {{ s.cards_mobile }};
+
+    background: var(--avisi-bg);
+    padding: {{ s.padding_top }}px 0 {{ s.padding_bottom }}px;
+    direction: rtl;
+    overflow: hidden;
+  }
+
+  #avisi-placements-{{ uid }} * {
+    box-sizing: border-box;
+  }
+
+  #avisi-placements-{{ uid }} .avisi-placements__inner {
+    width: min(100% - 40px, {{ s.max_width }}px);
+    margin: 0 auto;
+  }
+
+  #avisi-placements-{{ uid }} .avisi-placements__heading {
+    max-width: 920px;
+    margin: 0 auto {{ s.title_bottom_spacing }}px;
+    text-align: center;
+  }
+
+  #avisi-placements-{{ uid }} .avisi-placements__title {
+    margin: 0;
+    color: var(--avisi-title);
+    font-size: {{ s.title_size }}px;
+    font-weight: 800;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+  }
+
+  #avisi-placements-{{ uid }} .avisi-placements__viewport {
+    position: relative;
+    overflow: visible;
+  }
+
+  #avisi-placements-{{ uid }} .avisi-placements__track {
+    display: grid;
+    grid-template-columns: repeat({{ s.columns_desktop }}, minmax(0, 1fr));
+    gap: var(--avisi-gap);
+    direction: ltr;
+  }
+
+  #avisi-placements-{{ uid }} .avisi-placement {
+    min-width: 0;
+    overflow: hidden;
+    border-radius: var(--avisi-radius);
+    background: var(--avisi-caption-bg);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+    direction: rtl;
+  }
+
+  #avisi-placements-{{ uid }} .avisi-placement__media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: var(--avisi-image-ratio);
+    overflow: hidden;
+    background: #eeeeee;
+  }
+
+  #avisi-placements-{{ uid }} .avisi-placement__media img,
+  #avisi-placements-{{ uid }} .avisi-placement__placeholder {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  #avisi-placements-{{ uid }} .avisi-placement__placeholder {
+    background: #eeeeee;
+    fill: #bdbdbd;
+  }
+
+  #avisi-placements-{{ uid }} .avisi-placement__caption {
+    min-height: {{ s.caption_height }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 12px;
+    background: var(--avisi-caption-bg);
+    color: var(--avisi-caption-color);
+    text-align: center;
+    font-size: {{ s.caption_size }}px;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  #avisi-placements-{{ uid }} .avisi-placements__arrow,
+  #avisi-placements-{{ uid }} .avisi-placements__dots {
+    display: none;
+  }
+
+  @media screen and (max-width: 749px) {
+    #avisi-placements-{{ uid }} {
+      padding: {{ s.padding_top_mobile }}px 0 {{ s.padding_bottom_mobile }}px;
+    }
+
+    #avisi-placements-{{ uid }} .avisi-placements__inner {
+      width: min(100% - 30px, {{ s.max_width }}px);
+    }
+
+    #avisi-placements-{{ uid }} .avisi-placements__heading {
+      margin-bottom: {{ s.title_bottom_spacing_mobile }}px;
+      padding: 0 4px;
+    }
+
+    #avisi-placements-{{ uid }} .avisi-placements__title {
+      font-size: {{ s.title_size_mobile }}px;
+      line-height: 1.18;
+    }
+
+    #avisi-placements-{{ uid }} .avisi-placements__viewport {
+      overflow: hidden;
+      direction: ltr;
+    }
+
+    #avisi-placements-{{ uid }} .avisi-placements__track {
+      display: flex;
+      gap: var(--avisi-mobile-gap);
+      width: 100%;
+      transition: transform 0.38s ease;
+      will-change: transform;
+      direction: ltr;
+    }
+
+    #avisi-placements-{{ uid }} .avisi-placement {
+      flex:
+        0 0
+        calc(
+          (100% - (var(--avisi-mobile-per-view) - 1) * var(--avisi-mobile-gap))
+          / var(--avisi-mobile-per-view)
+        );
+    }
+
+    #avisi-placements-{{ uid }} .avisi-placement__caption {
+      min-height: {{ s.caption_height_mobile }}px;
+      padding: 9px 8px;
+      font-size: {{ s.caption_size_mobile }}px;
+    }
+
+    #avisi-placements-{{ uid }} .avisi-placements__arrow {
+      position: absolute;
+      top: 42%;
+      z-index: 3;
+      width: 34px;
+      height: 34px;
+      padding: 0;
+      border: 0;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: {{ s.arrow_color }};
+      background: {{ s.arrow_background }};
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+      cursor: pointer;
+      transform: translateY(-50%);
+      transition: opacity 0.2s ease;
+    }
+
+    #avisi-placements-{{ uid }} .avisi-placements__arrow svg {
+      width: 18px;
+      height: 18px;
+      display: block;
+    }
+
+    #avisi-placements-{{ uid }} .avisi-placements__arrow--previous {
+      left: 8px;
+    }
+
+    #avisi-placements-{{ uid }} .avisi-placements__arrow--next {
+      right: 8px;
+    }
+
+    #avisi-placements-{{ uid }} .avisi-placements__arrow:disabled {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #avisi-placements-{{ uid }} .avisi-placements__dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      margin-top: {{ s.dots_top_spacing }}px;
+      direction: ltr;
+    }
+
+    #avisi-placements-{{ uid }} .avisi-placements__dot {
+      width: 8px;
+      height: 8px;
+      padding: 0;
+      border: 0;
+      border-radius: 999px;
+      background: var(--avisi-dot);
+      cursor: pointer;
+      transition: width 0.2s ease, background 0.2s ease;
+    }
+
+    #avisi-placements-{{ uid }} .avisi-placements__dot.is-active {
+      width: 10px;
+      height: 10px;
+      background: var(--avisi-dot-active);
+    }
+  }
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    #avisi-placements-{{ uid }} .avisi-placements__track {
+      transition: none;
+    }
+  }
+</style>
+
+<section
+  id="avisi-placements-{{ uid }}"
+  class="avisi-placements"
+  dir="rtl"
+  data-section-id="{{ uid }}"
+  data-cards-mobile="{{ s.cards_mobile }}"
+>
+  <div class="avisi-placements__inner">
+
+    {% if s.title != blank %}
+      <header class="avisi-placements__heading">
+        <h2 class="avisi-placements__title">{{ s.title }}</h2>
+      </header>
+    {% endif %}
+
+    <div class="avisi-placements__viewport">
+      <div class="avisi-placements__track">
+
+        {% for block in section.blocks %}
+          <article class="avisi-placement" {{ block.shopify_attributes }}>
+            <div class="avisi-placement__media">
+              {% if block.settings.image != blank %}
+                {{
+                  block.settings.image
+                  | image_url: width: 1000
+                  | image_tag:
+                    loading: 'lazy',
+                    widths: '320, 480, 640, 800, 1000',
+                    sizes: '(max-width: 749px) 50vw, 25vw',
+                    alt: block.settings.image.alt | default: block.settings.caption
+                }}
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'avisi-placement__placeholder' }}
+              {% endif %}
+            </div>
+
+            {% if block.settings.caption != blank %}
+              <div class="avisi-placement__caption">
+                {{ block.settings.caption }}
+              </div>
+            {% endif %}
+          </article>
+        {% endfor %}
+
+      </div>
+
+      <button
+        type="button"
+        class="avisi-placements__arrow avisi-placements__arrow--previous"
+        aria-label="הקודם"
+      >
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M15 5L8 12L15 19" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <button
+        type="button"
+        class="avisi-placements__arrow avisi-placements__arrow--next"
+        aria-label="הבא"
+      >
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <div
+      class="avisi-placements__dots"
+      aria-label="ניווט בין התמונות"
+    ></div>
+
+  </div>
+</section>
+
+<script>
+  (function () {
+    function initAvisiPlacements(root) {
+      if (!root || root.dataset.sliderInitialized === 'true') return;
+
+      var track = root.querySelector('.avisi-placements__track');
+      var viewport = root.querySelector('.avisi-placements__viewport');
+      var cards = Array.prototype.slice.call(root.querySelectorAll('.avisi-placement'));
+      var dotsWrap = root.querySelector('.avisi-placements__dots');
+      var previousButton = root.querySelector('.avisi-placements__arrow--previous');
+      var nextButton = root.querySelector('.avisi-placements__arrow--next');
+
+      if (!track || !viewport || !cards.length) return;
+
+      root.dataset.sliderInitialized = 'true';
+
+      var currentPage = 0;
+      var pageCount = 1;
+      var perPage = 1;
+      var resizeTimer;
+
+      function isMobile() {
+        return window.matchMedia('(max-width: 749px)').matches;
+      }
+
+      function getPerPage() {
+        var value = parseInt(root.dataset.cardsMobile || '2', 10);
+        return value === 1 ? 1 : 2;
+      }
+
+      function createDots() {
+        dotsWrap.innerHTML = '';
+
+        for (var index = 0; index < pageCount; index++) {
+          var dot = document.createElement('button');
+          dot.type = 'button';
+          dot.className = 'avisi-placements__dot';
+          dot.setAttribute('aria-label', 'עמוד ' + (index + 1));
+
+          (function (pageIndex) {
+            dot.addEventListener('click', function () {
+              currentPage = pageIndex;
+              updateSlider();
+            });
+          })(index);
+
+          dotsWrap.appendChild(dot);
+        }
+      }
+
+      function updateControls() {
+        var dots = dotsWrap.querySelectorAll('.avisi-placements__dot');
+
+        dots.forEach(function (dot, index) {
+          dot.classList.toggle('is-active', index === currentPage);
+          dot.setAttribute(
+            'aria-current',
+            index === currentPage ? 'true' : 'false'
+          );
+        });
+
+        previousButton.disabled = currentPage <= 0;
+        nextButton.disabled = currentPage >= pageCount - 1;
+
+        var showNavigation = isMobile() && pageCount > 1;
+        previousButton.style.display = showNavigation ? 'flex' : 'none';
+        nextButton.style.display = showNavigation ? 'flex' : 'none';
+        dotsWrap.style.display = showNavigation ? 'flex' : 'none';
+      }
+
+      function updateSlider() {
+        if (!isMobile()) {
+          track.style.transform = '';
+          currentPage = 0;
+          updateControls();
+          return;
+        }
+
+        var firstCardIndex = currentPage * perPage;
+        var targetCard = cards[firstCardIndex];
+
+        if (!targetCard) {
+          currentPage = Math.max(0, pageCount - 1);
+          targetCard = cards[currentPage * perPage];
+        }
+
+        var offset = targetCard ? targetCard.offsetLeft : 0;
+        track.style.transform = 'translate3d(' + (-offset) + 'px, 0, 0)';
+        updateControls();
+      }
+
+      function calculateSlider() {
+        perPage = getPerPage();
+        pageCount = Math.max(1, Math.ceil(cards.length / perPage));
+
+        if (currentPage >= pageCount) {
+          currentPage = pageCount - 1;
+        }
+
+        createDots();
+        updateSlider();
+      }
+
+      previousButton.addEventListener('click', function () {
+        if (currentPage > 0) {
+          currentPage -= 1;
+          updateSlider();
+        }
+      });
+
+      nextButton.addEventListener('click', function () {
+        if (currentPage < pageCount - 1) {
+          currentPage += 1;
+          updateSlider();
+        }
+      });
+
+      window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(calculateSlider, 120);
+      });
+
+      calculateSlider();
+    }
+
+    var root = document.getElementById('avisi-placements-{{ uid }}');
+    initAvisiPlacements(root);
+
+    document.addEventListener('shopify:section:load', function (event) {
+      var loadedRoot = event.target.querySelector(
+        '#avisi-placements-{{ uid }}'
+      );
+
+      if (loadedRoot) {
+        loadedRoot.dataset.sliderInitialized = 'false';
+        initAvisiPlacements(loadedRoot);
+      }
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Avisi — Emplacements",
+  "tag": "section",
+  "class": "section-avisi-placements",
+  "max_blocks": 12,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Texte"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre en hébreu",
+      "default": "מצאו את המקום המושלם להצגת השלט שלכם!"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Taille du titre — PC",
+      "min": 20,
+      "max": 54,
+      "step": 1,
+      "unit": "px",
+      "default": 34
+    },
+    {
+      "type": "range",
+      "id": "title_size_mobile",
+      "label": "Taille du titre — mobile",
+      "min": 18,
+      "max": 38,
+      "step": 1,
+      "unit": "px",
+      "default": 27
+    },
+    {
+      "type": "range",
+      "id": "caption_size",
+      "label": "Taille des légendes — PC",
+      "min": 11,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "caption_size_mobile",
+      "label": "Taille des légendes — mobile",
+      "min": 11,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "header",
+      "content": "Disposition"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Largeur maximale",
+      "min": 800,
+      "max": 1800,
+      "step": 20,
+      "unit": "px",
+      "default": 1240
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "Nombre de colonnes — PC",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "select",
+      "id": "cards_mobile",
+      "label": "Cartes visibles — mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1 carte"
+        },
+        {
+          "value": "2",
+          "label": "2 cartes"
+        }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Format des images",
+      "options": [
+        {
+          "value": "1 / 1",
+          "label": "Carré"
+        },
+        {
+          "value": "4 / 5",
+          "label": "Portrait"
+        },
+        {
+          "value": "3 / 4",
+          "label": "Portrait allongé"
+        },
+        {
+          "value": "5 / 4",
+          "label": "Paysage"
+        }
+      ],
+      "default": "4 / 5"
+    },
+    {
+      "type": "range",
+      "id": "desktop_gap",
+      "label": "Espace entre les cartes — PC",
+      "min": 6,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 26
+    },
+    {
+      "type": "range",
+      "id": "mobile_gap",
+      "label": "Espace entre les cartes — mobile",
+      "min": 4,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "label": "Arrondi des cartes",
+      "min": 0,
+      "max": 36,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "caption_height",
+      "label": "Hauteur des légendes — PC",
+      "min": 36,
+      "max": 90,
+      "step": 2,
+      "unit": "px",
+      "default": 42
+    },
+    {
+      "type": "range",
+      "id": "caption_height_mobile",
+      "label": "Hauteur des légendes — mobile",
+      "min": 34,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 42
+    },
+    {
+      "type": "header",
+      "content": "Couleurs"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Fond de la section",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Couleur du titre",
+      "default": "#171717"
+    },
+    {
+      "type": "color",
+      "id": "caption_background",
+      "label": "Fond des légendes",
+      "default": "#F1F1F1"
+    },
+    {
+      "type": "color",
+      "id": "caption_color",
+      "label": "Couleur des légendes",
+      "default": "#2A2A2A"
+    },
+    {
+      "type": "color",
+      "id": "arrow_background",
+      "label": "Fond des flèches",
+      "default": "#222222"
+    },
+    {
+      "type": "color",
+      "id": "arrow_color",
+      "label": "Couleur des flèches",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "dot_color",
+      "label": "Points inactifs",
+      "default": "#A9A9A9"
+    },
+    {
+      "type": "color",
+      "id": "dot_active_color",
+      "label": "Point actif",
+      "default": "#111111"
+    },
+    {
+      "type": "header",
+      "content": "Espacements"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Marge haute — PC",
+      "min": 0,
+      "max": 140,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Marge basse — PC",
+      "min": 0,
+      "max": 140,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Marge haute — mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Marge basse — mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "title_bottom_spacing",
+      "label": "Espace sous le titre — PC",
+      "min": 8,
+      "max": 70,
+      "step": 2,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "title_bottom_spacing_mobile",
+      "label": "Espace sous le titre — mobile",
+      "min": 8,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "dots_top_spacing",
+      "label": "Espace au-dessus des points",
+      "min": 4,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    }
+  ],
+  "blocks": [
+    {
+      "type": "placement",
+      "name": "Emplacement",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "caption",
+          "label": "Légende en hébreu",
+          "default": "על הדלפק"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Avisi — Emplacements",
+      "blocks": [
+        {
+          "type": "placement",
+          "settings": {
+            "caption": "על הדלפק"
+          }
+        },
+        {
+          "type": "placement",
+          "settings": {
+            "caption": "על שולחן הקבלה"
+          }
+        },
+        {
+          "type": "placement",
+          "settings": {
+            "caption": "על הקיר"
+          }
+        },
+        {
+          "type": "placement",
+          "settings": {
+            "caption": "על השולחן"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
