@@ -194,14 +194,8 @@
         "logo_ybrG7M": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/Nouveau_projet_47.png",
             "alt": "New School",
-            "link": ""
-          }
-        },
-        "logo_ytyVBd": {
-          "type": "logo",
-          "settings": {
-            "alt": "E.Leclerc",
             "link": ""
           }
         }
@@ -210,8 +204,7 @@
         "logo_jHa3BR",
         "logo_CFQ7L7",
         "logo_fWXDpQ",
-        "logo_ybrG7M",
-        "logo_ytyVBd"
+        "logo_ybrG7M"
       ],
       "name": "Trust Logo Marquee",
       "settings": {
