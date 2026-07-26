@@ -94,8 +94,8 @@
           "settings": {
             "image": "shopify://shop_images/Lenova_10_2.png",
             "image_width": 180,
-            "heading_size": "h3",
-            "title": "Sign up for new stories and personal offers",
+            "heading_size": "h4",
+            "title": "Newsletters",
             "content": ""
           }
         },
@@ -104,13 +104,13 @@
           "settings": {
             "menu": "footer",
             "show_menu_title": true,
-            "menu_title": ""
+            "menu_title": "Informations Légales"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "title": "About",
+            "title": "Contactez-Nous",
             "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.</p>",
             "enable_follow_on_shop": true
           }
