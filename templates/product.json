@@ -695,15 +695,15 @@
         "item_nMxz3Y": {
           "type": "item",
           "settings": {
-            "title": "How long will it take to get my orders?",
-            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
+            "title": "האם צריך פרופיל עסקי בגוגל כדי להשתמש ב-Avisi?",
+            "content": "<p>כן. יש צורך בפרופיל פעיל של <strong>Google Business Profile</strong>, כדי שהלקוחות שלכם יוכלו להשאיר ביקורת על העסק בגוגל.</p>"
           }
         },
         "item_r4TmRq": {
           "type": "item",
           "settings": {
-            "title": "Any question?",
-            "content": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+            "title": "האם הלקוחות שלי יכולים להשאיר ביקורת בקלות?",
+            "content": "<p>בהחלט! ברגע שהלקוח מקרב את הטלפון החכם ללוחית <strong>Avisi</strong>, הוא מועבר ישירות לעמוד הביקורות שלכם בגוגל.</p><p>אין צורך להוריד אפליקציה או לבצע הרשמה נוספת.</p>"
           }
         }
       },
