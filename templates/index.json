@@ -626,7 +626,7 @@
         "166442457738b23caf-2"
       ],
       "settings": {
-        "full_width": false,
+        "full_width": true,
         "subheading": "",
         "title": "שאלות נפוצות",
         "content": "",
