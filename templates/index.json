@@ -290,6 +290,77 @@
         "pagination_label": "ניווט בין שלבי התהליך"
       }
     },
+    "emplacementcarte_Hw4NGY": {
+      "type": "emplacementcarte",
+      "blocks": {
+        "placement_UErnzX": {
+          "type": "placement",
+          "settings": {
+            "image": "shopify://shop_images/SPYaR7F6rt.webp",
+            "caption": "על הדלפק"
+          }
+        },
+        "placement_TD9Wpw": {
+          "type": "placement",
+          "settings": {
+            "image": "shopify://shop_images/iOjKAuHze_mid.webp",
+            "caption": "על שולחן הקבלה"
+          }
+        },
+        "placement_VKqnMr": {
+          "type": "placement",
+          "settings": {
+            "image": "shopify://shop_images/dentiste.webp",
+            "caption": "על הקיר"
+          }
+        },
+        "placement_zFzzwQ": {
+          "type": "placement",
+          "settings": {
+            "image": "shopify://shop_images/iOjKA2uHze_mid.webp",
+            "caption": "על השולחן"
+          }
+        }
+      },
+      "block_order": [
+        "placement_UErnzX",
+        "placement_TD9Wpw",
+        "placement_VKqnMr",
+        "placement_zFzzwQ"
+      ],
+      "name": "Avisi — Emplacements",
+      "settings": {
+        "title": "מצאו את המקום המושלם להצגת השלט שלכם!",
+        "title_size": 34,
+        "title_size_mobile": 27,
+        "caption_size": 16,
+        "caption_size_mobile": 15,
+        "max_width": 1240,
+        "columns_desktop": 4,
+        "cards_mobile": "2",
+        "image_ratio": "4 / 5",
+        "desktop_gap": 26,
+        "mobile_gap": 12,
+        "card_radius": 16,
+        "caption_height": 42,
+        "caption_height_mobile": 42,
+        "background_color": "#FFFFFF",
+        "title_color": "#171717",
+        "caption_background": "#F1F1F1",
+        "caption_color": "#2A2A2A",
+        "arrow_background": "#222222",
+        "arrow_color": "#FFFFFF",
+        "dot_color": "#A9A9A9",
+        "dot_active_color": "#111111",
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "title_bottom_spacing": 30,
+        "title_bottom_spacing_mobile": 28,
+        "dots_top_spacing": 18
+      }
+    },
     "doublereviwsection_9Ybpt6": {
       "type": "doublereviwsection",
       "name": "Double Reviews Split",
@@ -765,6 +836,7 @@
     "trustlogo_ymtPjm",
     "benefitsection_VtJMGb",
     "commentcafonctionne_x3KEFx",
+    "emplacementcarte_Hw4NGY",
     "doublereviwsection_9Ybpt6",
     "iconsfeature_myNHRE",
     "featured_collection_yezJaT",
