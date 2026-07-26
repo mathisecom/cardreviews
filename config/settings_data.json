@@ -58,6 +58,11 @@
         "type": "shopify://apps/kaching-bundles/blocks/app-embed-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
         "disabled": false,
         "settings": {}
+      },
+      "14900259222037449619": {
+        "type": "shopify://apps/chaty-chat-buttons-whatsapp/blocks/chaty/0aaf5812-760f-4dd7-be9b-cca564d8200b",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
