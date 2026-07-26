@@ -818,22 +818,46 @@
         "166442457738b23caf-1": {
           "type": "item",
           "settings": {
-            "title": "How long will it take to get my orders?",
-            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
+            "title": "האם צריך פרופיל עסקי בגוגל כדי להשתמש ב-Avisi?",
+            "content": "<p>כן. יש צורך בפרופיל פעיל של <strong>Google Business Profile</strong>, כדי שהלקוחות שלכם יוכלו להשאיר ביקורת על העסק בגוגל.</p>"
           }
         },
         "166442457738b23caf-2": {
           "type": "item",
           "settings": {
-            "title": "Any question?",
-            "content": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+            "title": "האם הלקוחות שלי יכולים להשאיר ביקורת בקלות?",
+            "content": "<p>בהחלט! ברגע שהלקוח מקרב את הטלפון החכם ללוחית <strong>Avisi</strong>, הוא מועבר ישירות לעמוד הביקורות שלכם בגוגל.</p><p>אין צורך להוריד אפליקציה או לבצע הרשמה נוספת.</p>"
+          }
+        },
+        "item_xMzfjV": {
+          "type": "item",
+          "settings": {
+            "title": "האם לוחיות Avisi מתאימות לכל סוגי הטלפונים?",
+            "content": "<p>לוחיות <strong>Avisi</strong> משלבות טכנולוגיית <strong>NFC</strong> יחד עם קוד <strong>QR</strong>.</p><p>הן מתאימות לרוב הטלפונים החכמים החדשים, וגם למכשירים ישנים יותר באמצעות סריקת קוד ה-QR.</p>"
+          }
+        },
+        "item_YMHtFn": {
+          "type": "item",
+          "settings": {
+            "title": "איך Avisi פועלת בפועל?",
+            "content": "<p>הלקוח מקרב את הטלפון ללוחית → עמוד הביקורות שלכם נפתח → הלקוח משאיר ביקורת.</p><p>פשוט, מהיר ויעיל.</p>"
+          }
+        },
+        "item_4FbLpQ": {
+          "type": "item",
+          "settings": {
+            "title": "האם אפשר להזמין כמה לוחיות Avisi?",
+            "content": "<p>כן. ניתן להזמין מספר לוחיות, ואנו מציעים מחירים מותאמים לעסקים עם כמה סניפים או נקודות מכירה, כגון מסעדות, בתי מלון, מספרות, מכוני יופי, רשתות וזכיינים.</p>"
           }
         }
       },
       "block_order": [
         "166442457738b23caf-0",
         "166442457738b23caf-1",
-        "166442457738b23caf-2"
+        "166442457738b23caf-2",
+        "item_xMzfjV",
+        "item_YMHtFn",
+        "item_4FbLpQ"
       ],
       "settings": {
         "full_width": true,
