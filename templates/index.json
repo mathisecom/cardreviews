@@ -530,12 +530,54 @@
             "avatar_bg": "#0066ff",
             "avatar_color": "#ffffff"
           }
+        },
+        "review_qX99Xp": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review": "שירות לקוחות מהיר ומקצועי במיוחד! תודה שפתרתם את הבעיה שלי במהירות רבה.",
+            "name": "סמנתה היולין",
+            "date": "04/09/2025",
+            "verified": false,
+            "initial": "S",
+            "avatar_bg": "#0066ff",
+            "avatar_color": "#ffffff"
+          }
+        },
+        "review_YhN77k": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review": "שירות לקוחות מהיר ומקצועי במיוחד! תודה שפתרתם את הבעיה שלי במהירות רבה.",
+            "name": "סמנתה היולין",
+            "date": "04/09/2025",
+            "verified": false,
+            "initial": "S",
+            "avatar_bg": "#0066ff",
+            "avatar_color": "#ffffff"
+          }
+        },
+        "review_ftmLK3": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review": "שירות לקוחות מהיר ומקצועי במיוחד! תודה שפתרתם את הבעיה שלי במהירות רבה.",
+            "name": "סמנתה היולין",
+            "date": "04/09/2025",
+            "verified": false,
+            "initial": "S",
+            "avatar_bg": "#0066ff",
+            "avatar_color": "#ffffff"
+          }
         }
       },
       "block_order": [
         "review_wGB6n4",
         "review_fJPcwB",
-        "review_3VYrxA"
+        "review_3VYrxA",
+        "review_qX99Xp",
+        "review_YhN77k",
+        "review_ftmLK3"
       ],
       "name": "Avis clients Avisi",
       "settings": {
