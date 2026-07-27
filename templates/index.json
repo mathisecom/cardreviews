@@ -571,7 +571,7 @@
         "liquid_RGAbcY": {
           "type": "liquid",
           "settings": {
-            "liquid": ""
+            "liquid": "<div class=\"product-info__liquid\" dir=\"rtl\">\n\n  <div style=\"display:flex; justify-content:center; align-items:center; gap:3rem;\">\n\n    <div style=\"display:flex; align-items:center; gap:0.6rem; font-size:9px; font-weight:500; color:#121212;\">\n      <img\n        src=\"https://cdn.shopify.com/s/files/1/0673/2562/4490/files/delivery-svgrepo-com.svg?v=1774451949\"\n        alt=\"סמל משלוח\"\n        width=\"16\"\n        height=\"16\"\n        loading=\"lazy\"\n      >\n      <span>משלוח ביום שלמחרת</span>\n    </div>\n\n    <div style=\"display:flex; align-items:center; gap:0.6rem; font-size:9px; font-weight:500; color:#121212;\">\n      <img\n        src=\"https://cdn.shopify.com/s/files/1/0673/2562/4490/files/return-svgrepo-com.svg?v=1774451951\"\n        alt=\"סמל אחריות\"\n        width=\"16\"\n        height=\"16\"\n        loading=\"lazy\"\n      >\n      <span>אחריות ל-30 יום</span>\n    </div>\n\n  </div>\n\n</div>"
           }
         },
         "collapsible_text_NPahXT": {
