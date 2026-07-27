@@ -579,8 +579,8 @@
           "settings": {
             "icon": "none",
             "icon_width": 20,
-            "title": "Title",
-            "content": "<p>Share some content to your customers about your products.</p>",
+            "title": "איך זה עובד?",
+            "content": "<p>קבלו יותר ביקורות בגוגל בתוך 3 שניות בלבד:</p><ul><li>אנחנו יוצרים עבורכם קוד QR מותאם אישית.<br/></li><li>סורקים, מזינים את הקוד — ומוכנים להתחיל.<br/></li><li>הלקוחות מצמידים את הטלפון, משאירים ביקורת ומגדילים את החשיפה שלכם.<br/></li><li>שימוש ללא הגבלה: אין צורך ב־Wi-Fi או בחיבור לחשמל.</li></ul>",
             "page": ""
           }
         },
@@ -589,8 +589,18 @@
           "settings": {
             "icon": "none",
             "icon_width": 20,
-            "title": "Title",
-            "content": "<p>Share some content to your customers about your products.</p>",
+            "title": "התחייבות להחזר כספי תוך 30 יום",
+            "content": "<p>אם מספר הביקורות שלכם בגוגל לא יוכפל לפחות בתוך 30 יום, תקבלו החזר כספי מלא — בהתחייבות.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_text_8mkkG7": {
+          "type": "collapsible_text",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "פרטי המוצר",
+            "content": "<ul><li>עשוי מפרספקס איכותי<br/></li><li>מידות: <strong>12 × 12 ס״מ</strong><br/></li><li>עובי: <strong>3 מ״מ</strong><br/></li><li>מסופק עם מדבקה חזקה המותקנת בגב הלוחית<br/></li></ul><p><strong>שימו לב:</strong> משטחי מתכת עלולים להפריע לפעולת טכנולוגיית ה־NFC. במקרה של התקנה על מתכת, מומלץ להשתמש בקוד ה־QR.</p>",
             "page": ""
           }
         }
@@ -608,7 +618,8 @@
         "liquid_UDRN6j",
         "liquid_RGAbcY",
         "collapsible_text_NPahXT",
-        "collapsible_text_kqNXrq"
+        "collapsible_text_kqNXrq",
+        "collapsible_text_8mkkG7"
       ],
       "name": "Featured product",
       "settings": {
