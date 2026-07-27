@@ -497,6 +497,12 @@
     "featured_product_YtLYkN": {
       "type": "featured-product",
       "blocks": {
+        "liquid_JcpECE": {
+          "type": "liquid",
+          "settings": {
+            "liquid": ""
+          }
+        },
         "title_XVLnkc": {
           "type": "title",
           "settings": {
@@ -506,12 +512,6 @@
         "badges_LNT7qy": {
           "type": "badges",
           "settings": {}
-        },
-        "price_ny7qgt": {
-          "type": "price",
-          "settings": {
-            "show_taxes_notice": false
-          }
         },
         "rating_4WgkMx": {
           "type": "rating",
@@ -555,17 +555,46 @@
             "payment_button_background": "",
             "payment_button_text_color": ""
           }
+        },
+        "liquid_UDRN6j": {
+          "type": "liquid",
+          "settings": {
+            "liquid": ""
+          }
+        },
+        "collapsible_text_NPahXT": {
+          "type": "collapsible_text",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Title",
+            "content": "<p>Share some content to your customers about your products.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_text_kqNXrq": {
+          "type": "collapsible_text",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Title",
+            "content": "<p>Share some content to your customers about your products.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
+        "liquid_JcpECE",
         "title_XVLnkc",
         "badges_LNT7qy",
-        "price_ny7qgt",
         "rating_4WgkMx",
         "kaching_bundles_app_block_xgRPzn",
         "description_ANgPyq",
         "variant_picker_Kf4z6y",
-        "buy_buttons_8wphqp"
+        "buy_buttons_8wphqp",
+        "liquid_UDRN6j",
+        "collapsible_text_NPahXT",
+        "collapsible_text_kqNXrq"
       ],
       "name": "Featured product",
       "settings": {
@@ -573,11 +602,11 @@
         "product": "שלט-nfc-לביקורות-גוגל",
         "desktop_media_width": 55,
         "desktop_media_layout": "carousel_thumbnails_left",
-        "mobile_media_size": "expanded",
-        "mobile_carousel_control": "floating_dots",
+        "mobile_media_size": "contained",
+        "mobile_carousel_control": "thumbnails",
         "enable_video_autoplay": true,
         "enable_video_looping": false,
-        "enable_image_zoom": true,
+        "enable_image_zoom": false,
         "max_image_zoom_level": 3,
         "background": "",
         "background_gradient": "",
