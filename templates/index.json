@@ -494,6 +494,98 @@
         "lazy": true
       }
     },
+    "featured_product_YtLYkN": {
+      "type": "featured-product",
+      "blocks": {
+        "title_XVLnkc": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h2"
+          }
+        },
+        "badges_LNT7qy": {
+          "type": "badges",
+          "settings": {}
+        },
+        "price_ny7qgt": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "rating_4WgkMx": {
+          "type": "rating",
+          "settings": {
+            "show_empty": false
+          }
+        },
+        "kaching_bundles_app_block_xgRPzn": {
+          "type": "shopify://apps/kaching-bundles/blocks/app-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
+          "settings": {
+            "product": "{{section.settings.product}}",
+            "manual_deal_block_id": ""
+          }
+        },
+        "description_ANgPyq": {
+          "type": "description",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "collapse_content": false
+          }
+        },
+        "variant_picker_Kf4z6y": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "stack_blocks": true,
+            "selector_style": "block",
+            "swatch_selector_style": "swatch",
+            "variant_image_options": "",
+            "size_chart_page": ""
+          }
+        },
+        "buy_buttons_8wphqp": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient": false,
+            "atc_button_background": "",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "title_XVLnkc",
+        "badges_LNT7qy",
+        "price_ny7qgt",
+        "rating_4WgkMx",
+        "kaching_bundles_app_block_xgRPzn",
+        "description_ANgPyq",
+        "variant_picker_Kf4z6y",
+        "buy_buttons_8wphqp"
+      ],
+      "name": "Featured product",
+      "settings": {
+        "full_width": true,
+        "product": "שלט-nfc-לביקורות-גוגל",
+        "desktop_media_width": 55,
+        "desktop_media_layout": "carousel_thumbnails_left",
+        "mobile_media_size": "expanded",
+        "mobile_carousel_control": "floating_dots",
+        "enable_video_autoplay": true,
+        "enable_video_looping": false,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "input_background": "rgba(0,0,0,0)",
+        "input_text_color": ""
+      }
+    },
     "doublereviwsection_9Ybpt6": {
       "type": "doublereviwsection",
       "name": "Double Reviews Split",
@@ -791,6 +883,154 @@
         "lazy": true
       }
     },
+    "avisclients_nAGeDM": {
+      "type": "avisclients",
+      "blocks": {
+        "review_LaY8Gh": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review": "הלוחית נראית מצוין על הדלפק והלקוחות מבינים מיד מה לעשות. ההתקנה הייתה פשוטה והכול עבד כבר מהנגיעה הראשונה.",
+            "name": "בעלת מסעדה בתל אביב",
+            "date": "יוני 2026",
+            "verified": true,
+            "initial": "מ",
+            "avatar_bg": "#0066ff",
+            "avatar_color": "#ffffff"
+          }
+        },
+        "review_6FbkaH": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review": "פתרון נוח מאוד לעסק. במקום להסביר לכל לקוח איך למצוא אותנו בגוגל, הוא פשוט מקרב את הטלפון ומשאיר ביקורת.",
+            "name": "בעל מספרה בחיפה",
+            "date": "מאי 2026",
+            "verified": true,
+            "initial": "ס",
+            "avatar_bg": "#0066ff",
+            "avatar_color": "#ffffff"
+          }
+        },
+        "review_cQXGFp": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review": "העיצוב מקצועי ומתאים מאוד לקליניקה שלנו. השירות היה מהיר והקישור לעמוד הביקורות הוגדר בדיוק כמו שביקשנו.",
+            "name": "מנהלת קליניקה בירושלים",
+            "date": "אפריל 2026",
+            "verified": true,
+            "initial": "ק",
+            "avatar_bg": "#0066ff",
+            "avatar_color": "#ffffff"
+          }
+        },
+        "review_Yrmm4Q": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review": "מאז שהצבנו את הלוחית ליד הקופה, הרבה יותר לקוחות זוכרים להשאיר לנו ביקורת. מוצר קטן שעושה עבודה גדולה.",
+            "name": "בעל בית קפה בראשון לציון",
+            "date": "מרץ 2026",
+            "verified": true,
+            "initial": "ק",
+            "avatar_bg": "#0066ff",
+            "avatar_color": "#ffffff"
+          }
+        },
+        "review_iYmRzd": {
+          "type": "review",
+          "settings": {
+            "rating": 4,
+            "review": "אהבתי שאין צורך באפליקציה או במנוי חודשי. הלקוחות משתמשים בלוחית בקלות גם באייפון וגם באנדרואיד.",
+            "name": "מנהל חדר כושר בנתניה",
+            "date": "פברואר 2026",
+            "verified": true,
+            "initial": "כ",
+            "avatar_bg": "#0066ff",
+            "avatar_color": "#ffffff"
+          }
+        },
+        "review_rGfCbq": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review": "המשלוח הגיע מהר, האיכות טובה מאוד והצוות עזר לנו להגדיר את כרטיס Google של העסק. שירות מצוין ומומלץ.",
+            "name": "בעלת חנות בבאר שבע",
+            "date": "ינואר 2026",
+            "verified": true,
+            "initial": "ח",
+            "avatar_bg": "#0066ff",
+            "avatar_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "review_LaY8Gh",
+        "review_6FbkaH",
+        "review_cQXGFp",
+        "review_Yrmm4Q",
+        "review_iYmRzd",
+        "review_rGfCbq"
+      ],
+      "name": "Avis clients Avisi",
+      "settings": {
+        "eyebrow": "חוות דעת של לקוחות",
+        "heading": "מה הלקוחות שלנו אומרים?",
+        "intro": "",
+        "show_summary": true,
+        "summary_title": "4.8 מתוך 5",
+        "summary_rating": 5,
+        "summary_prefix": "מבוסס על",
+        "summary_count": "3,177, ביקורות",
+        "summary_source": "לקוחות",
+        "section_bg": "#ffffff",
+        "card_bg": "#f9fafb",
+        "accent": "#0066ff",
+        "title_color": "#101218",
+        "text_color": "#363a44",
+        "muted_color": "#747a89",
+        "border_color": "#e5eaf2",
+        "star_inactive": "#d8dee8",
+        "max_width": 1320,
+        "columns": 3,
+        "gap": 20,
+        "heading_width": 820,
+        "card_height": 280,
+        "card_padding": 28,
+        "radius": 22,
+        "summary_radius": 16,
+        "border_width": 1,
+        "shadow_opacity": 6,
+        "eyebrow_size": 12,
+        "heading_desktop": 46,
+        "heading_mobile": 34,
+        "heading_weight": "700",
+        "intro_size": 16,
+        "star_size": 16,
+        "review_size": 17,
+        "review_size_mobile": 16,
+        "review_weight": "400",
+        "author_size": 15,
+        "meta_size": 12,
+        "avatar_size": 46,
+        "avatar_font": 16,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "header_gap": 48,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56,
+        "header_gap_mobile": 32,
+        "mobile_width": 88,
+        "mobile_gap": 14,
+        "card_height_mobile": 280,
+        "card_padding_mobile": 24,
+        "slider_label": "חוות הדעת של הלקוחות שלנו",
+        "prev_label": "הביקורת הקודמת",
+        "next_label": "הביקורת הבאה",
+        "verified_text": "ביקורת מאומתת"
+      }
+    },
     "faq": {
       "type": "faq",
       "blocks": {
@@ -865,154 +1105,6 @@
         "button_text_color": "",
         "accordion_background": "",
         "accordion_text_color": ""
-      }
-    },
-    "avisclients_nAGeDM": {
-      "type": "avisclients",
-      "blocks": {
-        "review_LaY8Gh": {
-          "type": "review",
-          "settings": {
-            "rating": 5,
-            "review": "הלוחית נראית מצוין על הדלפק והלקוחות מבינים מיד מה לעשות. ההתקנה הייתה פשוטה והכול עבד כבר מהנגיעה הראשונה.",
-            "name": "בעלת מסעדה בתל אביב",
-            "date": "יוני 2026",
-            "verified": true,
-            "initial": "מ",
-            "avatar_bg": "#0066FF",
-            "avatar_color": "#FFFFFF"
-          }
-        },
-        "review_6FbkaH": {
-          "type": "review",
-          "settings": {
-            "rating": 5,
-            "review": "פתרון נוח מאוד לעסק. במקום להסביר לכל לקוח איך למצוא אותנו בגוגל, הוא פשוט מקרב את הטלפון ומשאיר ביקורת.",
-            "name": "בעל מספרה בחיפה",
-            "date": "מאי 2026",
-            "verified": true,
-            "initial": "ס",
-            "avatar_bg": "#0066FF",
-            "avatar_color": "#FFFFFF"
-          }
-        },
-        "review_cQXGFp": {
-          "type": "review",
-          "settings": {
-            "rating": 5,
-            "review": "העיצוב מקצועי ומתאים מאוד לקליניקה שלנו. השירות היה מהיר והקישור לעמוד הביקורות הוגדר בדיוק כמו שביקשנו.",
-            "name": "מנהלת קליניקה בירושלים",
-            "date": "אפריל 2026",
-            "verified": true,
-            "initial": "ק",
-            "avatar_bg": "#0066FF",
-            "avatar_color": "#FFFFFF"
-          }
-        },
-        "review_Yrmm4Q": {
-          "type": "review",
-          "settings": {
-            "rating": 5,
-            "review": "מאז שהצבנו את הלוחית ליד הקופה, הרבה יותר לקוחות זוכרים להשאיר לנו ביקורת. מוצר קטן שעושה עבודה גדולה.",
-            "name": "בעל בית קפה בראשון לציון",
-            "date": "מרץ 2026",
-            "verified": true,
-            "initial": "ק",
-            "avatar_bg": "#0066FF",
-            "avatar_color": "#FFFFFF"
-          }
-        },
-        "review_iYmRzd": {
-          "type": "review",
-          "settings": {
-            "rating": 4,
-            "review": "אהבתי שאין צורך באפליקציה או במנוי חודשי. הלקוחות משתמשים בלוחית בקלות גם באייפון וגם באנדרואיד.",
-            "name": "מנהל חדר כושר בנתניה",
-            "date": "פברואר 2026",
-            "verified": true,
-            "initial": "כ",
-            "avatar_bg": "#0066FF",
-            "avatar_color": "#FFFFFF"
-          }
-        },
-        "review_rGfCbq": {
-          "type": "review",
-          "settings": {
-            "rating": 5,
-            "review": "המשלוח הגיע מהר, האיכות טובה מאוד והצוות עזר לנו להגדיר את כרטיס Google של העסק. שירות מצוין ומומלץ.",
-            "name": "בעלת חנות בבאר שבע",
-            "date": "ינואר 2026",
-            "verified": true,
-            "initial": "ח",
-            "avatar_bg": "#0066FF",
-            "avatar_color": "#FFFFFF"
-          }
-        }
-      },
-      "block_order": [
-        "review_LaY8Gh",
-        "review_6FbkaH",
-        "review_cQXGFp",
-        "review_Yrmm4Q",
-        "review_iYmRzd",
-        "review_rGfCbq"
-      ],
-      "name": "Avis clients Avisi",
-      "settings": {
-        "eyebrow": "חוות דעת של לקוחות",
-        "heading": "מה הלקוחות שלנו אומרים?",
-        "intro": "",
-        "show_summary": true,
-        "summary_title": "4.8 מתוך 5",
-        "summary_rating": 5,
-        "summary_prefix": "מבוסס על",
-        "summary_count": "3,177, ביקורות",
-        "summary_source": "לקוחות",
-        "section_bg": "#FFFFFF",
-        "card_bg": "#F9FAFB",
-        "accent": "#0066FF",
-        "title_color": "#101218",
-        "text_color": "#363A44",
-        "muted_color": "#747A89",
-        "border_color": "#E5EAF2",
-        "star_inactive": "#D8DEE8",
-        "max_width": 1320,
-        "columns": 3,
-        "gap": 20,
-        "heading_width": 820,
-        "card_height": 280,
-        "card_padding": 28,
-        "radius": 22,
-        "summary_radius": 16,
-        "border_width": 1,
-        "shadow_opacity": 6,
-        "eyebrow_size": 12,
-        "heading_desktop": 46,
-        "heading_mobile": 34,
-        "heading_weight": "700",
-        "intro_size": 16,
-        "star_size": 16,
-        "review_size": 17,
-        "review_size_mobile": 16,
-        "review_weight": "400",
-        "author_size": 15,
-        "meta_size": 12,
-        "avatar_size": 46,
-        "avatar_font": 16,
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "header_gap": 48,
-        "padding_top_mobile": 56,
-        "padding_bottom_mobile": 56,
-        "header_gap_mobile": 32,
-        "mobile_width": 88,
-        "mobile_gap": 14,
-        "card_height_mobile": 280,
-        "card_padding_mobile": 24,
-        "slider_label": "חוות הדעת של הלקוחות שלנו",
-        "prev_label": "הביקורת הקודמת",
-        "next_label": "הביקורת הבאה",
-        "verified_text": "ביקורת מאומתת"
       }
     },
     "iconsfooter_yWRCHe": {
@@ -1149,13 +1241,14 @@
     "emplacementcarte_Hw4NGY",
     "rich_text_K8Fkm3",
     "logoscroll_gGPUFh",
+    "featured_product_YtLYkN",
     "doublereviwsection_9Ybpt6",
     "iconsfeature_myNHRE",
     "featured_collection_yezJaT",
     "whychoose_zV64bJ",
     "logoscroll_byYiLc",
-    "faq",
     "avisclients_nAGeDM",
+    "faq",
     "iconsfooter_yWRCHe",
     "ctafinal_aGztMy"
   ]
