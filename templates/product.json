@@ -482,7 +482,7 @@
       "name": "Why Choose Us",
       "settings": {
         "text_direction": "rtl",
-        "heading": "?למה לבחור ב-Avisi",
+        "heading": "?למה לבחור ב-Revio Star",
         "image": "shopify://shop_images/0c49d315-0d89-4ff1-963a-63950399f1f4.png",
         "image_position": "right",
         "padding_top_desktop": 80,
@@ -603,8 +603,8 @@
             "date": "יוני 2026",
             "verified": true,
             "initial": "מ",
-            "avatar_bg": "#0066FF",
-            "avatar_color": "#FFFFFF"
+            "avatar_bg": "#0066ff",
+            "avatar_color": "#ffffff"
           }
         },
         "review_haUMQd": {
@@ -616,8 +616,8 @@
             "date": "מאי 2026",
             "verified": true,
             "initial": "ס",
-            "avatar_bg": "#0066FF",
-            "avatar_color": "#FFFFFF"
+            "avatar_bg": "#0066ff",
+            "avatar_color": "#ffffff"
           }
         },
         "review_yrkWVq": {
@@ -629,8 +629,8 @@
             "date": "אפריל 2026",
             "verified": true,
             "initial": "ק",
-            "avatar_bg": "#0066FF",
-            "avatar_color": "#FFFFFF"
+            "avatar_bg": "#0066ff",
+            "avatar_color": "#ffffff"
           }
         },
         "review_hBiLjt": {
@@ -642,8 +642,8 @@
             "date": "מרץ 2026",
             "verified": true,
             "initial": "ק",
-            "avatar_bg": "#0066FF",
-            "avatar_color": "#FFFFFF"
+            "avatar_bg": "#0066ff",
+            "avatar_color": "#ffffff"
           }
         },
         "review_JneXTn": {
@@ -655,8 +655,8 @@
             "date": "פברואר 2026",
             "verified": true,
             "initial": "כ",
-            "avatar_bg": "#0066FF",
-            "avatar_color": "#FFFFFF"
+            "avatar_bg": "#0066ff",
+            "avatar_color": "#ffffff"
           }
         },
         "review_hKxVy7": {
@@ -668,8 +668,8 @@
             "date": "ינואר 2026",
             "verified": true,
             "initial": "ח",
-            "avatar_bg": "#0066FF",
-            "avatar_color": "#FFFFFF"
+            "avatar_bg": "#0066ff",
+            "avatar_color": "#ffffff"
           }
         }
       },
@@ -692,14 +692,14 @@
         "summary_prefix": "מבוסס על",
         "summary_count": "3,177, ביקורות",
         "summary_source": "לקוחות",
-        "section_bg": "#FFFFFF",
-        "card_bg": "#F9FAFB",
-        "accent": "#0066FF",
+        "section_bg": "#ffffff",
+        "card_bg": "#f9fafb",
+        "accent": "#0066ff",
         "title_color": "#101218",
-        "text_color": "#363A44",
-        "muted_color": "#747A89",
-        "border_color": "#E5EAF2",
-        "star_inactive": "#D8DEE8",
+        "text_color": "#363a44",
+        "muted_color": "#747a89",
+        "border_color": "#e5eaf2",
+        "star_inactive": "#d8dee8",
         "max_width": 1320,
         "columns": 3,
         "gap": 20,
