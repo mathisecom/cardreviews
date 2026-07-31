@@ -942,6 +942,7 @@
             "name": "בעלת מסעדה בתל אביב",
             "date": "יוני 2026",
             "verified": true,
+            "photo": "shopify://shop_images/BANNER_MOBILE_64.png",
             "initial": "מ",
             "avatar_bg": "#0066ff",
             "avatar_color": "#ffffff"
@@ -955,6 +956,7 @@
             "name": "בעל מספרה בחיפה",
             "date": "מאי 2026",
             "verified": true,
+            "photo": "shopify://shop_images/BANNER_MOBILE_65.png",
             "initial": "ס",
             "avatar_bg": "#0066ff",
             "avatar_color": "#ffffff"
@@ -968,6 +970,7 @@
             "name": "מנהלת קליניקה בירושלים",
             "date": "אפריל 2026",
             "verified": true,
+            "photo": "shopify://shop_images/BANNER_MOBILE_66.png",
             "initial": "ק",
             "avatar_bg": "#0066ff",
             "avatar_color": "#ffffff"
@@ -981,6 +984,7 @@
             "name": "בעל בית קפה בראשון לציון",
             "date": "מרץ 2026",
             "verified": true,
+            "photo": "shopify://shop_images/BANNER_MOBILE_67.png",
             "initial": "ק",
             "avatar_bg": "#0066ff",
             "avatar_color": "#ffffff"
@@ -994,6 +998,7 @@
             "name": "מנהל חדר כושר בנתניה",
             "date": "פברואר 2026",
             "verified": true,
+            "photo": "shopify://shop_images/BANNER_MOBILE_68.png",
             "initial": "כ",
             "avatar_bg": "#0066ff",
             "avatar_color": "#ffffff"
@@ -1007,6 +1012,7 @@
             "name": "בעלת חנות בבאר שבע",
             "date": "ינואר 2026",
             "verified": true,
+            "photo": "shopify://shop_images/BANNER_MOBILE_69.png",
             "initial": "ח",
             "avatar_bg": "#0066ff",
             "avatar_color": "#ffffff"
